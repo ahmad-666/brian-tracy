@@ -1,0 +1,32 @@
+<form id="wrapper" name="wrapper" class="wrapper" enctype="text/plain" >
+	<select class="select2 validate" id="state" name="state">
+		<option></option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+	</select>
+	<select class="select2 validate" id="city" name="city">
+		<option></option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+		<option value="tehran">تهران</option>
+		<option value="mashhad">مشهد</option>
+	</select>
+</form>

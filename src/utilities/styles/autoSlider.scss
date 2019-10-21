@@ -1,0 +1,50 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+.autoSlider{
+    width: 80% ;
+    height: auto;
+    position: relative ;
+    margin: $sectionsDist auto ;
+    padding: $dist2 0 $dist4 + .5em 0 ;
+    overflow: hidden;
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    h4{
+        font-size: $fontL ;
+        color: $textDark ;
+        font-weight: 700 ;
+    }
+    .show_more{
+        bottom: $dist1 ;
+        font-size: $fontM ;
+        color: $textGrey ;
+        i{
+            font-size: $fontS ;
+            color: $textGrey ;
+            transform: translate(-.3em,15%) ;
+        }
+    }
+    .slider{
+        width: 100% ;
+        height: auto;
+        margin-top: $dist2 ;
+        display: flex ;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        position: relative ;
+        right: 0 ;
+        .slide{
+            flex-shrink: 0 ;
+            width: calc((100% - (5 * 1em)) / 5) ;
+            margin: 0 $dist1 ;
+            height: 25em;
+            border-radius: $dist3 ;
+            cursor: pointer;
+            &:nth-child(5n+1){background-color: lighten(orangered,15%) ;}
+            &:nth-child(5n+2){background-color: lighten(cornflowerblue,2%) ;}
+            &:nth-child(5n+3){background-color: lighten(teal,8%);}
+            &:nth-child(5n+4){background-color: lighten(crimson,15%) ;}
+            &:nth-child(5n+5){background-color: darken(aquamarine,35%) ;}
+        }
+    }
+}

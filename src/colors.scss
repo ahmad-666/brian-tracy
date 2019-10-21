@@ -1,0 +1,76 @@
+//primary color------------------------------
+$primaryColor: #26a69a;
+//dark color------------------------------
+$darkColor: #2d2d31 ; 
+$darkBlue: #4a4e60 ;
+//grey color----------------------------------
+$greyColor: rgb(144, 144, 155) ; 
+//white color------------------------------
+$whiteColor1: rgb(245,245,245) ;
+$whiteColor2: rgb(251,251,251) ;
+$paleColor: rgb(244, 243, 247) ;
+//body color-----------------------------------
+$bodyColor: darken($whiteColor1,5%) ;
+//back-ground color--------------------------------------
+$bgColor: white ;
+//text color------------------------------
+$textWhite: $whiteColor2;
+$textDark: $darkColor;
+$textGrey: $greyColor ;
+//blue color------------------------------
+$blueColor1 : #007FE8 ;
+$blueColor2 : #003DBB ;
+//green color------------------------------
+$greenColor1: #00BC9A ;
+//teal color------------------------------
+$tealColor: #80cbc4 ;
+//red color------------------------------
+$redColor1 : #FF427B ;
+$redColor2: #e74a4a  ;
+//orange color------------------------------
+$orangeColor1: #FF805B ; 
+//yellow color------------------------------
+$yellowColor: #FFBE4F ;
+//purple color------------------------------
+$purpleColor1: #C422A0;
+$purpleColor2: #9090C5 ;
+$purpleColor3: #6956D8 ; 
+//brown color------------------------------
+$brownColor: rgb(184, 131, 45) ;
+//shadow color-----------------------------
+$shadowColor: rgba(70,69,85,.3) ;
+//filters----------------------------
+$blackFilter1: rgba(30,30,30,.5) ;
+$blackFilter2: rgba(30,30,30,.65) ;
+$blackFilter3: rgba(30,30,30,.8) ;
+//exports---------------------------------------------
+// :export{
+//     primaryColor: $primaryColor ;
+//     darkColor: $darkColor ; 
+//     darkBlue: $darkBlue ;
+//     greyColor: $greyColor ; 
+//     whiteColor1: $whiteColor1 ;
+//     whiteColor2: $whiteColor2 ;
+//     paleColor: $paleColor ;
+//     bodyColor: $bodyColor ;
+//     bgColor: $bgColor ;
+//     textWhite: $textWhite;
+//     textDark: $textDark;
+//     textGrey: $textGrey ;
+//     blueColor1 : $blueColor1 ;
+//     blueColor2 : $blueColor2 ;
+//     greenColor1: $greenColor1 ;
+//     tealColor: $tealColor ;
+//     redColor1 : $redColor1 ;
+//     redColor2: $redColor2 ;
+//     orangeColor1: $orangeColor1 ; 
+//     yellowColor: $yellowColor ;
+//     purpleColor1: $purpleColor1 ;
+//     purpleColor3: $purpleColor3 ; 
+//     purpleColor2: $purpleColor2 ;
+//     brownColor: $brownColor ;
+//     shadowColor: $shadowColor ;
+//     blackFilter1: $blackFilter1 ;
+//     blackFilter2: $blackFilter2 ;
+//     blackFilter3: $blackFilter3 ;
+// }

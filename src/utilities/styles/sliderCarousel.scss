@@ -1,0 +1,73 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+.sliderWrapperFade{
+    width: 80% ;
+    height: auto;
+    padding: $dist1 0 $dist4 + .5em 0;
+    margin: $sectionsDist auto 0 auto ;
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    position: relative ;
+    h4{
+        font-size: $fontL ;
+        color: $textDark; 
+        font-weight: 700 ;
+    }
+    .btn{
+        width: 4em ;
+        height: 4em;
+        border-radius: 50% ;
+        cursor: pointer;
+        background-color: $primaryColor ;
+        z-index: 2;
+        i{
+            font-size: $fontXL ;
+            color: white ;
+        }
+    }
+    .btn.prev{
+        right: $dist2 ;
+    }
+    .btn.next{
+        left: $dist2 ;
+    }
+    .show_more{
+        width: auto ;
+        height: auto;
+        font-size: $fontM ;
+        color: $textGrey ;
+        bottom: $dist1 ;
+        i{
+            font-size: $fontS ;
+            color: $textGrey ;
+            transform: translate(-.3em,15%) ;
+        }
+    }
+    .helper{
+        width: 100% ;
+        height: auto;
+        overflow: hidden;
+    }
+    .slides{
+        width: 100% ;
+        height: auto;
+        margin-top: $dist2 ;
+        display: flex ;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        position: relative ;
+        transition: all .3s linear ;
+        .slide{
+            flex-shrink: 0 ;
+            width: calc((100% - (4 * 1.5em)) / 4) ;
+            height: 25em;
+            margin: 0 $dist1 ;
+            // &:first-child{margin-right: 0;}
+            // &:last-child{margin-left: 0;}
+            &:nth-child(4n+1){background-color: lighten($blueColor1,10%) ;}
+            &:nth-child(4n+2){background-color: lighten($redColor1,10%) ;}
+            &:nth-child(4n+3){background-color: lighten($orangeColor1,10%) ;}
+            &:nth-child(4n+4){background-color: lighten($greenColor1,10%) ;}
+        }
+    }
+}

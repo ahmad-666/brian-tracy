@@ -1,0 +1,19 @@
+<div class="autoSlider containerStyle">
+	<h4>عنوان</h4>
+	<a href="#!" class="show_more center-x">
+		نمایش همه
+		<i class="fas fa-angle-double-left"></i>
+	</a>
+	<div class="slider">
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+		<div class="slide"></div>
+	</div>
+</div>

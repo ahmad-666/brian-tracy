@@ -1,0 +1,7 @@
+node_modules/
+.cache/
+others/
+dist/
+dist.rar
+src/assets/PSD/
+src/assets/Ai/

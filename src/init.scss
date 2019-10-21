@@ -1,0 +1,46 @@
+@import './fonts.scss' ;
+@import './colors.scss' ;
+*{
+    box-sizing: border-box ;
+    padding: 0;
+    margin: 0;
+    direction: rtl ;   
+    font-family: iranSans ;
+    // font-family: byekan ;
+    -webkit-tap-highlight-color: transparent;
+}
+html,body{
+    height: 100%;
+    font-size: 10px !important ;
+}
+body.bg{background-color: $bodyColor;}
+body.disableScroll{overflow: hidden;}
+a {
+    border: none ;
+    text-decoration: none;
+    &:focus{outline: none;}
+}
+button {
+    border: none ;
+	background-color: none ;
+    &:focus{outline: none;}
+}
+input {
+    &:focus{outline: none;}
+}
+textarea {
+    &:focus{outline: none;}
+}
+video{
+    &:focus{outline: none;}
+}
+ul{list-style: none ;}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+input[type=number] {-moz-appearance:textfield;}

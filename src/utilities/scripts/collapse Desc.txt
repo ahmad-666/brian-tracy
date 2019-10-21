@@ -1,0 +1,79 @@
+<div id="faq" class="containerStyle">
+	<img src="../assets/imgs/faq.png" alt="faqImg">
+	<h4>سوالات متداول</h4>
+	<div class="question withCollapse">
+		<div class="content collapseTrigger">
+			<p>
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+			</p>
+			<i class="fas fa-plus collapseIcon"></i>
+		</div>
+		<div class="answer collapse">
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+				Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
+				laborum earum! Fugit saepe, soluta facere ad 
+				numquam cupiditate debitis veritatis molestiae 
+				unde accusantium.
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+				Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
+				laborum earum! Fugit saepe, soluta facere ad 
+				numquam cupiditate debitis veritatis molestiae 
+				unde accusantium.
+			</p>
+		</div>
+	</div>
+	<div class="question withCollapse">
+		<div class="content collapseTrigger">
+			<p>
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+			</p>
+			<i class="fas fa-plus collapseIcon"></i>
+		</div>
+		<div class="answer collapse">
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+				Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
+				laborum earum! Fugit saepe, soluta facere ad 
+				numquam cupiditate debitis veritatis molestiae 
+				unde accusantium.
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+				Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
+				laborum earum! Fugit saepe, soluta facere ad 
+				numquam cupiditate debitis veritatis molestiae 
+				unde accusantium.
+			</p>
+		</div>
+	</div>
+	<div class="question withCollapse">
+		<div class="content collapseTrigger">
+			<p>
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+				متن سوال متن سوال متن سوال متن سوال
+			</p>
+			<i class="fas fa-plus collapseIcon"></i>
+		</div>
+		<div class="answer collapse">
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+				Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
+				laborum earum! Fugit saepe, soluta facere ad 
+				numquam cupiditate debitis veritatis molestiae 
+				unde accusantium.
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+				Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
+				laborum earum! Fugit saepe, soluta facere ad 
+				numquam cupiditate debitis veritatis molestiae 
+				unde accusantium.
+			</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="sliderCarousel scrollArrows containerStyle">
+	<div class="arrows">
+		<i class="fas fa-angle-left"></i>
+		<i class="fas fa-angle-left"></i>
+		<i class="fas fa-angle-left"></i>
+	</div>
+	<h4>عنوان</h4>
+	<button class="btn prev center-y">
+		<i class="fas fa-angle-right center-xy"></i>
+	</button>
+	<button class="btn next center-y">
+		<i class="fas fa-angle-left center-xy"></i>
+	</button>
+	<a href="#!" class="show_more center-x">
+		نمایش همه
+		<i class="fas fa-angle-double-left"></i>
+	</a>
+	<div class="helper">
+		<div class="slides" style="right:0px">
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+		  
+		</div>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+.line{
+    display: inline-block ;
+    height: .2em;
+    position: absolute ;
+    top: calc(100% - .5em) ;
+    background-color: $primaryColor; 
+    transition: all .3s linear ;
+}
+   

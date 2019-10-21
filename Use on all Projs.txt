@@ -1,0 +1,20 @@
+-should not use 'npm i' on previous package.json because this will not update major version.
+-'scripts' of package.json(for package.json we should use 'npm init')
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+		"build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+		"deploy": "gh-pages -d dist"
+	}
+-we should add 'homepage' inside package.json too :
+	"homepage": "https://ahmad-666.github.io/<Repo>"
+-Bellow packages should always get installed :
+	npm i webpack webpack-cli webpack-dev-server cross-env --save-dev
+	npm i core-js regenerator-runtime path-browserify 
+	npm i @babel/core @babel/preset-env babel-loader  --save-dev
+	npm i postcss postcss-loader autoprefixer cssnano @fullhuman/postcss-purgecss --save-dev
+	npm i css-loader sass-loader node-sass style-loader --save-dev 
+		*if we see error while installing it we should install other packages like webpack first and then install these packages.
+	npm i html-loader file-loader --save-dev 
+	npm i html-webpack-plugin mini-css-extract-plugin clean-webpack-plugin --save-dev
+	npm i @fortawesome/fontawesome-free animejs gh-pages fontfaceobserver nouislider wnumb
+-should change webpack config to match current entry points.
