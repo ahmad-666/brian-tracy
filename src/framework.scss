@@ -86,17 +86,23 @@
     font-size: $fontL;
     padding: .5em $dist2 + .5em;
 }
-.collapseTrigger{cursor: pointer;}
-.collapse{height: auto;}
-.collapse.close{
+.fadeIn{
     opacity: 0;
-    visibility: hidden ;
-    height: 0;
+    visibility: hidden;
+    transition: all .3s linear;
 }
-.collapse.addTransition{transition: all .15s linear ;}
-.collapse.open{
+.fadeIn.show{
     opacity: 1;
-    visibility: visible ;
+    visibility: visible;
+}
+.fadeOut{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s linear;
+}
+.fadeOut.hide{
+    opacity: 0;
+    visibility: hidden;
 }
 //text effects--------------------------------------------
 //text effects--------------------------------------------
@@ -170,3 +176,32 @@
 //others-------------------------------------------
 //others-------------------------------------------
 @include hiddenShow('.modal') ;
+.collapseTrigger{cursor: pointer;}
+.collapse{height: auto;}
+.collapse.close{
+    opacity: 0;
+    visibility: hidden ;
+    height: 0;
+}
+.collapse.addTransition{transition: all .15s linear ;}
+.collapse.open{
+    opacity: 1;
+    visibility: visible ;
+}
+.dropdownTrigger{
+    cursor: pointer;
+}
+ul.dropdown{
+    width: auto;
+    height: auto;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    li{
+        width: 100%;
+        height: auto;
+        padding: $dist1 ;
+        font-size: $fontM;
+        color: $textWhite;
+        transition: all .2;
+    }
+}

@@ -110,7 +110,7 @@
         opacity: 1;
         visibility: visible;
     }
-    #{$elm}.show{
+    #{$elm}.hide{
         opacity: 0;
         visibility: hidden;
     }
