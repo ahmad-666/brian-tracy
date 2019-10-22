@@ -228,6 +228,34 @@ Timer.prototype.resetTimer = function(){
     clearInterval(this.clearTimer) ;
     this.clearTimer = setInterval(this.start.bind(this),1000) ;
 }
+//findMinMax------------------------------------------------------------------------
+function heightMinMax(minmax,elms){
+    //minmax can be 'min','max'
+    //elms are array of elements(DOM elements) we need to check them 
+    //lookFor can be name css property like 'height'
+    elms = [...elms] ;
+    let res = null ;
+    let compareArray = [] ;
+    elms.forEach(elm => {
+        //?????????????
+        compareArray.push(elm.offsetHeight) ;
+    });
+    
+    if(minmax == 'min'){
+        compareArray.sort((a,b)=>{
+            if(a>b) return 1;
+            else return -1;
+        })
+    }
+    else if(minmax == 'max'){
+        compareArray.sort((a,b)=>{
+            if(a<b) return 1 ;
+            else return -1 ;
+        });
+    }
+    res = compareArray[0] ;
+    return res ;
+}
 //exports------------------------------------------------------------------------
 export default{
     getStyle,
@@ -245,5 +273,6 @@ export default{
     shuffleArray,
     Timer,
     pxToEm,
-    emtoPx
+    emtoPx,
+    heightMinMax,
 }

@@ -104,6 +104,19 @@
     opacity: 0;
     visibility: hidden;
 }
+.underline{
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $textGrey;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 100%;
+    }
+}
 //text effects--------------------------------------------
 //text effects--------------------------------------------
 //text effects--------------------------------------------
@@ -187,21 +200,4 @@
 .collapse.open{
     opacity: 1;
     visibility: visible ;
-}
-.dropdownTrigger{
-    cursor: pointer;
-}
-ul.dropdown{
-    width: auto;
-    height: auto;
-    display: flex;
-    @include flex(column,flex-start,flex-start,nowrap,"") ;
-    li{
-        width: 100%;
-        height: auto;
-        padding: $dist1 ;
-        font-size: $fontM;
-        color: $textWhite;
-        transition: all .2;
-    }
 }

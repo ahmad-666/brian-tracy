@@ -1,0 +1,40 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#journey{
+    width: 100%;
+    height: auto;
+    padding: $dist1 $dist4 * 4;
+    background-color: $darkBlue;
+    display: flex;
+    @include flex(row,space-between,center,nowrap,"") ;
+    .text{
+        width: auto;
+        height: auto;
+        display: flex;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        p{
+            &:nth-child(1){
+                font-size: $fontXL;
+                font-weight: 700;
+                color: $greenColor1;
+            }
+            &:nth-child(2){
+                font-size: $fontL;
+                color: $textWhite;
+                margin-right: .3em;
+            }
+        }
+    }
+    button{
+        border: 1.2px solid $greenColor1 ;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all .3s linear;
+        &:hover{
+            background-color: $greenColor1;
+            border: 1.2px solid transparent ;
+        }
+    }
+}

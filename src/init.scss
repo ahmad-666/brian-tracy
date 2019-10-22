@@ -31,6 +31,9 @@ input {
 textarea {
     &:focus{outline: none;}
 }
+select {
+    &:focus{outline: none;}
+}
 video{
     &:focus{outline: none;}
 }
