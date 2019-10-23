@@ -4,7 +4,7 @@
 
 #category {
     width: 100%;
-    height: 100vh;
+    height: auto;
     padding: $dist3 0;
     @include bg('../../assets/imgs/advice.jpg', center center, no-repeat, cover);
     display: flex;
@@ -123,8 +123,8 @@
                     }
                 }
             }
-            .advice.show{
-                display: flex;
+            .advice.show{display: flex;}
+            .advice.anime{
                 animation: fadeIn .5s linear forwards ; 
                 &:nth-child(1){animation-delay: 0s;}   
                 &:nth-child(2){animation-delay: .25s;}   

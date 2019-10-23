@@ -236,11 +236,7 @@ function heightMinMax(minmax,elms){
     elms = [...elms] ;
     let res = null ;
     let compareArray = [] ;
-    elms.forEach(elm => {
-        //?????????????
-        compareArray.push(elm.offsetHeight) ;
-    });
-    
+    elms.forEach(elm => compareArray.push(elm.scrollHeight));    
     if(minmax == 'min'){
         compareArray.sort((a,b)=>{
             if(a>b) return 1;
@@ -255,6 +251,22 @@ function heightMinMax(minmax,elms){
     }
     res = compareArray[0] ;
     return res ;
+}
+//find which <option> is clicked inside <select>
+function findOption(select,cb){
+    let options = select.querySelectorAll('option') ;
+    let selectedOption = null ;
+    select.addEventListener('change',e=>{
+        for(let i=0 ; i<options.length ; i++){
+            let option = options[i];
+            if(select.value == option.value){
+                selectedOption = option ;
+                cb(selectedOption) ;
+                break ;
+            }
+        }
+    })
+    return selectedOption ;
 }
 //exports------------------------------------------------------------------------
 export default{
@@ -275,4 +287,5 @@ export default{
     pxToEm,
     emtoPx,
     heightMinMax,
+    findOption,
 }
