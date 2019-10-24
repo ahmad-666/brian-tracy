@@ -3,6 +3,10 @@
 @import '../../colors.scss' ;
 @import '../../utilities/styles/verticalSlider.scss' ;
 #verticalSliderWrapper{
+    .btn{
+        opacity: 0;
+        visibility: hidden;
+    }
     .slider{
         .slide{
             display: flex;

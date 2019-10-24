@@ -28,6 +28,23 @@
             background-color: $primaryColor;
         }
     }
+    .btn{
+        z-index: 2;
+        color: white;
+        font-size: 4em;
+        cursor: pointer;
+        transition: all .2s linear;
+        &:hover{
+            font-size: 5em;
+            color: $primaryColor;
+        }
+    }
+    .btn.prev{
+        top: .2em;
+    }
+    .btn.next{
+        bottom: .2em;
+    }
     .slider{
         width: 100%;
         height: 100%;

@@ -9,6 +9,9 @@ import '../index/styles/advice.scss'
 import '../index/styles/advicesLinks.scss' ;
 import '../index/styles/articles.scss' ;
 import '../index/styles/slider.scss' ;
+import '../index/styles/sponsors.scss';
+import '../index/styles/rss.scss' ;
+import '../index/styles/footer.scss' ;
 //load scripts
 import '../index/scripts/header.js' ;
 import '../index/scripts/journey.js' ;
@@ -16,5 +19,7 @@ import '../index/scripts/free.js' ;
 import '../index/scripts/advice.js' ;
 import '../index/scripts/articles.js' ;
 import '../index/scripts/slider.js' ;
+import '../index/scripts/rss.js';
+import '../index/scripts/footer.js' ;
 //load videos 
 

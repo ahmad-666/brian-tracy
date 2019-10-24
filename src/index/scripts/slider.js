@@ -1,2 +1,7 @@
-import verticalSlider from '../../utilities/scripts/verticalSlider' ;
-new verticalSlider.VerticalSlider(document.querySelector('#verticalSliderWrapper')) ;
+import VerticalSlider from '../../utilities/scripts/verticalSlider.js';
+let verticalSliderConfig = {
+    autoSlider:true ,
+    timer:3000
+}
+let vs = new VerticalSlider(document.querySelector('#verticalSliderWrapper'),verticalSliderConfig) ;
+vs.init() ;

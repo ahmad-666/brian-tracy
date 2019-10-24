@@ -1,0 +1,28 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import '../../utilities/styles/form.scss' ;
+form#rss{
+    width: 100%;
+    height: auto;
+    padding: $dist2 $dist4 * 2;
+    background-color: darken(white,6%);
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    h4{
+        font-size: $fontXL;
+        color: $primaryColor;
+        font-weight: 700;
+    }      
+    p{
+        margin-top: $dist1;
+        font-size: $fontM;
+        color: $textDark;
+    }
+    .inputs{
+        width: 100%;
+        height: auto;
+        display: flex;
+        @include flex(row,space-around,center,wrap,flex-start) ;
+    }
+}

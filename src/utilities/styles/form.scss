@@ -1258,106 +1258,11 @@ form#sample {
         @include swapColor($textWhite,$primaryColor) ; 
     }
 }
-form#newsLetters {
-    width: auto ;
-    height: auto;
-    margin: $dist3 auto 0 auto ;
-    display: flex ;
-    @include flex(column,flex-start,center,nowrap,"") ;
-    h4 {
-        font-size: $fontXL;
-        font-weight: 700;
-        color: $darkColor;
-    }
-    > p {
-        color: $textGrey ;
-        font-size: $fontM - .2em ;
-    }
-    .inputWrapper.withSubmit {
-        width: 35em;
+form#rss { 
+    .inputWrapper.text {
+        width: calc((100% - (3 * 3em)) / 3);
         height: 5em;
         position: relative;
-        margin-top: $dist1;
-        input {
-            border: none ;
-            box-shadow: 0 .5em 2em .1em lighten($shadowColor,35%) ;
-            width: 100%;
-            height: 100%;
-            line-height: 5em;
-            padding: 0 $dist1;
-            color: $darkColor;
-            font-size: $fontM;
-            border-radius: $dist3;
-            border: 1.2px solid lighten($textGrey, 25%);
-            transition: all .2s linear;
-            &::placeholder {
-                font-size: $fontS - .2em;
-                color: lighten($textGrey, 18%);
-            }
-            &:focus {border: 1.2px solid $primaryColor;}
-        }
-        input.error {border: 1.2px solid lighten($redColor2, 5%);}
-        button[type="submit"] {
-            width: auto;
-            height: calc(100%);
-            line-height: 3em;
-            border-top-left-radius: $dist3 ;
-            border-bottom-left-radius: $dist3 ;
-            padding: 0 $dist1 + .5em;
-            position: absolute;
-            left: 0em;
-            top: 0em;    
-            font-size: $fontM ;
-            @include swapColor($textWhite,$primaryColor) ;       
-        }
-        .msg {
-            opacity: 0;
-            visibility: hidden;
-            transition: all .2s linear;
-            width: auto;
-            height: auto;
-            padding: $dist1 $dist2;
-            border-radius: $dist3;
-            background-color: lighten($redColor2, 5%);
-            position: absolute;
-            right: 0;
-            top: 115%;
-            i {
-                font-size: $fontL;
-                color: lighten($redColor2, 5%);
-                position: absolute;
-                right: $dist2;
-                top: -.6em;
-            }
-            p {
-                color: $whiteColor2;
-                font-size: $fontM - .2em;
-            }
-        }
-        .msg.show {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-}
-@include resizeTablet('form#newsLetters') ;
-@include resizeMobile('form#newsLetters') ;
-form#contact{
-    width:100% ;
-    height: auto;
-    margin-top: 0 ;
-    display: flex;
-    @include flex(column,flex-start,center,nowrap,"") ;
-    .inputs {
-        width: 100%;
-        height: auto;
-        display: flex;
-        @include flex(row, flex-start, center, wrap, flex-start);
-    }
-    .inputWrapper.text {
-        width: calc((100% - (2 * 3em)) / 2);
-        height: 4em;
-        position: relative;
         margin: $dist2;
         input {
             width: 100%;
@@ -1372,674 +1277,8 @@ form#contact{
                 font-size: $fontM;
             }
         }
-        input.style1 {
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-
-            &:focus {
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(50%);
-                    right: 0;
-                }
-
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
         input.style2 {
-            border: 1.2px solid lighten($textGrey, 25%);
-            border-radius: $dist3;
-            &:focus {
-                border: 1.2px solid $primaryColor;
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + 1.5em);
-                    transform: translateY(50%);
-                    right: $dist1;
-                }
-                ~.line {width: 0%;}
-            }
-        }
-        input.style1.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
-            ~label {color: lighten($redColor2, 5%);}
-            ~.line {background-color: lighten($redColor2, 5%);}
-        }
-        input.style2.error {
-            border: 1.2px solid lighten($redColor2, 5%);
-            ~label {color: lighten($redColor2, 5%);}
-        }
-        label {
-            width: auto;
-            height: auto;
-            position: absolute;
-            right: $dist1;
-            bottom: 50%;
-            transform: translateY(50%);
-            display: flex;
-            @include flex(row, flex-start, center, nowrap, "");
-            color: lighten($textGrey, 20%);
-            transition: all .2s linear;
-            .icon {font-size: $fontM;}
-            p {
-                font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-        input.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + .5em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-        input.style2 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 1.5em);
-                transform: translateY(50%);
-                right: $dist1;
-            }
-        }
-        .line {
-            width: 0%;
-            height: 1.2px;
-            background-color: $primaryColor;
-            position: absolute;
-            right: 0;
-            top: calc(100% - 1.5px);
-            transition: all .2s linear;
-        }
-        .msg {
-            width: auto;
-            height: auto;
-            border-radius: $dist3;
-            padding: $dist1 $dist2;
-            position: relative;
-            background-color: lighten($redColor2, 5%);
-            position: absolute;
-            right: 0;
-            top: 115%;
-            opacity: 0;
-            visibility: hidden;
-            transition: all .2s linear;
-            p {
-                color: $whiteColor2;
-                font-size: $fontM - .2em;
-            }
-            i {
-                font-size: $fontXL;
-                color: lighten($redColor2, 5%);
-                position: absolute;
-                right: $dist2;
-                top: calc(0% - .6em);
-            }
-        }
-        .msg.show {
-            opacity: 1;
-            visibility: visible;
-            z-index: 2;
-        }
-    }
-    .inputWrapper.textarea {
-        width: 100%;
-        height: auto;
-        position: relative;
-        margin: $dist2;
-        display: flex;
-        textarea {
-            width: 100%;
-            font-size: $fontM;
-            color: $darkColor;
-            padding: $dist1;
-            line-height: $dist2 ;
-            transition: all .2s linear;
-            resize: none;
-
-            &::placeholder {
-                font-size: $fontM;
-                color: $textGrey;
-            }
-        }
-
-        textarea.style1 {
-            height: 8em;
-            border: 1.2px solid lighten($textGrey, 25%);
-            border-radius: $dist2;
-
-            ~label {
-                bottom: 100%;
-                transform: translateY(150%);
-            }
-
-            &:focus {
-                border: 1.2px solid $primaryColor;
-
-                ~label {
-                    font-size: 8px;
-                    right: $dist1;
-                    color: $primaryColor;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(0);
-                }
-            }
-        }
-
-        textarea.style2 {
-            height: 4em;
-            max-height: 12em;
-            overflow: auto;
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-
-            ~label {
-                bottom: 50%;
-                transform: translateY(50%);
-            }
-
-            &:focus {
-                border-bottom: 1.2px solid $primaryColor;
-
-                ~label {
-                    font-size: 8px;
-                    right: 0;
-                    color: $primaryColor;
-                    bottom: calc(100% + 0em);
-                    transform: translateY(0);
-                }
-
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
-
-        textarea.style1.error {
-            border: 1.2px solid lighten($redColor2, 5%);
-
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-
-        textarea.style2.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
-
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-
-        textarea.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 2em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-
-        textarea.style2 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 1em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-
-        label {
-            width: auto;
-            height: auto;
-            position: absolute;
-            right: $dist1;
-            position: absolute;
-            display: flex;
-            @include flex(row, flex-start, center, nowrap, "");
-            transition: all .2s linear;
-            color: lighten($textGrey, 25%);
-
-            i {
-                font-size: $fontM;
-            }
-
-            p {
-                font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-
-        .line {
-            width: 0%;
-            height: 1.2px;
-            background-color: $primaryColor;
-            position: absolute;
-            right: 0;
-            top: calc(100% - .6px);
-            transition: all .2s linear;
-        }
-    }
-    button[type="submit"] {
-        margin: 0 auto;
-        @include swapColor($textWhite,$primaryColor) ;
-    }
-}
-@include resizeTablet('form#contact');
-@include resizeMobile('form#contact');
-@include mediaQ(400px){
-    form#contact{
-        .inputWrapper.text {
-            width: 90%;
-            margin: $dist2;
-        }
-        .inputWrapper.textarea {
-            width: 100%;
-            textarea.style1 {
-                height: 13em;
-            }         
-        }     
-    }
-}
-form#report,form#requestAd {
-    width: 60em ;
-    height: auto;
-    padding: $dist2 0 ;
-    display: flex ;
-    @include flex(column,flex-start,center,nowrap,"") ;
-    img{
-        width: 14em ;
-        height: 16em;
-        margin-top: -$dist2 ;
-    }
-    h4{
-        font-size: $fontL ;
-        font-weight: 700 ;
-        color: $primaryColor ;
-    }
-    .inputs {
-        width: 100%;
-        height: auto;
-        display: flex;
-        @include flex(row, flex-start, center, wrap, flex-start);
-    }
-    .inputWrapper.text {
-        width: calc((100% - (2 * 3em)) / 2);
-        height: 4em;
-        position: relative;
-        margin: $dist2;
-        input {
-            width: 100%;
-            height: 100%;
-            line-height: 4em;
-            padding: 0 $dist1;
-            font-size: $fontM;
-            color: $darkColor;
-            transition: all .2s linear;
-            &::placeholder {
-                color: $textGrey;
-                font-size: $fontM;
-            }
-        }
-        input.style1 {
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-
-            &:focus {
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(50%);
-                    right: 0;
-                }
-
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
-        input.style2 {
-            border: 1.2px solid lighten($textGrey, 25%);
-            border-radius: $dist3;
-            &:focus {
-                border: 1.2px solid $primaryColor;
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + 1.5em);
-                    transform: translateY(50%);
-                    right: $dist1;
-                }
-                ~.line {width: 0%;}
-            }
-        }
-        input.style1.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
-            ~label {color: lighten($redColor2, 5%);}
-            ~.line {background-color: lighten($redColor2, 5%);}
-        }
-        input.style2.error {
-            border: 1.2px solid lighten($redColor2, 5%);
-            ~label {color: lighten($redColor2, 5%);}
-        }
-        label {
-            width: auto;
-            height: auto;
-            position: absolute;
-            right: $dist1;
-            bottom: 50%;
-            transform: translateY(50%);
-            display: flex;
-            @include flex(row, flex-start, center, nowrap, "");
-            color: lighten($textGrey, 20%);
-            transition: all .2s linear;
-            .icon {font-size: $fontM;}
-            p {
-                font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-        input.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + .5em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-        input.style2 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 1.5em);
-                transform: translateY(50%);
-                right: $dist1;
-            }
-        }
-        .line {
-            width: 0%;
-            height: 1.2px;
-            background-color: $primaryColor;
-            position: absolute;
-            right: 0;
-            top: calc(100% - 1.5px);
-            transition: all .2s linear;
-        }
-        .msg {
-            width: auto;
-            height: auto;
-            border-radius: $dist3;
-            padding: $dist1 $dist2;
-            position: relative;
-            background-color: lighten($redColor2, 5%);
-            position: absolute;
-            right: 0;
-            top: 115%;
-            opacity: 0;
-            visibility: hidden;
-            transition: all .2s linear;
-            p {
-                color: $whiteColor2;
-                font-size: $fontM - .2em;
-            }
-            i {
-                font-size: $fontXL;
-                color: lighten($redColor2, 5%);
-                position: absolute;
-                right: $dist2;
-                top: calc(0% - .6em);
-            }
-        }
-        .msg.show {
-            opacity: 1;
-            visibility: visible;
-            z-index: 2;
-        }
-    }
-    .inputWrapper.textarea {
-        width: 100%;
-        height: auto;
-        position: relative;
-        margin: $dist2;
-        display: flex;
-        textarea {
-            width: 100%;
-            font-size: $fontM;
-            color: $darkColor;
-            padding: $dist1;
-            line-height: $dist2 ;
-            transition: all .2s linear;
-            resize: none;
-
-            &::placeholder {
-                font-size: $fontM;
-                color: $textGrey;
-            }
-        }
-
-        textarea.style1 {
-            height: 8em;
-            border: 1.2px solid lighten($textGrey, 25%);
-            border-radius: $dist2;
-
-            ~label {
-                bottom: 100%;
-                transform: translateY(150%);
-            }
-
-            &:focus {
-                border: 1.2px solid $primaryColor;
-
-                ~label {
-                    font-size: 8px;
-                    right: $dist1;
-                    color: $primaryColor;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(0);
-                }
-            }
-        }
-
-        textarea.style2 {
-            height: 4em;
-            max-height: 12em;
-            overflow: auto;
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-
-            ~label {
-                bottom: 50%;
-                transform: translateY(50%);
-            }
-
-            &:focus {
-                border-bottom: 1.2px solid $primaryColor;
-
-                ~label {
-                    font-size: 8px;
-                    right: 0;
-                    color: $primaryColor;
-                    bottom: calc(100% + 0em);
-                    transform: translateY(0);
-                }
-
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
-
-        textarea.style1.error {
-            border: 1.2px solid lighten($redColor2, 5%);
-
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-
-        textarea.style2.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
-
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-
-        textarea.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 2em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-
-        textarea.style2 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 1em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-
-        label {
-            width: auto;
-            height: auto;
-            position: absolute;
-            right: $dist1;
-            position: absolute;
-            display: flex;
-            @include flex(row, flex-start, center, nowrap, "");
-            transition: all .2s linear;
-            color: lighten($textGrey, 25%);
-
-            i {
-                font-size: $fontM;
-            }
-
-            p {
-                font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-
-        .line {
-            width: 0%;
-            height: 1.2px;
-            background-color: $primaryColor;
-            position: absolute;
-            right: 0;
-            top: calc(100% - .6px);
-            transition: all .2s linear;
-        }
-    }
-    button[type="submit"] {
-        width: auto;
-        height: auto;
-        padding: .5em $dist3 - .5em;
-        margin: 0 auto;
-        border-radius: $dist3;
-        font-size: $fontL;
-        position: relative ;
-        @include swapColor($textWhite,$primaryColor) ;
-    }
-}
-@include resizeTablet('form#report');
-@include resizeMobile('form#report');
-@include resizeTablet('form#requestAd');
-@include resizeMobile('form#requestAd');
-@include mediaQ(400px){
-    form#report,form#requestAd{
-        width: 90% ;
-        img{
-            width: 14em ;
-            height: 16em;
-        }
-        .inputWrapper.text {
-            width: 90%;
-            height: 4em;
-            position: relative;
-            margin: $dist2;
-        }
-        .inputWrapper.textarea {
-            width: 100%;
-            textarea.style1 {
-                height: 13em;
-            }
-        }
-    }   
-}
-form#requestAd{
-    img{
-        width: 14em ;
-        height: 14em;
-    }
-}
-form#login{
-    width: 40em;
-    height: auto;
-    padding: $dist2;
-    margin: 0 ;
-    position: fixed ;
-    top: 50% ;
-    right: 50% ;
-    transform: translate(50%,-50%) ;
-    display: flex;
-    @include flex(column, flex-start, center, nowrap, "");
-    img{
-        width: 12em ;
-        height: 10em;
-    }
-    h4 {
-        font-size: $fontL;
-        font-weight: 700;
-        color: $darkColor;
-    }
-    .inputWrapper.text {
-        width: 35em;
-        height: 4em;
-        position: relative;
-        margin-top: $dist2;
-        &:nth-child(4){margin-top: $dist3 ;}
-        input {
-            width: 100%;
-            height: 100%;
-            line-height: 4em;
-            padding: 0 $dist1;
-            font-size: $fontM;
-            color: $darkColor;
-            transition: all .2s linear;
-            &::placeholder {
-                color: $textGrey;
-                font-size: $fontM;
-            }
-        }
-        input.style1 {
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-
-            &:focus {
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(50%);
-                    right: 0;
-                }
-
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
-        input.style2 {
-            border: 1.2px solid lighten($textGrey, 25%);
+            border: 1px solid lighten($textGrey, 25%);
             border-radius: $dist3;
 
             &:focus {
@@ -2058,15 +1297,6 @@ form#login{
                 }
             }
         }
-        input.style1.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-            ~.line {
-                background-color: lighten($redColor2, 5%);
-            }
-        }
         input.style2.error {
             border: 1.2px solid lighten($redColor2, 5%);
 
@@ -2074,6 +1304,7 @@ form#login{
                 color: lighten($redColor2, 5%);
             }
         }
+
         label {
             width: auto;
             height: auto;
@@ -2090,15 +1321,7 @@ form#login{
             }
             p {
                 font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-        input.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + .5em);
-                transform: translateY(50%);
-                right: 0;
+                transform: translate(-.3em,-.3em);
             }
         }
         input.style2 {
@@ -2118,6 +1341,7 @@ form#login{
             top: calc(100% - 1px);
             transition: all .2s linear;
         }
+
         .msg {
             width: auto;
             height: auto;
@@ -2131,10 +1355,12 @@ form#login{
             opacity: 0;
             visibility: hidden;
             transition: all .2s linear;
+
             p {
                 color: $whiteColor2;
                 font-size: $fontM - .2em;
             }
+
             i {
                 font-size: $fontXL;
                 color: lighten($redColor2, 5%);
@@ -2143,1061 +1369,1877 @@ form#login{
                 top: calc(0% - .6em);
             }
         }
+
         .msg.show {
             opacity: 1;
             visibility: visible;
             z-index: 2;
         }
     }
-    .inputWrapper.checkboxes {
-        width: auto;
-        height: auto;
-        display: flex;
-        @include flex(column, flex-start, flex-start, nowrap, "");
-        margin-top: 0;
-        .checkbox {
-            width: auto;
-            height: auto;
-            padding-right: $dist1;
-            margin-top: $dist2 ;
-            input[type="checkbox"] {
-                width: 0;
-                height: 0;
-                display: none;
-            }
-            input[type="checkbox"].style1 {
-                &:checked {
-                    ~label {
-                        .rect {
-                            width: 2em;
-                            height: 1em;
-                            border-radius: 0;
-                            border-top: none;
-                            border-right: none;
-                            border-left: 1.2px solid $primaryColor;
-                            border-bottom: 1.2px solid $primaryColor;
-                            transform: translateY(-.3em) rotate(-45deg);
-                        }
-
-                        p {
-                            color: $primaryColor;
-                        }
-                    }
-                }
-            }
-
-            input[type="checkbox"].style2 {
-                &:checked {
-                    ~label {
-                        .rect {
-                            border: 1px solid transparent;
-                            background-color: $primaryColor;
-
-                            i {
-                                opacity: 1;
-                            }
-                        }
-
-                        p {
-                            color: $primaryColor;
-                        }
-                    }
-                }
-            }
-
-            label {
-                cursor: pointer;
-                width: 100%;
-                height: 100%;
-                line-height: 2.5em;
-                display: flex;
-                @include flex(row, flex-start, center, nowrap, "");
-
-                .rect {
-                    flex-shrink: 0;
-                    width: 2em;
-                    height: 2em;
-                    border: 1px solid darken($textGrey, 15%);
-                    position: relative;
-                    transition: all .2s linear;
-                    border-radius: .45em;
-
-                    i {
-                        opacity: 0;
-                        font-size: $fontM;
-                        color: $whiteColor2;
-                        transition: all .2s linear;
-                    }
-                }
-
-                p {
-                    width: auto;
-                    font-size: $fontS + .2em;
-                    color: lighten($textGrey, 0%);
-                    margin-right: .3em;
-                    transition: all .2s linear;
-                }
-            }
-        }
-    }
     button[type="submit"] {
-        width: auto;
-        height: auto;
-        padding: .3em $dist2 + .5em;
-        margin: $dist3 auto 0 auto;
-        border-radius: $dist3;
-        font-size: $fontL;
-        @include swapColor($textWhite,$primaryColor) ;
-    }
-    a.rememberPassword{
-        font-size: $fontS + .1em;
-        color: lighten($textGrey,0%) ;
-        position: absolute ;
-        right: 0 ;
-        top: 140% ;
-    }
-    a.signup{
-        font-size: $fontM ;
-        color: lighten($textGrey,0%) ;
-        margin-top: $dist2 ;
-    }
-}
-@include resizeTablet('form#login') ;
-@include resizeMobile('form#login') ;
-form#forgetPassword{
-    width: 40em;
-    height: auto;
-    padding: $dist2;
-    margin: 0 ;
-    position: fixed ;
-    top: 50% ;
-    right: 50% ;
-    transform: translate(50%,-50%) ;
-    display: flex;
-    @include flex(column, flex-start, center, nowrap, "");
-    img{
-        width: 12em ;
-        height: 10em;
-    }
-    h4 {
-        font-size: $fontL;
-        font-weight: 700;
-        color: $darkColor;
-    }
-    .inputWrapper.text {
-        width: 35em;
-        height: 4em;
-        position: relative;
-        margin-top: $dist2;
-        input {
-            width: 100%;
-            height: 100%;
-            line-height: 4em;
-            padding: 0 $dist1;
-            font-size: $fontM;
-            color: $darkColor;
-            transition: all .2s linear;
-            &::placeholder {
-                color: $textGrey;
-                font-size: $fontM;
-            }
-        }
-        input.style1 {
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-
-            &:focus {
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(50%);
-                    right: 0;
-                }
-
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
-        input.style2 {
-            border: 1.2px solid lighten($textGrey, 25%);
-            border-radius: $dist3;
-
-            &:focus {
-                border: 1.2px solid $primaryColor;
-
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + 1.5em);
-                    transform: translateY(50%);
-                    right: $dist1;
-                }
-
-                ~.line {
-                    width: 0%;
-                }
-            }
-        }
-        input.style1.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-            ~.line {
-                background-color: lighten($redColor2, 5%);
-            }
-        }
-        input.style2.error {
-            border: 1.2px solid lighten($redColor2, 5%);
-
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-        label {
-            width: auto;
-            height: auto;
-            position: absolute;
-            right: $dist1;
-            bottom: 50%;
-            transform: translateY(50%);
-            display: flex;
-            @include flex(row, flex-start, center, nowrap, "");
-            color: lighten($textGrey, 20%);
-            transition: all .2s linear;
-            .icon {
-                font-size: $fontM;
-            }
-            p {
-                font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-        input.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + .5em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-        input.style2 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 1.5em);
-                transform: translateY(50%);
-                right: $dist1;
-            }
-        }
-        .line {
-            width: 0%;
-            height: 1.2px;
-            background-color: $primaryColor;
-            position: absolute;
-            right: 0;
-            top: calc(100% - .6px);
-            transition: all .2s linear;
-        }
-        .msg {
-            width: auto;
-            height: auto;
-            border-radius: $dist3;
-            padding: $dist1 $dist2;
-            position: relative;
-            background-color: lighten($redColor2, 5%);
-            position: absolute;
-            right: 0;
-            top: 115%;
-            opacity: 0;
-            visibility: hidden;
-            transition: all .2s linear;
-            p {
-                color: $whiteColor2;
-                font-size: $fontM - .2em;
-            }
-            i {
-                font-size: $fontXL;
-                color: lighten($redColor2, 5%);
-                position: absolute;
-                right: $dist2;
-                top: calc(0% - .6em);
-            }
-        }
-        .msg.show {
-            opacity: 1;
-            visibility: visible;
-            z-index: 2;
-        }
-        .rememberPassword{
-            font-size: $fontS ;
-            color: lighten($textGrey,10%) ;
-            position: absolute ;
-            right: 0 ;
-            top: 140% ;
-        }
-    }
-    button[type="submit"] {
-        width: auto;
-        height: auto;
-        padding: .3em $dist2 + .5em;
-        margin-top: $dist2 ;
-        border-radius: $dist3;
-        font-size: $fontL;
-        @include swapColor($textWhite,$primaryColor) ;
-    }
-    a.login{
-        font-size: $fontS + .2em ;
-        color: $textGrey ;
-        margin-top: $dist2 ;
-    }
-}
-@include resizeTablet('form#forgetPassword') ;
-@include resizeMobile('form#forgetPassword') ;
-form#signup {
-    width: 40em;
-    height: auto;
-    padding: $dist2;
-    margin: 0 ;
-    position: fixed ;
-    top: 50% ;
-    right: 50% ;
-    transform: translate(50%,-50%) ;
-    display: flex;
-    @include flex(column, flex-start, center, nowrap, "");
-    img{
-        width: 12em ;
-        height: 10em;
-    }
-    h4 {
-        font-size: $fontL;
-        font-weight: 700;
-        color: $darkColor;
-    }
-    .inputWrapper.text {
-        width: 35em;
-        height: 4em;
-        position: relative;
-        margin-top: $dist2 + .5em;
-        input {
-            width: 100%;
-            height: 100%;
-            line-height: 4em;
-            padding: 0 $dist1;
-            font-size: $fontM;
-            color: $darkColor;
-            transition: all .2s linear;
-            &::placeholder {
-                color: $textGrey;
-                font-size: $fontM;
-            }
-        }
-        input.style1 {
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-
-            &:focus {
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(50%);
-                    right: 0;
-                }
-
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
-        input.style2 {
-            border: 1.2px solid lighten($textGrey, 25%);
-            border-radius: $dist3;
-
-            &:focus {
-                border: 1.2px solid $primaryColor;
-
-                ~label {
-                    color: $primaryColor;
-                    font-size: 8px;
-                    bottom: calc(100% + 1.5em);
-                    transform: translateY(50%);
-                    right: $dist1;
-                }
-
-                ~.line {
-                    width: 0%;
-                }
-            }
-        }
-        input.style1.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-            ~.line {
-                background-color: lighten($redColor2, 5%);
-            }
-        }
-        input.style2.error {
-            border: 1.2px solid lighten($redColor2, 5%);
-
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-        label {
-            width: auto;
-            height: auto;
-            position: absolute;
-            right: $dist1;
-            bottom: 50%;
-            transform: translateY(50%);
-            display: flex;
-            @include flex(row, flex-start, center, nowrap, "");
-            color: lighten($textGrey, 20%);
-            transition: all .2s linear;
-            .icon {
-                font-size: $fontM;
-            }
-            p {
-                font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-        input.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + .5em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-        input.style2 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 1.5em);
-                transform: translateY(50%);
-                right: $dist1;
-            }
-        }
-        .line {
-            width: 0%;
-            height: 1.2px;
-            background-color: $primaryColor;
-            position: absolute;
-            right: 0;
-            top: calc(100% - 1px);
-            transition: all .2s linear;
-        }
-        .msg {
-            width: auto;
-            height: auto;
-            border-radius: $dist3;
-            padding: $dist1 $dist2;
-            position: relative;
-            background-color: lighten($redColor2, 5%);
-            position: absolute;
-            right: 0;
-            top: 115%;
-            opacity: 0;
-            visibility: hidden;
-            transition: all .2s linear;
-            p {
-                color: $whiteColor2;
-                font-size: $fontM - .2em;
-            }
-            i {
-                font-size: $fontXL;
-                color: lighten($redColor2, 5%);
-                position: absolute;
-                right: $dist2;
-                top: calc(0% - .6em);
-            }
-        }
-        .msg.show {
-            opacity: 1;
-            visibility: visible;
-            z-index: 2;
-        }
-    }
-    .inputWrapper.checkboxes {
-        width: auto;
-        height: auto;
-        display: flex;
-        @include flex(column, flex-start, flex-start, nowrap, "");
-        margin-top: 0;
-        .checkbox {
-            width: auto;
-            height: auto;
-            padding-right: $dist1;
-            margin-top: $dist2 ;
-            input[type="checkbox"] {
-                width: 0;
-                height: 0;
-                display: none;
-            }
-            input[type="checkbox"].style1 {
-                &:checked {
-                    ~label {
-                        .rect {
-                            width: 2em;
-                            height: 1em;
-                            border-radius: 0;
-                            border-top: none;
-                            border-right: none;
-                            border-left: 1.2px solid $primaryColor;
-                            border-bottom: 1.2px solid $primaryColor;
-                            transform: translateY(-.3em) rotate(-45deg);
-                        }
-
-                        p {
-                            color: $primaryColor;
-                        }
-                    }
-                }
-            }
-
-            input[type="checkbox"].style2 {
-                &:checked {
-                    ~label {
-                        .rect {
-                            border: 1px solid transparent;
-                            background-color: $primaryColor;
-
-                            i {
-                                opacity: 1;
-                            }
-                        }
-
-                        p {
-                            color: $primaryColor;
-                        }
-                    }
-                }
-            }
-
-            label {
-                cursor: pointer;
-                width: 100%;
-                height: 100%;
-                line-height: 2.5em;
-                display: flex;
-                @include flex(row, flex-start, center, nowrap, "");
-
-                .rect {
-                    flex-shrink: 0;
-                    width: 2em;
-                    height: 2em;
-                    border: 1px solid darken($textGrey, 15%);
-                    position: relative;
-                    transition: all .2s linear;
-                    border-radius: .45em;
-
-                    i {
-                        opacity: 0;
-                        font-size: $fontM;
-                        color: $whiteColor2;
-                        transition: all .2s linear;
-                    }
-                }
-
-                p {
-                    width: auto;
-                    font-size: $fontS + .2em;
-                    color: lighten($textGrey, 0%);
-                    margin-right: .3em;
-                    transition: all .2s linear;
-                }
-            }
-        }
-    }
-    button[type="submit"] {
-        width: auto;
-        height: auto;
-        padding: .3em $dist2 + .5em;
-        margin-top: $dist2 ;
-        border-radius: $dist3;
-        font-size: $fontL;
-        @include swapColor($textWhite,$primaryColor) ;
-    }
-    a.login{
-        font-size: $fontM ;
-        color: lighten($textGrey,0%) ;
-        margin-top: $dist2 ;
-    }
-}
-@include resizeTablet('form#signup') ;
-@include resizeMobile('form#signup') ;
-form#userComment{
-    width: auto;
-    display: flex;
-    @include flex(column,flex-start,flex-start,nowrap,"") ;
-    .row{
-        width: auto ;
-        height: auto;
-        margin-top: $dist2;
-        display: flex;
-        @include flex(row,flex-start,flex-start,wrap,flex-start) ;
-        .inputWrapper.text {
-            width: 25em;
-            height: 4em;
-            position: relative;
-            &:not(:first-child){margin-right: $dist3;}
-            input {
-                width: 100%;
-                height: 100%;
-                line-height: 4em;
-                padding: 0 $dist1;
-                font-size: $fontM;
-                color: $darkColor;
-                transition: all .2s linear;
-                &::placeholder {
-                    color: $textGrey;
-                    font-size: $fontM;
-                }
-            }
-            input.style1 {
-                border: none;
-                border-bottom: 1.2px solid lighten($textGrey, 25%);
-    
-                &:focus {
-                    ~label {
-                        color: $primaryColor;
-                        font-size: 8px;
-                        bottom: calc(100% + .5em);
-                        transform: translateY(50%);
-                        right: 0;
-                    }
-    
-                    ~.line {
-                        width: 100%;
-                    }
-                }
-            }
-    
-            input.style2 {
-                border: 1.2px solid lighten($textGrey, 25%);
-                border-radius: $dist3;
-    
-                &:focus {
-                    border: 1.2px solid $primaryColor;
-    
-                    ~label {
-                        color: $primaryColor;
-                        font-size: 8px;
-                        bottom: calc(100% + 1.5em);
-                        transform: translateY(50%);
-                        right: $dist1;
-                    }
-    
-                    ~.line {
-                        width: 0%;
-                    }
-                }
-            }
-    
-            input.style1.error {
-                border-bottom: 1.2px solid lighten($redColor2, 5%);
-    
-                ~label {
-                    color: lighten($redColor2, 5%);
-                }
-    
-                ~.line {
-                    background-color: lighten($redColor2, 5%);
-                }
-            }
-    
-            input.style2.error {
-                border: 1.2px solid lighten($redColor2, 5%);
-    
-                ~label {
-                    color: lighten($redColor2, 5%);
-                }
-            }
-    
-            label {
-                width: auto;
-                height: auto;
-                position: absolute;
-                right: $dist1;
-                bottom: 50%;
-                transform: translateY(50%);
-                display: flex;
-                @include flex(row, flex-start, center, nowrap, "");
-                color: lighten($textGrey, 20%);
-                transition: all .2s linear;
-    
-                .icon {
-                    font-size: $fontM;
-                }
-    
-                p {
-                    font-size: $fontM - .1em;
-                    transform: translateX(-.3em);
-                }
-            }
-    
-            input.style1 {
-                ~label.top {
-                    font-size: 8px;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(50%);
-                    right: 0;
-                }
-            }
-    
-            input.style2 {
-                ~label.top {
-                    font-size: 8px;
-                    bottom: calc(100% + 1.5em);
-                    transform: translateY(50%);
-                    right: $dist1;
-                }
-            }
-    
-            .line {
-                width: 0%;
-                height: 1.2px;
-                background-color: $primaryColor;
-                position: absolute;
-                right: 0;
-                top: calc(100% - 1px);
-                transition: all .2s linear;
-            }
-    
-            .msg {
-                width: auto;
-                height: auto;
-                border-radius: $dist3;
-                padding: $dist1 $dist2;
-                position: relative;
-                background-color: lighten($redColor2, 5%);
-                position: absolute;
-                right: 0;
-                top: 115%;
-                opacity: 0;
-                visibility: hidden;
-                transition: all .2s linear;
-    
-                p {
-                    color: $whiteColor2;
-                    font-size: $fontM - .2em;
-                }
-    
-                i {
-                    font-size: $fontXL;
-                    color: lighten($redColor2, 5%);
-                    position: absolute;
-                    right: $dist2;
-                    top: calc(0% - .6em);
-                }
-            }
-    
-            .msg.show {
-                opacity: 1;
-                visibility: visible;
-                z-index: 2;
-            }
-        }
-    }
-    .inputWrapper.textarea {
-        width: 53em;
-        height: auto;
-        position: relative;
-        margin-top: $dist3;
-        display: flex;
-        textarea {
-            // we set height/max-height via js
-            width: 100%;
-            font-size: $fontM;
-            color: $darkColor;
-            padding: $dist1;
-            line-height: $dist2 ;
-            transition: all .2s linear;
-            resize: none;
-            &::placeholder {
-                font-size: $fontM;
-                color: $textGrey;
-            }
-        }
-        textarea.style1 {
-            height: 8em;
-            border: 1.2px solid lighten($textGrey, 25%);
-            border-radius: $dist2;
-            ~label {
-                bottom: 100%;
-                transform: translateY(150%);
-            }
-            &:focus {
-                border: 1.2px solid $primaryColor;
-                ~label {
-                    font-size: 8px;
-                    right: $dist1;
-                    color: $primaryColor;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(0);
-                }
-            }
-        }
-        textarea.style2 {
-            overflow: hidden;
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-            ~label {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            &:focus {
-                border-bottom: 1.2px solid $primaryColor;
-                ~label {
-                    font-size: 8px;
-                    right: 0;
-                    color: $primaryColor;
-                    top: 0;
-                    transform: translateY(-100%);
-                }
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
-        textarea.style1.error {
-            border: 1.2px solid lighten($redColor2, 5%);
-
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-        textarea.style2.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-        textarea.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 2em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-        textarea.style2 {
-            ~label.top {
-                font-size: 8px;
-                top: 0;
-                transform: translateY(-100%);
-                right: 0;                            
-            }
-        }
-        label {
-            width: auto;
-            height: auto;
-            position: absolute;
-            right: $dist1;
-            position: absolute;
-            display: flex;
-            @include flex(row, flex-start, center, nowrap, "");
-            transition: all .2s linear;
-            color: lighten($textGrey,20%);
-            i {
-                font-size: $fontM;
-            }
-
-            p {
-                font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-        .line {
-            width: 0%;
-            height: 1.2px;
-            background-color: $primaryColor;
-            position: absolute;
-            right: 0;
-            top: calc(100% - .6px);
-            transition: all .2s linear;
-        }
-    }
-    button[type="submit"] {
-        width: auto;
-        height: auto;
-        padding: .5em $dist2 + .2em;
-        margin: $dist2 auto 0 auto;
-        border-radius: $dist3;
-        font-size: $fontM;
+        margin: $dist2;
         @include swapColor($textWhite,$primaryColor) ; 
     }
 }
-@include mediaQ(360px){
-    form#userComment{
-        width: 100%;
-        @include flex(column,flex-start,center,nowrap,"") ;
-        .row{
-            @include flex(row,center,center,wrap,flex-start) ;
-            width: 100%;
-            .inputWrapper.text {
-                width: 90%;
-                height: 4em;
-                position: relative;
-                &:not(:first-child){
-                    margin-right: 0;
-                    margin-top: $dist3;
-                }
-            }
-        }
-        .inputWrapper.textarea {
-            width: 90%;
-        }
-    }
-}
-form.reply{
-    width: auto;
-    height: auto;
-    margin-top: -$dist1;
-    display: flex;
-    @include flex(column,flex-start,center,nowrap,"") ;
-    .inputWrapper.textarea {
-        width: 53em;
-        height: auto;
-        position: relative;
-        margin-top: $dist3;
-        display: flex;
-        textarea {
-            width: 100%;
-            font-size: $fontM;
-            color: $darkColor;
-            padding: $dist1;
-            line-height: $dist2 ;
-            transition: all .2s linear;
-            resize: none;
-            &::placeholder {
-                font-size: $fontM;
-                color: $textGrey;
-            }
-        }
-        textarea.style1 {
-            height: 8em;
-            border: 1.2px solid lighten($textGrey, 25%);
-            border-radius: $dist2;
-            ~label {
-                bottom: 100%;
-                transform: translateY(150%);
-            }
-            &:focus {
-                border: 1.2px solid $primaryColor;
-                ~label {
-                    font-size: 8px;
-                    right: $dist1;
-                    color: $primaryColor;
-                    bottom: calc(100% + .5em);
-                    transform: translateY(0);
-                }
-            }
-        }
-        textarea.style2 {
-            overflow: hidden;
-            border: none;
-            border-bottom: 1.2px solid lighten($textGrey, 25%);
-            ~label {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            &:focus {
-                border-bottom: 1.2px solid $primaryColor;
-                ~label {
-                    font-size: 8px;
-                    right: 0;
-                    color: $primaryColor;
-                    top: 0;
-                    transform: translateY(-100%);
-                }
-                ~.line {
-                    width: 100%;
-                }
-            }
-        }
-        textarea.style1.error {
-            border: 1.2px solid lighten($redColor2, 5%);
 
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-        textarea.style2.error {
-            border-bottom: 1.2px solid lighten($redColor2, 5%);
+// @include resizeTablet('form#newsLetters') ;
+// @include resizeMobile('form#newsLetters') ;
+// form#contact{
+//     width:100% ;
+//     height: auto;
+//     margin-top: 0 ;
+//     display: flex;
+//     @include flex(column,flex-start,center,nowrap,"") ;
+//     .inputs {
+//         width: 100%;
+//         height: auto;
+//         display: flex;
+//         @include flex(row, flex-start, center, wrap, flex-start);
+//     }
+//     .inputWrapper.text {
+//         width: calc((100% - (2 * 3em)) / 2);
+//         height: 4em;
+//         position: relative;
+//         margin: $dist2;
+//         input {
+//             width: 100%;
+//             height: 100%;
+//             line-height: 4em;
+//             padding: 0 $dist1;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             transition: all .2s linear;
+//             &::placeholder {
+//                 color: $textGrey;
+//                 font-size: $fontM;
+//             }
+//         }
+//         input.style1 {
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
 
-            ~label {
-                color: lighten($redColor2, 5%);
-            }
-        }
-        textarea.style1 {
-            ~label.top {
-                font-size: 8px;
-                bottom: calc(100% + 2em);
-                transform: translateY(50%);
-                right: 0;
-            }
-        }
-        textarea.style2 {
-            ~label.top {
-                font-size: 8px;
-                top: 0;
-                transform: translateY(-100%);
-                right: 0;                            
-            }
-        }
-        label {
-            width: auto;
-            height: auto;
-            position: absolute;
-            right: $dist1;
-            position: absolute;
-            display: flex;
-            @include flex(row, flex-start, center, nowrap, "");
-            transition: all .2s linear;
-            color: lighten($textGrey, 25%);
+//             &:focus {
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(50%);
+//                     right: 0;
+//                 }
 
-            i {
-                font-size: $fontM;
-            }
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//         input.style2 {
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist3;
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + 1.5em);
+//                     transform: translateY(50%);
+//                     right: $dist1;
+//                 }
+//                 ~.line {width: 0%;}
+//             }
+//         }
+//         input.style1.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+//             ~label {color: lighten($redColor2, 5%);}
+//             ~.line {background-color: lighten($redColor2, 5%);}
+//         }
+//         input.style2.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+//             ~label {color: lighten($redColor2, 5%);}
+//         }
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             bottom: 50%;
+//             transform: translateY(50%);
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             color: lighten($textGrey, 20%);
+//             transition: all .2s linear;
+//             .icon {font-size: $fontM;}
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+//         input.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + .5em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+//         input.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 1.5em);
+//                 transform: translateY(50%);
+//                 right: $dist1;
+//             }
+//         }
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - 1.5px);
+//             transition: all .2s linear;
+//         }
+//         .msg {
+//             width: auto;
+//             height: auto;
+//             border-radius: $dist3;
+//             padding: $dist1 $dist2;
+//             position: relative;
+//             background-color: lighten($redColor2, 5%);
+//             position: absolute;
+//             right: 0;
+//             top: 115%;
+//             opacity: 0;
+//             visibility: hidden;
+//             transition: all .2s linear;
+//             p {
+//                 color: $whiteColor2;
+//                 font-size: $fontM - .2em;
+//             }
+//             i {
+//                 font-size: $fontXL;
+//                 color: lighten($redColor2, 5%);
+//                 position: absolute;
+//                 right: $dist2;
+//                 top: calc(0% - .6em);
+//             }
+//         }
+//         .msg.show {
+//             opacity: 1;
+//             visibility: visible;
+//             z-index: 2;
+//         }
+//     }
+//     .inputWrapper.textarea {
+//         width: 100%;
+//         height: auto;
+//         position: relative;
+//         margin: $dist2;
+//         display: flex;
+//         textarea {
+//             width: 100%;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             padding: $dist1;
+//             line-height: $dist2 ;
+//             transition: all .2s linear;
+//             resize: none;
 
-            p {
-                font-size: $fontM - .1em;
-                transform: translateX(-.3em);
-            }
-        }
-        .line {
-            width: 0%;
-            height: 1.2px;
-            background-color: $primaryColor;
-            position: absolute;
-            right: 0;
-            top: calc(100% - .6px);
-            transition: all .2s linear;
-        }
-    }
-    button[type="submit"] {
-        width: auto;
-        height: auto;
-        padding: .5em $dist2 + .2em;
-        margin: $dist1 auto;
-        border-radius: $dist3;
-        font-size: $fontM;
-        @include swapColor($textWhite,$primaryColor) ; 
-    }
-}
-@include mediaQ(400px){
-    form.reply{
-        width: 100%;
-        .inputWrapper.textarea {
-            width: 90%;
-        }    
-    }
-}
+//             &::placeholder {
+//                 font-size: $fontM;
+//                 color: $textGrey;
+//             }
+//         }
+
+//         textarea.style1 {
+//             height: 8em;
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist2;
+
+//             ~label {
+//                 bottom: 100%;
+//                 transform: translateY(150%);
+//             }
+
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+
+//                 ~label {
+//                     font-size: 8px;
+//                     right: $dist1;
+//                     color: $primaryColor;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(0);
+//                 }
+//             }
+//         }
+
+//         textarea.style2 {
+//             height: 4em;
+//             max-height: 12em;
+//             overflow: auto;
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
+
+//             ~label {
+//                 bottom: 50%;
+//                 transform: translateY(50%);
+//             }
+
+//             &:focus {
+//                 border-bottom: 1.2px solid $primaryColor;
+
+//                 ~label {
+//                     font-size: 8px;
+//                     right: 0;
+//                     color: $primaryColor;
+//                     bottom: calc(100% + 0em);
+//                     transform: translateY(0);
+//                 }
+
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+
+//         textarea.style1.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+
+//         textarea.style2.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+
+//         textarea.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 2em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+
+//         textarea.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 1em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             position: absolute;
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             transition: all .2s linear;
+//             color: lighten($textGrey, 25%);
+
+//             i {
+//                 font-size: $fontM;
+//             }
+
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - .6px);
+//             transition: all .2s linear;
+//         }
+//     }
+//     button[type="submit"] {
+//         margin: 0 auto;
+//         @include swapColor($textWhite,$primaryColor) ;
+//     }
+// }
+// @include resizeTablet('form#contact');
+// @include resizeMobile('form#contact');
+// @include mediaQ(400px){
+//     form#contact{
+//         .inputWrapper.text {
+//             width: 90%;
+//             margin: $dist2;
+//         }
+//         .inputWrapper.textarea {
+//             width: 100%;
+//             textarea.style1 {
+//                 height: 13em;
+//             }         
+//         }     
+//     }
+// }
+// form#report,form#requestAd {
+//     width: 60em ;
+//     height: auto;
+//     padding: $dist2 0 ;
+//     display: flex ;
+//     @include flex(column,flex-start,center,nowrap,"") ;
+//     img{
+//         width: 14em ;
+//         height: 16em;
+//         margin-top: -$dist2 ;
+//     }
+//     h4{
+//         font-size: $fontL ;
+//         font-weight: 700 ;
+//         color: $primaryColor ;
+//     }
+//     .inputs {
+//         width: 100%;
+//         height: auto;
+//         display: flex;
+//         @include flex(row, flex-start, center, wrap, flex-start);
+//     }
+//     .inputWrapper.text {
+//         width: calc((100% - (2 * 3em)) / 2);
+//         height: 4em;
+//         position: relative;
+//         margin: $dist2;
+//         input {
+//             width: 100%;
+//             height: 100%;
+//             line-height: 4em;
+//             padding: 0 $dist1;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             transition: all .2s linear;
+//             &::placeholder {
+//                 color: $textGrey;
+//                 font-size: $fontM;
+//             }
+//         }
+//         input.style1 {
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
+
+//             &:focus {
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(50%);
+//                     right: 0;
+//                 }
+
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//         input.style2 {
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist3;
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + 1.5em);
+//                     transform: translateY(50%);
+//                     right: $dist1;
+//                 }
+//                 ~.line {width: 0%;}
+//             }
+//         }
+//         input.style1.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+//             ~label {color: lighten($redColor2, 5%);}
+//             ~.line {background-color: lighten($redColor2, 5%);}
+//         }
+//         input.style2.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+//             ~label {color: lighten($redColor2, 5%);}
+//         }
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             bottom: 50%;
+//             transform: translateY(50%);
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             color: lighten($textGrey, 20%);
+//             transition: all .2s linear;
+//             .icon {font-size: $fontM;}
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+//         input.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + .5em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+//         input.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 1.5em);
+//                 transform: translateY(50%);
+//                 right: $dist1;
+//             }
+//         }
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - 1.5px);
+//             transition: all .2s linear;
+//         }
+//         .msg {
+//             width: auto;
+//             height: auto;
+//             border-radius: $dist3;
+//             padding: $dist1 $dist2;
+//             position: relative;
+//             background-color: lighten($redColor2, 5%);
+//             position: absolute;
+//             right: 0;
+//             top: 115%;
+//             opacity: 0;
+//             visibility: hidden;
+//             transition: all .2s linear;
+//             p {
+//                 color: $whiteColor2;
+//                 font-size: $fontM - .2em;
+//             }
+//             i {
+//                 font-size: $fontXL;
+//                 color: lighten($redColor2, 5%);
+//                 position: absolute;
+//                 right: $dist2;
+//                 top: calc(0% - .6em);
+//             }
+//         }
+//         .msg.show {
+//             opacity: 1;
+//             visibility: visible;
+//             z-index: 2;
+//         }
+//     }
+//     .inputWrapper.textarea {
+//         width: 100%;
+//         height: auto;
+//         position: relative;
+//         margin: $dist2;
+//         display: flex;
+//         textarea {
+//             width: 100%;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             padding: $dist1;
+//             line-height: $dist2 ;
+//             transition: all .2s linear;
+//             resize: none;
+
+//             &::placeholder {
+//                 font-size: $fontM;
+//                 color: $textGrey;
+//             }
+//         }
+
+//         textarea.style1 {
+//             height: 8em;
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist2;
+
+//             ~label {
+//                 bottom: 100%;
+//                 transform: translateY(150%);
+//             }
+
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+
+//                 ~label {
+//                     font-size: 8px;
+//                     right: $dist1;
+//                     color: $primaryColor;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(0);
+//                 }
+//             }
+//         }
+
+//         textarea.style2 {
+//             height: 4em;
+//             max-height: 12em;
+//             overflow: auto;
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
+
+//             ~label {
+//                 bottom: 50%;
+//                 transform: translateY(50%);
+//             }
+
+//             &:focus {
+//                 border-bottom: 1.2px solid $primaryColor;
+
+//                 ~label {
+//                     font-size: 8px;
+//                     right: 0;
+//                     color: $primaryColor;
+//                     bottom: calc(100% + 0em);
+//                     transform: translateY(0);
+//                 }
+
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+
+//         textarea.style1.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+
+//         textarea.style2.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+
+//         textarea.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 2em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+
+//         textarea.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 1em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             position: absolute;
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             transition: all .2s linear;
+//             color: lighten($textGrey, 25%);
+
+//             i {
+//                 font-size: $fontM;
+//             }
+
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - .6px);
+//             transition: all .2s linear;
+//         }
+//     }
+//     button[type="submit"] {
+//         width: auto;
+//         height: auto;
+//         padding: .5em $dist3 - .5em;
+//         margin: 0 auto;
+//         border-radius: $dist3;
+//         font-size: $fontL;
+//         position: relative ;
+//         @include swapColor($textWhite,$primaryColor) ;
+//     }
+// }
+// @include resizeTablet('form#report');
+// @include resizeMobile('form#report');
+// @include resizeTablet('form#requestAd');
+// @include resizeMobile('form#requestAd');
+// @include mediaQ(400px){
+//     form#report,form#requestAd{
+//         width: 90% ;
+//         img{
+//             width: 14em ;
+//             height: 16em;
+//         }
+//         .inputWrapper.text {
+//             width: 90%;
+//             height: 4em;
+//             position: relative;
+//             margin: $dist2;
+//         }
+//         .inputWrapper.textarea {
+//             width: 100%;
+//             textarea.style1 {
+//                 height: 13em;
+//             }
+//         }
+//     }   
+// }
+// form#requestAd{
+//     img{
+//         width: 14em ;
+//         height: 14em;
+//     }
+// }
+// // form#login{
+//     width: 40em;
+//     height: auto;
+//     padding: $dist2;
+//     margin: 0 ;
+//     position: fixed ;
+//     top: 50% ;
+//     right: 50% ;
+//     transform: translate(50%,-50%) ;
+//     display: flex;
+//     @include flex(column, flex-start, center, nowrap, "");
+//     img{
+//         width: 12em ;
+//         height: 10em;
+//     }
+//     h4 {
+//         font-size: $fontL;
+//         font-weight: 700;
+//         color: $darkColor;
+//     }
+//     .inputWrapper.text {
+//         width: 35em;
+//         height: 4em;
+//         position: relative;
+//         margin-top: $dist2;
+//         &:nth-child(4){margin-top: $dist3 ;}
+//         input {
+//             width: 100%;
+//             height: 100%;
+//             line-height: 4em;
+//             padding: 0 $dist1;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             transition: all .2s linear;
+//             &::placeholder {
+//                 color: $textGrey;
+//                 font-size: $fontM;
+//             }
+//         }
+//         input.style1 {
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
+
+//             &:focus {
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(50%);
+//                     right: 0;
+//                 }
+
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//         input.style2 {
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist3;
+
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + 1.5em);
+//                     transform: translateY(50%);
+//                     right: $dist1;
+//                 }
+
+//                 ~.line {
+//                     width: 0%;
+//                 }
+//             }
+//         }
+//         input.style1.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//             ~.line {
+//                 background-color: lighten($redColor2, 5%);
+//             }
+//         }
+//         input.style2.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             bottom: 50%;
+//             transform: translateY(50%);
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             color: lighten($textGrey, 20%);
+//             transition: all .2s linear;
+//             .icon {
+//                 font-size: $fontM;
+//             }
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+//         input.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + .5em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+//         input.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 1.5em);
+//                 transform: translateY(50%);
+//                 right: $dist1;
+//             }
+//         }
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - 1px);
+//             transition: all .2s linear;
+//         }
+//         .msg {
+//             width: auto;
+//             height: auto;
+//             border-radius: $dist3;
+//             padding: $dist1 $dist2;
+//             position: relative;
+//             background-color: lighten($redColor2, 5%);
+//             position: absolute;
+//             right: 0;
+//             top: 115%;
+//             opacity: 0;
+//             visibility: hidden;
+//             transition: all .2s linear;
+//             p {
+//                 color: $whiteColor2;
+//                 font-size: $fontM - .2em;
+//             }
+//             i {
+//                 font-size: $fontXL;
+//                 color: lighten($redColor2, 5%);
+//                 position: absolute;
+//                 right: $dist2;
+//                 top: calc(0% - .6em);
+//             }
+//         }
+//         .msg.show {
+//             opacity: 1;
+//             visibility: visible;
+//             z-index: 2;
+//         }
+//     }
+//     .inputWrapper.checkboxes {
+//         width: auto;
+//         height: auto;
+//         display: flex;
+//         @include flex(column, flex-start, flex-start, nowrap, "");
+//         margin-top: 0;
+//         .checkbox {
+//             width: auto;
+//             height: auto;
+//             padding-right: $dist1;
+//             margin-top: $dist2 ;
+//             input[type="checkbox"] {
+//                 width: 0;
+//                 height: 0;
+//                 display: none;
+//             }
+//             input[type="checkbox"].style1 {
+//                 &:checked {
+//                     ~label {
+//                         .rect {
+//                             width: 2em;
+//                             height: 1em;
+//                             border-radius: 0;
+//                             border-top: none;
+//                             border-right: none;
+//                             border-left: 1.2px solid $primaryColor;
+//                             border-bottom: 1.2px solid $primaryColor;
+//                             transform: translateY(-.3em) rotate(-45deg);
+//                         }
+
+//                         p {
+//                             color: $primaryColor;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             input[type="checkbox"].style2 {
+//                 &:checked {
+//                     ~label {
+//                         .rect {
+//                             border: 1px solid transparent;
+//                             background-color: $primaryColor;
+
+//                             i {
+//                                 opacity: 1;
+//                             }
+//                         }
+
+//                         p {
+//                             color: $primaryColor;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             label {
+//                 cursor: pointer;
+//                 width: 100%;
+//                 height: 100%;
+//                 line-height: 2.5em;
+//                 display: flex;
+//                 @include flex(row, flex-start, center, nowrap, "");
+
+//                 .rect {
+//                     flex-shrink: 0;
+//                     width: 2em;
+//                     height: 2em;
+//                     border: 1px solid darken($textGrey, 15%);
+//                     position: relative;
+//                     transition: all .2s linear;
+//                     border-radius: .45em;
+
+//                     i {
+//                         opacity: 0;
+//                         font-size: $fontM;
+//                         color: $whiteColor2;
+//                         transition: all .2s linear;
+//                     }
+//                 }
+
+//                 p {
+//                     width: auto;
+//                     font-size: $fontS + .2em;
+//                     color: lighten($textGrey, 0%);
+//                     margin-right: .3em;
+//                     transition: all .2s linear;
+//                 }
+//             }
+//         }
+//     }
+//     button[type="submit"] {
+//         width: auto;
+//         height: auto;
+//         padding: .3em $dist2 + .5em;
+//         margin: $dist3 auto 0 auto;
+//         border-radius: $dist3;
+//         font-size: $fontL;
+//         @include swapColor($textWhite,$primaryColor) ;
+//     }
+//     a.rememberPassword{
+//         font-size: $fontS + .1em;
+//         color: lighten($textGrey,0%) ;
+//         position: absolute ;
+//         right: 0 ;
+//         top: 140% ;
+//     }
+//     a.signup{
+//         font-size: $fontM ;
+//         color: lighten($textGrey,0%) ;
+//         margin-top: $dist2 ;
+//     }
+// }
+// @include resizeTablet('form#login') ;
+// @include resizeMobile('form#login') ;
+// form#forgetPassword{
+//     width: 40em;
+//     height: auto;
+//     padding: $dist2;
+//     margin: 0 ;
+//     position: fixed ;
+//     top: 50% ;
+//     right: 50% ;
+//     transform: translate(50%,-50%) ;
+//     display: flex;
+//     @include flex(column, flex-start, center, nowrap, "");
+//     img{
+//         width: 12em ;
+//         height: 10em;
+//     }
+//     h4 {
+//         font-size: $fontL;
+//         font-weight: 700;
+//         color: $darkColor;
+//     }
+//     .inputWrapper.text {
+//         width: 35em;
+//         height: 4em;
+//         position: relative;
+//         margin-top: $dist2;
+//         input {
+//             width: 100%;
+//             height: 100%;
+//             line-height: 4em;
+//             padding: 0 $dist1;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             transition: all .2s linear;
+//             &::placeholder {
+//                 color: $textGrey;
+//                 font-size: $fontM;
+//             }
+//         }
+//         input.style1 {
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
+
+//             &:focus {
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(50%);
+//                     right: 0;
+//                 }
+
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//         input.style2 {
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist3;
+
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + 1.5em);
+//                     transform: translateY(50%);
+//                     right: $dist1;
+//                 }
+
+//                 ~.line {
+//                     width: 0%;
+//                 }
+//             }
+//         }
+//         input.style1.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//             ~.line {
+//                 background-color: lighten($redColor2, 5%);
+//             }
+//         }
+//         input.style2.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             bottom: 50%;
+//             transform: translateY(50%);
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             color: lighten($textGrey, 20%);
+//             transition: all .2s linear;
+//             .icon {
+//                 font-size: $fontM;
+//             }
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+//         input.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + .5em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+//         input.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 1.5em);
+//                 transform: translateY(50%);
+//                 right: $dist1;
+//             }
+//         }
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - .6px);
+//             transition: all .2s linear;
+//         }
+//         .msg {
+//             width: auto;
+//             height: auto;
+//             border-radius: $dist3;
+//             padding: $dist1 $dist2;
+//             position: relative;
+//             background-color: lighten($redColor2, 5%);
+//             position: absolute;
+//             right: 0;
+//             top: 115%;
+//             opacity: 0;
+//             visibility: hidden;
+//             transition: all .2s linear;
+//             p {
+//                 color: $whiteColor2;
+//                 font-size: $fontM - .2em;
+//             }
+//             i {
+//                 font-size: $fontXL;
+//                 color: lighten($redColor2, 5%);
+//                 position: absolute;
+//                 right: $dist2;
+//                 top: calc(0% - .6em);
+//             }
+//         }
+//         .msg.show {
+//             opacity: 1;
+//             visibility: visible;
+//             z-index: 2;
+//         }
+//         .rememberPassword{
+//             font-size: $fontS ;
+//             color: lighten($textGrey,10%) ;
+//             position: absolute ;
+//             right: 0 ;
+//             top: 140% ;
+//         }
+//     }
+//     button[type="submit"] {
+//         width: auto;
+//         height: auto;
+//         padding: .3em $dist2 + .5em;
+//         margin-top: $dist2 ;
+//         border-radius: $dist3;
+//         font-size: $fontL;
+//         @include swapColor($textWhite,$primaryColor) ;
+//     }
+//     a.login{
+//         font-size: $fontS + .2em ;
+//         color: $textGrey ;
+//         margin-top: $dist2 ;
+//     }
+// }
+// @include resizeTablet('form#forgetPassword') ;
+// @include resizeMobile('form#forgetPassword') ;
+// form#signup {
+//     width: 40em;
+//     height: auto;
+//     padding: $dist2;
+//     margin: 0 ;
+//     position: fixed ;
+//     top: 50% ;
+//     right: 50% ;
+//     transform: translate(50%,-50%) ;
+//     display: flex;
+//     @include flex(column, flex-start, center, nowrap, "");
+//     img{
+//         width: 12em ;
+//         height: 10em;
+//     }
+//     h4 {
+//         font-size: $fontL;
+//         font-weight: 700;
+//         color: $darkColor;
+//     }
+//     .inputWrapper.text {
+//         width: 35em;
+//         height: 4em;
+//         position: relative;
+//         margin-top: $dist2 + .5em;
+//         input {
+//             width: 100%;
+//             height: 100%;
+//             line-height: 4em;
+//             padding: 0 $dist1;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             transition: all .2s linear;
+//             &::placeholder {
+//                 color: $textGrey;
+//                 font-size: $fontM;
+//             }
+//         }
+//         input.style1 {
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
+
+//             &:focus {
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(50%);
+//                     right: 0;
+//                 }
+
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//         input.style2 {
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist3;
+
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+
+//                 ~label {
+//                     color: $primaryColor;
+//                     font-size: 8px;
+//                     bottom: calc(100% + 1.5em);
+//                     transform: translateY(50%);
+//                     right: $dist1;
+//                 }
+
+//                 ~.line {
+//                     width: 0%;
+//                 }
+//             }
+//         }
+//         input.style1.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//             ~.line {
+//                 background-color: lighten($redColor2, 5%);
+//             }
+//         }
+//         input.style2.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             bottom: 50%;
+//             transform: translateY(50%);
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             color: lighten($textGrey, 20%);
+//             transition: all .2s linear;
+//             .icon {
+//                 font-size: $fontM;
+//             }
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+//         input.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + .5em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+//         input.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 1.5em);
+//                 transform: translateY(50%);
+//                 right: $dist1;
+//             }
+//         }
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - 1px);
+//             transition: all .2s linear;
+//         }
+//         .msg {
+//             width: auto;
+//             height: auto;
+//             border-radius: $dist3;
+//             padding: $dist1 $dist2;
+//             position: relative;
+//             background-color: lighten($redColor2, 5%);
+//             position: absolute;
+//             right: 0;
+//             top: 115%;
+//             opacity: 0;
+//             visibility: hidden;
+//             transition: all .2s linear;
+//             p {
+//                 color: $whiteColor2;
+//                 font-size: $fontM - .2em;
+//             }
+//             i {
+//                 font-size: $fontXL;
+//                 color: lighten($redColor2, 5%);
+//                 position: absolute;
+//                 right: $dist2;
+//                 top: calc(0% - .6em);
+//             }
+//         }
+//         .msg.show {
+//             opacity: 1;
+//             visibility: visible;
+//             z-index: 2;
+//         }
+//     }
+//     .inputWrapper.checkboxes {
+//         width: auto;
+//         height: auto;
+//         display: flex;
+//         @include flex(column, flex-start, flex-start, nowrap, "");
+//         margin-top: 0;
+//         .checkbox {
+//             width: auto;
+//             height: auto;
+//             padding-right: $dist1;
+//             margin-top: $dist2 ;
+//             input[type="checkbox"] {
+//                 width: 0;
+//                 height: 0;
+//                 display: none;
+//             }
+//             input[type="checkbox"].style1 {
+//                 &:checked {
+//                     ~label {
+//                         .rect {
+//                             width: 2em;
+//                             height: 1em;
+//                             border-radius: 0;
+//                             border-top: none;
+//                             border-right: none;
+//                             border-left: 1.2px solid $primaryColor;
+//                             border-bottom: 1.2px solid $primaryColor;
+//                             transform: translateY(-.3em) rotate(-45deg);
+//                         }
+
+//                         p {
+//                             color: $primaryColor;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             input[type="checkbox"].style2 {
+//                 &:checked {
+//                     ~label {
+//                         .rect {
+//                             border: 1px solid transparent;
+//                             background-color: $primaryColor;
+
+//                             i {
+//                                 opacity: 1;
+//                             }
+//                         }
+
+//                         p {
+//                             color: $primaryColor;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             label {
+//                 cursor: pointer;
+//                 width: 100%;
+//                 height: 100%;
+//                 line-height: 2.5em;
+//                 display: flex;
+//                 @include flex(row, flex-start, center, nowrap, "");
+
+//                 .rect {
+//                     flex-shrink: 0;
+//                     width: 2em;
+//                     height: 2em;
+//                     border: 1px solid darken($textGrey, 15%);
+//                     position: relative;
+//                     transition: all .2s linear;
+//                     border-radius: .45em;
+
+//                     i {
+//                         opacity: 0;
+//                         font-size: $fontM;
+//                         color: $whiteColor2;
+//                         transition: all .2s linear;
+//                     }
+//                 }
+
+//                 p {
+//                     width: auto;
+//                     font-size: $fontS + .2em;
+//                     color: lighten($textGrey, 0%);
+//                     margin-right: .3em;
+//                     transition: all .2s linear;
+//                 }
+//             }
+//         }
+//     }
+//     button[type="submit"] {
+//         width: auto;
+//         height: auto;
+//         padding: .3em $dist2 + .5em;
+//         margin-top: $dist2 ;
+//         border-radius: $dist3;
+//         font-size: $fontL;
+//         @include swapColor($textWhite,$primaryColor) ;
+//     }
+//     a.login{
+//         font-size: $fontM ;
+//         color: lighten($textGrey,0%) ;
+//         margin-top: $dist2 ;
+//     }
+// }
+// @include resizeTablet('form#signup') ;
+// @include resizeMobile('form#signup') ;
+// form#userComment{
+//     width: auto;
+//     display: flex;
+//     @include flex(column,flex-start,flex-start,nowrap,"") ;
+//     .row{
+//         width: auto ;
+//         height: auto;
+//         margin-top: $dist2;
+//         display: flex;
+//         @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+//         .inputWrapper.text {
+//             width: 25em;
+//             height: 4em;
+//             position: relative;
+//             &:not(:first-child){margin-right: $dist3;}
+//             input {
+//                 width: 100%;
+//                 height: 100%;
+//                 line-height: 4em;
+//                 padding: 0 $dist1;
+//                 font-size: $fontM;
+//                 color: $darkColor;
+//                 transition: all .2s linear;
+//                 &::placeholder {
+//                     color: $textGrey;
+//                     font-size: $fontM;
+//                 }
+//             }
+//             input.style1 {
+//                 border: none;
+//                 border-bottom: 1.2px solid lighten($textGrey, 25%);
+    
+//                 &:focus {
+//                     ~label {
+//                         color: $primaryColor;
+//                         font-size: 8px;
+//                         bottom: calc(100% + .5em);
+//                         transform: translateY(50%);
+//                         right: 0;
+//                     }
+    
+//                     ~.line {
+//                         width: 100%;
+//                     }
+//                 }
+//             }
+    
+//             input.style2 {
+//                 border: 1.2px solid lighten($textGrey, 25%);
+//                 border-radius: $dist3;
+    
+//                 &:focus {
+//                     border: 1.2px solid $primaryColor;
+    
+//                     ~label {
+//                         color: $primaryColor;
+//                         font-size: 8px;
+//                         bottom: calc(100% + 1.5em);
+//                         transform: translateY(50%);
+//                         right: $dist1;
+//                     }
+    
+//                     ~.line {
+//                         width: 0%;
+//                     }
+//                 }
+//             }
+    
+//             input.style1.error {
+//                 border-bottom: 1.2px solid lighten($redColor2, 5%);
+    
+//                 ~label {
+//                     color: lighten($redColor2, 5%);
+//                 }
+    
+//                 ~.line {
+//                     background-color: lighten($redColor2, 5%);
+//                 }
+//             }
+    
+//             input.style2.error {
+//                 border: 1.2px solid lighten($redColor2, 5%);
+    
+//                 ~label {
+//                     color: lighten($redColor2, 5%);
+//                 }
+//             }
+    
+//             label {
+//                 width: auto;
+//                 height: auto;
+//                 position: absolute;
+//                 right: $dist1;
+//                 bottom: 50%;
+//                 transform: translateY(50%);
+//                 display: flex;
+//                 @include flex(row, flex-start, center, nowrap, "");
+//                 color: lighten($textGrey, 20%);
+//                 transition: all .2s linear;
+    
+//                 .icon {
+//                     font-size: $fontM;
+//                 }
+    
+//                 p {
+//                     font-size: $fontM - .1em;
+//                     transform: translateX(-.3em);
+//                 }
+//             }
+    
+//             input.style1 {
+//                 ~label.top {
+//                     font-size: 8px;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(50%);
+//                     right: 0;
+//                 }
+//             }
+    
+//             input.style2 {
+//                 ~label.top {
+//                     font-size: 8px;
+//                     bottom: calc(100% + 1.5em);
+//                     transform: translateY(50%);
+//                     right: $dist1;
+//                 }
+//             }
+    
+//             .line {
+//                 width: 0%;
+//                 height: 1.2px;
+//                 background-color: $primaryColor;
+//                 position: absolute;
+//                 right: 0;
+//                 top: calc(100% - 1px);
+//                 transition: all .2s linear;
+//             }
+    
+//             .msg {
+//                 width: auto;
+//                 height: auto;
+//                 border-radius: $dist3;
+//                 padding: $dist1 $dist2;
+//                 position: relative;
+//                 background-color: lighten($redColor2, 5%);
+//                 position: absolute;
+//                 right: 0;
+//                 top: 115%;
+//                 opacity: 0;
+//                 visibility: hidden;
+//                 transition: all .2s linear;
+    
+//                 p {
+//                     color: $whiteColor2;
+//                     font-size: $fontM - .2em;
+//                 }
+    
+//                 i {
+//                     font-size: $fontXL;
+//                     color: lighten($redColor2, 5%);
+//                     position: absolute;
+//                     right: $dist2;
+//                     top: calc(0% - .6em);
+//                 }
+//             }
+    
+//             .msg.show {
+//                 opacity: 1;
+//                 visibility: visible;
+//                 z-index: 2;
+//             }
+//         }
+//     }
+//     .inputWrapper.textarea {
+//         width: 53em;
+//         height: auto;
+//         position: relative;
+//         margin-top: $dist3;
+//         display: flex;
+//         textarea {
+//             // we set height/max-height via js
+//             width: 100%;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             padding: $dist1;
+//             line-height: $dist2 ;
+//             transition: all .2s linear;
+//             resize: none;
+//             &::placeholder {
+//                 font-size: $fontM;
+//                 color: $textGrey;
+//             }
+//         }
+//         textarea.style1 {
+//             height: 8em;
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist2;
+//             ~label {
+//                 bottom: 100%;
+//                 transform: translateY(150%);
+//             }
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+//                 ~label {
+//                     font-size: 8px;
+//                     right: $dist1;
+//                     color: $primaryColor;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(0);
+//                 }
+//             }
+//         }
+//         textarea.style2 {
+//             overflow: hidden;
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
+//             ~label {
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//             }
+//             &:focus {
+//                 border-bottom: 1.2px solid $primaryColor;
+//                 ~label {
+//                     font-size: 8px;
+//                     right: 0;
+//                     color: $primaryColor;
+//                     top: 0;
+//                     transform: translateY(-100%);
+//                 }
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//         textarea.style1.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+//         textarea.style2.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+//         textarea.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 2em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+//         textarea.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 top: 0;
+//                 transform: translateY(-100%);
+//                 right: 0;                            
+//             }
+//         }
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             position: absolute;
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             transition: all .2s linear;
+//             color: lighten($textGrey,20%);
+//             i {
+//                 font-size: $fontM;
+//             }
+
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - .6px);
+//             transition: all .2s linear;
+//         }
+//     }
+//     button[type="submit"] {
+//         width: auto;
+//         height: auto;
+//         padding: .5em $dist2 + .2em;
+//         margin: $dist2 auto 0 auto;
+//         border-radius: $dist3;
+//         font-size: $fontM;
+//         @include swapColor($textWhite,$primaryColor) ; 
+//     }
+// }
+// @include mediaQ(360px){
+//     form#userComment{
+//         width: 100%;
+//         @include flex(column,flex-start,center,nowrap,"") ;
+//         .row{
+//             @include flex(row,center,center,wrap,flex-start) ;
+//             width: 100%;
+//             .inputWrapper.text {
+//                 width: 90%;
+//                 height: 4em;
+//                 position: relative;
+//                 &:not(:first-child){
+//                     margin-right: 0;
+//                     margin-top: $dist3;
+//                 }
+//             }
+//         }
+//         .inputWrapper.textarea {
+//             width: 90%;
+//         }
+//     }
+// }
+// form.reply{
+//     width: auto;
+//     height: auto;
+//     margin-top: -$dist1;
+//     display: flex;
+//     @include flex(column,flex-start,center,nowrap,"") ;
+//     .inputWrapper.textarea {
+//         width: 53em;
+//         height: auto;
+//         position: relative;
+//         margin-top: $dist3;
+//         display: flex;
+//         textarea {
+//             width: 100%;
+//             font-size: $fontM;
+//             color: $darkColor;
+//             padding: $dist1;
+//             line-height: $dist2 ;
+//             transition: all .2s linear;
+//             resize: none;
+//             &::placeholder {
+//                 font-size: $fontM;
+//                 color: $textGrey;
+//             }
+//         }
+//         textarea.style1 {
+//             height: 8em;
+//             border: 1.2px solid lighten($textGrey, 25%);
+//             border-radius: $dist2;
+//             ~label {
+//                 bottom: 100%;
+//                 transform: translateY(150%);
+//             }
+//             &:focus {
+//                 border: 1.2px solid $primaryColor;
+//                 ~label {
+//                     font-size: 8px;
+//                     right: $dist1;
+//                     color: $primaryColor;
+//                     bottom: calc(100% + .5em);
+//                     transform: translateY(0);
+//                 }
+//             }
+//         }
+//         textarea.style2 {
+//             overflow: hidden;
+//             border: none;
+//             border-bottom: 1.2px solid lighten($textGrey, 25%);
+//             ~label {
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//             }
+//             &:focus {
+//                 border-bottom: 1.2px solid $primaryColor;
+//                 ~label {
+//                     font-size: 8px;
+//                     right: 0;
+//                     color: $primaryColor;
+//                     top: 0;
+//                     transform: translateY(-100%);
+//                 }
+//                 ~.line {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//         textarea.style1.error {
+//             border: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+//         textarea.style2.error {
+//             border-bottom: 1.2px solid lighten($redColor2, 5%);
+
+//             ~label {
+//                 color: lighten($redColor2, 5%);
+//             }
+//         }
+//         textarea.style1 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 bottom: calc(100% + 2em);
+//                 transform: translateY(50%);
+//                 right: 0;
+//             }
+//         }
+//         textarea.style2 {
+//             ~label.top {
+//                 font-size: 8px;
+//                 top: 0;
+//                 transform: translateY(-100%);
+//                 right: 0;                            
+//             }
+//         }
+//         label {
+//             width: auto;
+//             height: auto;
+//             position: absolute;
+//             right: $dist1;
+//             position: absolute;
+//             display: flex;
+//             @include flex(row, flex-start, center, nowrap, "");
+//             transition: all .2s linear;
+//             color: lighten($textGrey, 25%);
+
+//             i {
+//                 font-size: $fontM;
+//             }
+
+//             p {
+//                 font-size: $fontM - .1em;
+//                 transform: translateX(-.3em);
+//             }
+//         }
+//         .line {
+//             width: 0%;
+//             height: 1.2px;
+//             background-color: $primaryColor;
+//             position: absolute;
+//             right: 0;
+//             top: calc(100% - .6px);
+//             transition: all .2s linear;
+//         }
+//     }
+//     button[type="submit"] {
+//         width: auto;
+//         height: auto;
+//         padding: .5em $dist2 + .2em;
+//         margin: $dist1 auto;
+//         border-radius: $dist3;
+//         font-size: $fontM;
+//         @include swapColor($textWhite,$primaryColor) ; 
+//     }
+// }
+// @include mediaQ(400px){
+//     form.reply{
+//         width: 100%;
+//         .inputWrapper.textarea {
+//             width: 90%;
+//         }    
+//     }
+// }
 @include mediaQ(900px){
     form#sample {
         font-size: 8px ;
@@ -3275,87 +3317,7 @@ form.reply{
             }
         }
     }
-    form#contact{
-        font-size: 8px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 6px;}                  
-                }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 6px;}
-                }
-            }  
-            input.style1 {
-                ~label.top {font-size: 6px;}
-            }
-    
-            input.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 6px;}
-                }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 6px;}
-                }
-            }
-            textarea.style1 {
-                ~label.top {font-size: 6px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-    }
-    form#report,form#requestAd {
-        font-size: 8px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 6px;}                  
-                }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 6px;}
-                }
-            }  
-            input.style1 {
-                ~label.top {font-size: 6px;}
-            }
-    
-            input.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 6px;}
-                }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 6px;}
-                }
-            }
-            textarea.style1 {
-                ~label.top {font-size: 6px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-    }
-    form#login {
+    form#rss {
         font-size: 8px ;
         .inputWrapper.text {
             input.style1 {
@@ -3377,114 +3339,216 @@ form.reply{
             }
         }
     }
-    form#forgetPassword {
-        font-size: 8px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 6px;}                  
-                }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 6px;}
-                }
-            }  
-            input.style1 {
-                ~label.top {font-size: 6px;}
-            }
+    // form#contact{
+    //     font-size: 8px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
     
-            input.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-    }
-    form#signup {
-        font-size: 8px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 6px;}                  
-                }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 6px;}
-                }
-            }  
-            input.style1 {
-                ~label.top {font-size: 6px;}
-            }
+    //         input.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    //     .inputWrapper.textarea {   
+    //         textarea.style1 {
+    //             &:focus {    
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }
+    //         textarea.style2 {
+    //             &:focus {    
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }
+    //         textarea.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //         textarea.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    // }
+    // form#report,form#requestAd {
+    //     font-size: 8px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
     
-            input.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-    }
-    form#userComment {
-        font-size: 8px ;
-        .row{
-            .inputWrapper.text {
-                input.style1 {
-                    &:focus {
-                        ~label {font-size: 6px;}                  
-                    }
-                }
-                input.style2 {
-                    &:focus {
-                        ~label {font-size: 6px;}
-                    }
-                }  
-                input.style1 {
-                    ~label.top {font-size: 6px;}
-                }
+    //         input.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    //     .inputWrapper.textarea {   
+    //         textarea.style1 {
+    //             &:focus {    
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }
+    //         textarea.style2 {
+    //             &:focus {    
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }
+    //         textarea.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //         textarea.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    // }
+    // form#login {
+    //     font-size: 8px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    
+    //         input.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    // }
+    // form#forgetPassword {
+    //     font-size: 8px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    
+    //         input.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    // }
+    // form#signup {
+    //     font-size: 8px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    
+    //         input.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    // }
+    // form#userComment {
+    //     font-size: 8px ;
+    //     .row{
+    //         .inputWrapper.text {
+    //             input.style1 {
+    //                 &:focus {
+    //                     ~label {font-size: 6px;}                  
+    //                 }
+    //             }
+    //             input.style2 {
+    //                 &:focus {
+    //                     ~label {font-size: 6px;}
+    //                 }
+    //             }  
+    //             input.style1 {
+    //                 ~label.top {font-size: 6px;}
+    //             }
         
-                input.style2 {
-                    ~label.top {font-size: 6px;}
-                }
-            }
-        }
+    //             input.style2 {
+    //                 ~label.top {font-size: 6px;}
+    //             }
+    //         }
+    //     }
         
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 6px;}
-                }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 6px;}
-                }
-            }
-            textarea.style1 {
-                ~label.top {font-size: 6px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-    }
-    form.reply {
-        font-size: 8px ;
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 6px;}
-                }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 6px;}
-                }
-            }
-            textarea.style1 {
-                ~label.top {font-size: 6px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 6px;}
-            }
-        }
-    }
+    //     .inputWrapper.textarea {   
+    //         textarea.style1 {
+    //             &:focus {    
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }
+    //         textarea.style2 {
+    //             &:focus {    
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }
+    //         textarea.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //         textarea.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    // }
+    // form.reply {
+    //     font-size: 8px ;
+    //     .inputWrapper.textarea {   
+    //         textarea.style1 {
+    //             &:focus {    
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }
+    //         textarea.style2 {
+    //             &:focus {    
+    //                 ~label {font-size: 6px;}
+    //             }
+    //         }
+    //         textarea.style1 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //         textarea.style2 {
+    //             ~label.top {font-size: 6px;}
+    //         }
+    //     }
+    // }
 }
 @include mediaQ(600px){
     form#sample {
@@ -3563,87 +3627,7 @@ form.reply{
             }
         }
     }
-    form#contact {
-        font-size: 6px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 4px;}                  
-                }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 4px;}
-                }
-            }  
-            input.style1 {
-                ~label.top {font-size: 4px;}
-            }
-    
-            input.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 4px;}
-                }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 4px;}
-                }
-            }
-            textarea.style1 {
-                ~label.top {font-size: 4px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-    }
-    form#report,form#requestAd {
-        font-size: 6px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 4px;}                  
-                }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 4px;}
-                }
-            }  
-            input.style1 {
-                ~label.top {font-size: 4px;}
-            }
-    
-            input.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 4px;}
-                }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 4px;}
-                }
-            }
-            textarea.style1 {
-                ~label.top {font-size: 4px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-    }
-    form#login {
+    form#rss {
         font-size: 6px ;
         .inputWrapper.text {
             input.style1 {
@@ -3665,113 +3649,215 @@ form.reply{
             }
         }
     }
-    form#forgetPassword {
-        font-size: 6px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 4px;}                  
-                }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 4px;}
-                }
-            }  
-            input.style1 {
-                ~label.top {font-size: 4px;}
-            }
+    // form#contact {
+    //     font-size: 6px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
     
-            input.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-    }
-    form#signup {
-        font-size: 6px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 4px;}                  
-                }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 4px;}
-                }
-            }  
-            input.style1 {
-                ~label.top {font-size: 4px;}
-            }
+    //         input.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    //     .inputWrapper.textarea {   
+    //         textarea.style1 {
+    //             &:focus {    
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }
+    //         textarea.style2 {
+    //             &:focus {    
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }
+    //         textarea.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //         textarea.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    // }
+    // form#report,form#requestAd {
+    //     font-size: 6px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
     
-            input.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-    }
-    form#userComment {
-        font-size: 6px ;
-        .row{
-            .inputWrapper.text {
-                input.style1 {
-                    &:focus {
-                        ~label {font-size: 4px;}                  
-                    }
-                }
-                input.style2 {
-                    &:focus {
-                        ~label {font-size: 4px;}
-                    }
-                }  
-                input.style1 {
-                    ~label.top {font-size: 4px;}
-                }
+    //         input.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    //     .inputWrapper.textarea {   
+    //         textarea.style1 {
+    //             &:focus {    
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }
+    //         textarea.style2 {
+    //             &:focus {    
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }
+    //         textarea.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //         textarea.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    // }
+    // form#login {
+    //     font-size: 6px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    
+    //         input.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    // }
+    // form#forgetPassword {
+    //     font-size: 6px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    
+    //         input.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    // }
+    // form#signup {
+    //     font-size: 6px ;
+    //     .inputWrapper.text {
+    //         input.style1 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}                  
+    //             }
+    //         }
+    //         input.style2 {
+    //             &:focus {
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }  
+    //         input.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    
+    //         input.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    // }
+    // form#userComment {
+    //     font-size: 6px ;
+    //     .row{
+    //         .inputWrapper.text {
+    //             input.style1 {
+    //                 &:focus {
+    //                     ~label {font-size: 4px;}                  
+    //                 }
+    //             }
+    //             input.style2 {
+    //                 &:focus {
+    //                     ~label {font-size: 4px;}
+    //                 }
+    //             }  
+    //             input.style1 {
+    //                 ~label.top {font-size: 4px;}
+    //             }
         
-                input.style2 {
-                    ~label.top {font-size: 4px;}
-                }
-            }
-        }
+    //             input.style2 {
+    //                 ~label.top {font-size: 4px;}
+    //             }
+    //         }
+    //     }
         
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 4px;}
-                }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 4px;}
-                }
-            }
-            textarea.style1 {
-                ~label.top {font-size: 4px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-    }
-    form.reply {
-        font-size: 6px ;
-        .inputWrapper.textarea {   
-            textarea.style1 {
-                &:focus {    
-                    ~label {font-size: 4px;}
-                }
-            }
-            textarea.style2 {
-                &:focus {    
-                    ~label {font-size: 4px;}
-                }
-            }
-            textarea.style1 {
-                ~label.top {font-size: 4px;}
-            }
-            textarea.style2 {
-                ~label.top {font-size: 4px;}
-            }
-        }
-    }
+    //     .inputWrapper.textarea {   
+    //         textarea.style1 {
+    //             &:focus {    
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }
+    //         textarea.style2 {
+    //             &:focus {    
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }
+    //         textarea.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //         textarea.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    // }
+    // form.reply {
+    //     font-size: 6px ;
+    //     .inputWrapper.textarea {   
+    //         textarea.style1 {
+    //             &:focus {    
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }
+    //         textarea.style2 {
+    //             &:focus {    
+    //                 ~label {font-size: 4px;}
+    //             }
+    //         }
+    //         textarea.style1 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //         textarea.style2 {
+    //             ~label.top {font-size: 4px;}
+    //         }
+    //     }
+    // }
 }
 
