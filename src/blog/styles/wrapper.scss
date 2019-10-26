@@ -1,0 +1,23 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import './categories.scss' ;
+@import './articles.scss' ;
+main{
+    width: 100%;
+    height: auto;
+    padding: 0 $dist4 * 2;
+    margin: $dist2 auto;
+    display: flex;
+    @include flex(row,flex-start,flex-start,nowrap,"") ;
+    #categories{
+        flex-shrink: 0;
+        width: 25em;
+        height: auto;
+    }
+    .articles,#article{
+        width: 100%;
+        height: auto;
+        margin-right: $dist4;
+    }
+}
