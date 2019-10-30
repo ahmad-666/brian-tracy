@@ -2,10 +2,11 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 .productSlider{
-    width: 55em ;
+    flex-shrink: 0;
+    width: 35em ;
     height: auto;
-    margin: $sectionsDist auto 0 auto ;
-    padding: $dist2 $dist1 ;
+    margin-right: $dist2  ;
+    // padding: $dist2 $dist1 ;
     display: flex ;
     @include flex(column,flex-start,center,nowrap,"") ;
     overflow: hidden;
@@ -36,8 +37,8 @@
         position: relative ;
         margin: $dist2 auto 0 auto ;
         .arrow{
-            width: 4em ;
-            height: 4em;
+            width: 3.5em ;
+            height: 3.5em;
             border-radius: 50% ;
             background-color: $purpleColor1 ;
             cursor: pointer;
@@ -59,7 +60,7 @@
             transition: all .3s linear ;
             .slide{
                 flex-shrink: 0 ;
-                width: calc((100% - (3 * 1.2em)) / 3) ;
+                width: calc((100% - (3 * 1.4em)) / 3) ;
                 height: 10em;
                 margin: 0 $dist1 ;
                 cursor: pointer;
@@ -68,7 +69,7 @@
                 &::before{
                     content: '' ;
                     @include fullSize-abs ;
-                    background-color: $blackFilter2 ;
+                    background-color: $blackFilter3 ;
                     transition: all .2s linear ;
                 }
                 &:hover{
@@ -83,7 +84,7 @@
                 }
             }
             .slide.active{
-                transform: scale(1.1) ;
+                transform: scale(1) ;
                 &::before{
                     background-color: transparent ;
                 }

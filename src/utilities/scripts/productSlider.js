@@ -1,7 +1,8 @@
+import util from '../utilities.js' ;
 //product slider------------------------------
 //product slider------------------------------
 //product slider------------------------------
-function ProductSlider(wrapper){
+function ProductSlider(wrapper,fixSliderWrapper){
     this.wrapper = wrapper ;
     this.currWrapper = this.wrapper.querySelector('.curr_wrapper') ;
     this.currSlides = this.currWrapper.querySelectorAll('.curr') ;
@@ -12,7 +13,7 @@ function ProductSlider(wrapper){
     this.slidesNum = this.slides.length ;
     this.prevIndex = null ;
     this.currIndex = 0 ;
-    this.offset = this.slides[this.currIndex].offsetWidth + parseFloat(getStyle(this.slides[this.currIndex],'margin-right')) + parseFloat(getStyle(this.slides[this.currIndex],'margin-left'));
+    this.offset = this.slides[this.currIndex].offsetWidth + parseFloat(util.getStyle(this.slides[this.currIndex],'margin-right')) + parseFloat(util.getStyle(this.slides[this.currIndex],'margin-left'));
     this.viewportSlides = Math.floor(this.slidesWrapper.offsetWidth/this.offset) ;
     this.nextBtn.addEventListener('click',this.nextSlide.bind(this)) ;
     this.prevBtn.addEventListener('click',this.prevSlide.bind(this)) ;
@@ -23,12 +24,15 @@ function ProductSlider(wrapper){
     this.slides.forEach(slide => {
         slide.addEventListener('click',this.slideClick.bind(this)) ;
     });
-    this.fixSlider = new FixSlider(document.querySelector('.fix_productSlider')) ;
+    //this.fixSlider = new FixSlider(document.querySelector('.fix_productSlider')) ;
+    if(fixSliderWrapper) this.fixSlider = new FixSlider(fixSliderWrapper) ;
     this.currWrapper.addEventListener('click',this.openFixSlider.bind(this)) ;
 }
 ProductSlider.prototype.openFixSlider = function(e){
-    this.fixSlider.wrapper.classList.add('show') ;
-    document.body.classList.add('disableScroll') ;
+    if(this.fixSlider){
+        this.fixSlider.wrapper.classList.add('show') ;
+        document.body.classList.add('disableScroll') ;
+    } 
 }
 ProductSlider.prototype.slideClick = function(e){
     this.changeSlide('none',e.currentTarget) ;
@@ -45,11 +49,13 @@ ProductSlider.prototype.changeSlide = function(dir,slide){
     this.prevIndex = this.currIndex ;
     if(dir == 'forward') this.currIndex = this.currIndex+1<=this.slidesNum-1 ? this.currIndex+1 : 0 ; 
     else if(dir == 'backward') this.currIndex = this.currIndex-1>=0 ? this.currIndex-1 : this.slidesNum-1 ;
-    else if(dir == 'none') this.currIndex = getChildIndex(this.slidesWrapper,slide) ;
+    else if(dir == 'none') this.currIndex = util.getChildIndex(this.slidesWrapper,slide) ;
     this.currSlides[this.currIndex].classList.add('active') ;
     this.slides[this.currIndex].classList.add('active') ;
-    this.fixSlider.currIndex = this.currIndex ;
-    this.fixSlider.moveSlider('none') ;
+    if(this.fixSlider){
+        this.fixSlider.currIndex = this.currIndex ;
+        this.fixSlider.moveSlider('none') ;
+    } 
     this.moveSlider(dir) ;
 }
 ProductSlider.prototype.moveSlider = function(dir){
@@ -60,7 +66,7 @@ ProductSlider.prototype.moveSlider = function(dir){
         else if(this.currIndex<=this.slidesNum-this.viewportSlides) movement = currPos - this.offset ;
         else {
             if(Math.abs(currPos - this.offset) <= this.threshold.max) movement = currPos - this.offset ;
-            else  movement = currPos ;
+            else movement = currPos ;
         }
     }
     else if(dir == 'backward'){
@@ -114,7 +120,7 @@ FixSlider.prototype.moveSlider = function(dir){
 //init productSlider------------------------------
 //init productSlider------------------------------
 //init productSlider------------------------------
-//new ProductSlider(document.querySelector('.productSlider')) ;
+//new ProductSlider(document.querySelector('.productSlider'),<fix-slider>) ;
 export default{
 	ProductSlider
 }

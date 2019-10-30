@@ -84,104 +84,119 @@
                     سخنرانی در جامعه
                 </a>
             </div>
+            <form novalidate id="searchProduct" name="searchProduct">
+                <div class="title">
+                    <div class="skew">
+                        <p>جست و جوی محصول</p>
+                    </div>
+                </div>
+                <div class="inputWrapper withSubmit">
+                    <input type="text" id="search" name="search" class="validate" placeholder="نام محصول را وارد کنید"
+                        required>
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="msg">
+                        <i class="fas fa-caret-up"></i>
+                        <p>نام محصول را باید وارد کنید</p>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="articles">
-            <div class="article">
-                <h4>عنوان مقاله</h4>
-                <div class="tags">
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                </div>
-                <div class="content">
-                    <img src="../assets/imgs/article.jpeg" alt="articleImg">
-                    <p class="desc">
-                        Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Quas ea, eaque, fugit
-                        eligendi dolorem odit omnis, ut saepe eum
-                        unde asperiores accusamus. Reprehenderit
-                        adipisci delectus optio voluptas non
-                        necessitatibus quibusdam.
+        <div id="product">
+            <div id="breadcrumb">
+                <a href="products.html" class="home">
+                    <i class="fas fa-home"></i>
+                    <p>خانه</p>
+                </a>
+                <i class="fas fa-angle-left arrow"></i>
+                <a href="products.html" class="category">نام دسته بندی</a>
+                <i class="fas fa-angle-left arrow"></i>
+                <a href="products.html" class="product">نام محصول</a>
+            </div>
+            <div class="infos">
+                <div class="info">
+                    <h4>نام محصول</h4>
+                    <p>
+                        توضیح کوتاه
+                        توضیح کوتاه
+                        توضیح کوتاه
+                        توضیح کوتاه
                     </p>
-                    <a class="showMore" href="article.html">
-                        <i class="fas fa-angle-double-left"></i>
-                        <p>اطلاعات بیشتر</p>
-                    </a>
+                    <button class="buy btn mid">خرید</button>
+                    <div class="desc">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, aliquam qui, ipsam odio, optio ea
+                            id quis natus error iusto blanditiis quia maiores sed recusandae. Ipsa delectus id nulla nostrum.
+                            Aliquam nulla assumenda incidunt eligendi neque, quasi officiis temporibus quod odit? Cupiditate sit
+                            est cum laborum, provident nostrum repellat. Beatae et atque itaque qui unde ipsum, quae nihil
+                            assumenda reprehenderit!
+                            Eum repudiandae porro facilis nostrum deleniti debitis nam laboriosam rem at eaque odit ducimus
+                            maiores quisquam, exercitationem, dolore quos. Voluptates quis eligendi perspiciatis. Et porro,
+                            consectetur quidem debitis maiores pariatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="productSlider">
+                    <div class="curr_wrapper">
+                        <div class="curr active fullSize-abs">
+                            <img src="../assets/imgs/productSlide1.jpg" alt="slide1">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="../assets/imgs/productSlide2.jpg" alt="slide2">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="../assets/imgs/productSlide1.jpg" alt="slide1">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="../assets/imgs/productSlide2.jpg" alt="slide2">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="../assets/imgs/productSlide1.jpg" alt="slide1">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="../assets/imgs/productSlide2.jpg" alt="slide2">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="../assets/imgs/productSlide1.jpg" alt="slide1">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="../assets/imgs/productSlide2.jpg" alt="slide2">
+                        </div>             
+                    </div>
+                    <div class="slider_wrapper">
+                        <i class="fas fa-angle-right arrow prev center-y"></i>
+                        <i class="fas fa-angle-left arrow next center-y"></i>
+                        <div class="slider" style="right:0px">
+                            <div class="slide active">
+                                <img src="../assets/imgs/productSlide1.jpg" alt="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="../assets/imgs/productSlide2.jpg" alt="slide2">
+                            </div>
+                            <div class="slide">
+                                <img src="../assets/imgs/productSlide1.jpg" alt="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="../assets/imgs/productSlide2.jpg" alt="slide2">
+                            </div>
+                            <div class="slide">
+                                <img src="../assets/imgs/productSlide1.jpg" alt="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="../assets/imgs/productSlide2.jpg" alt="slide2">
+                            </div>
+                            <div class="slide">
+                                <img src="../assets/imgs/productSlide1.jpg" alt="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="../assets/imgs/productSlide2.jpg" alt="slide2">
+                            </div>                 
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="article">
-                <h4>عنوان مقاله</h4>
-                <div class="tags">
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                </div>
-                <div class="content">
-                    <img src="../assets/imgs/article.jpeg" alt="articleImg">
-                    <p class="desc">
-                        Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Quas ea, eaque, fugit
-                        eligendi dolorem odit omnis, ut saepe eum
-                        unde asperiores accusamus. Reprehenderit
-                        adipisci delectus optio voluptas non
-                        necessitatibus quibusdam.
-                    </p>
-                    <a class="showMore" href="article.html">
-                        <i class="fas fa-angle-double-left"></i>
-                        <p>اطلاعات بیشتر</p>
-                    </a>
-                </div>
-            </div>
-            <div class="article">
-                <h4>عنوان مقاله</h4>
-                <div class="tags">
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                </div>
-                <div class="content">
-                    <img src="../assets/imgs/article.jpeg" alt="articleImg">
-                    <p class="desc">
-                        Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Quas ea, eaque, fugit
-                        eligendi dolorem odit omnis, ut saepe eum
-                        unde asperiores accusamus. Reprehenderit
-                        adipisci delectus optio voluptas non
-                        necessitatibus quibusdam.
-                    </p>
-                    <a class="showMore" href="article.html">
-                        <i class="fas fa-angle-double-left"></i>
-                        <p>اطلاعات بیشتر</p>
-                    </a>
-                </div>
-            </div>
+           
         </div>
     </main>
     <footer>

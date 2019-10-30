@@ -1,0 +1,82 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import './filters.scss' ;
+@import './pagination.scss' ;
+main{
+    #products{
+        display: flex ;
+        @include flex(column,flex-start,center,nowrap,"") ;
+        h4{
+            width: 100%;
+            font-size: $fontL;
+            font-weight: 700;
+            color: $textDark;
+        }  
+        .productsWrapper{
+            width: 100%;
+            height: auto;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            .product{
+                width: 100%;
+                height: auto;
+                padding: $dist1;
+                margin-top: $dist2;
+                border-bottom: 1px solid lighten($textGrey,20%);
+                padding-bottom: $dist2;
+                display: flex;
+                @include flex(row,flex-start,flex-start,nowrap,"") ;
+                img{
+                    width: 12em ;
+                    height: 12em;
+                }
+                .info{
+                    width: auto;
+                    height: auto;
+                    margin-right: $dist2;
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    h4{
+                        font-size: $fontM;
+                        color: $textDark;
+                        font-weight: 700;
+                    }
+                    .desc{
+                        font-size: $fontM;
+                        color: darken($textGrey,0%);
+                        margin-top: .3em;
+                    }
+                    .price{
+                        width: auto;
+                        height: auto;
+                        margin-top: .3em;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        p{
+                            font-size: $fontM;
+                            &:not(:first-child){margin-right: $dist2;}
+                        }
+                        .beforeDiscount{color: $primaryColor;}
+                    }
+                    a{
+                        margin-top: .3em;
+                        @include swapColor(white,$primaryColor) ;
+                    }
+                    a.mid{
+                        font-size: $fontM - .2em;
+                    }
+                }
+            }
+            .product.withDiscount{
+                .info{
+                    .price{
+                        .beforeDiscount{color: $textGrey; text-decoration: line-through;} 
+                        .afterDiscount{color: $primaryColor;} 
+                        .discount{color: $textGrey;} 
+                    }
+                }
+            }
+        }
+    }
+}

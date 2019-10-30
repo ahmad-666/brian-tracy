@@ -84,103 +84,157 @@
                     سخنرانی در جامعه
                 </a>
             </div>
+            <form novalidate id="searchProduct" name="searchProduct" >
+                <div class="title">
+                    <div class="skew">
+                        <p>جست و جوی محصول</p>
+                    </div>
+                </div>         
+                <div class="inputWrapper withSubmit">
+                    <input type="text" id="search" name="search" class="validate" placeholder="نام محصول را وارد کنید" required>
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="msg">
+                        <i class="fas fa-caret-up"></i>
+                        <p>نام محصول را باید وارد کنید</p>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="articles">
-            <div class="article">
-                <h4>عنوان مقاله</h4>
-                <div class="tags">
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
+        <div id="products">
+            <h4>محصولات حسین جونی</h4>
+            <div class="filtersWrapper">
+                <div id="sortWrapper">
+                    <label for="sort">مرتب سازی</label>
+                    <select name="sort" id="sort">
+                        <option value="top" selected>بیشترین فروش</option>
+                        <option value="discount">بیشترین تخفیف</option>
+                        <option value="highPrice">بیشترین قیمت</option>
+                        <option value="lowPrice">کمترین قیمت</option>
+                        <option value="new">جدیدترین</option>
+                    </select>
                 </div>
-                <div class="content">
-                    <img src="../assets/imgs/article.jpeg" alt="articleImg">
-                    <p class="desc">
-                        Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Quas ea, eaque, fugit
-                        eligendi dolorem odit omnis, ut saepe eum
-                        unde asperiores accusamus. Reprehenderit
-                        adipisci delectus optio voluptas non
-                        necessitatibus quibusdam.
-                    </p>
-                    <a class="showMore" href="article.html">
-                        <i class="fas fa-angle-double-left"></i>
-                        <p>اطلاعات بیشتر</p>
-                    </a>
+                <div id="formatWrapper">
+                    <label for="format">نوع محصول</label>
+                    <select name="format" id="format">
+                        <option value="all" selected>همه</option>
+                        <option value="audio">صوت</option>
+                        <option value="video">ویدیو</option>
+                        <option value="book">کتاب</option>
+                    </select>
                 </div>
             </div>
-            <div class="article">
-                <h4>عنوان مقاله</h4>
-                <div class="tags">
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
+            <div class="productsWrapper">
+                <div class="product">
+                    <img src="../assets/imgs/product.jpg" alt="productImg">
+                    <div class="info">
+                        <h4>نام محصول</h4>
+                        <p class="desc">
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                        </p>
+                        <div class="price">
+                            <p class="beforeDiscount">500.000 تومان</p>
+                        </div>
+                        <a href="product.html" class="btn mid">اطلاعات بیشتر</a>
+                    </div>
                 </div>
-                <div class="content">
-                    <img src="../assets/imgs/article.jpeg" alt="articleImg">
-                    <p class="desc">
-                        Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Quas ea, eaque, fugit
-                        eligendi dolorem odit omnis, ut saepe eum
-                        unde asperiores accusamus. Reprehenderit
-                        adipisci delectus optio voluptas non
-                        necessitatibus quibusdam.
-                    </p>
-                    <a class="showMore" href="article.html">
-                        <i class="fas fa-angle-double-left"></i>
-                        <p>اطلاعات بیشتر</p>
-                    </a>
+                <div class="product withDiscount">
+                    <img src="../assets/imgs/product.jpg" alt="productImg">
+                    <div class="info">
+                        <h4>نام محصول</h4>
+                        <p class="desc">
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                        </p>
+                        <div class="price">
+                            <p class="beforeDiscount">500.000 تومان</p>
+                            <p class="afterDiscount">250.000 تومان</p>
+                            <p class="discount">(۵۰٪ تخفیف)</p>
+                        </div>
+                        <a href="product.html" class="btn mid">اطلاعات بیشتر</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="../assets/imgs/product.jpg" alt="productImg">
+                    <div class="info">
+                        <h4>نام محصول</h4>
+                        <p class="desc">
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                        </p>
+                        <div class="price">
+                            <p class="beforeDiscount">500.000 تومان</p>
+                        </div>
+                        <a href="product.html" class="btn mid">اطلاعات بیشتر</a>
+                    </div>
+                </div>
+                <div class="product withDiscount">
+                    <img src="../assets/imgs/product.jpg" alt="productImg">
+                    <div class="info">
+                        <h4>نام محصول</h4>
+                        <p class="desc">
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                        </p>
+                        <div class="price">
+                            <p class="beforeDiscount">500.000 تومان</p>
+                            <p class="afterDiscount">250.000 تومان</p>
+                            <p class="discount">(۵۰٪ تخفیف)</p>
+                        </div>
+                        <a href="product.html" class="btn mid">اطلاعات بیشتر</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="../assets/imgs/product.jpg" alt="productImg">
+                    <div class="info">
+                        <h4>نام محصول</h4>
+                        <p class="desc">
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                        </p>
+                        <div class="price">
+                            <p class="beforeDiscount">500.000 تومان</p>
+                        </div>
+                        <a href="product.html" class="btn mid">اطلاعات بیشتر</a>
+                    </div>
+                </div>
+                <div class="product withDiscount">
+                    <img src="../assets/imgs/product.jpg" alt="productImg">
+                    <div class="info">
+                        <h4>نام محصول</h4>
+                        <p class="desc">
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                            توضیح درباره محصول
+                        </p>
+                        <div class="price">
+                            <p class="beforeDiscount">500.000 تومان</p>
+                            <p class="afterDiscount">250.000 تومان</p>
+                            <p class="discount">(۵۰٪ تخفیف)</p>
+                        </div>
+                        <a href="product.html" class="btn mid">اطلاعات بیشتر</a>
+                    </div>
                 </div>
             </div>
-            <div class="article">
-                <h4>عنوان مقاله</h4>
-                <div class="tags">
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                    <a href="blog.html" class="tag">
-                        <i class="fas fa-tag"></i>
-                        <p>مدیریت زمان</p>
-                    </a>
-                </div>
-                <div class="content">
-                    <img src="../assets/imgs/article.jpeg" alt="articleImg">
-                    <p class="desc">
-                        Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Quas ea, eaque, fugit
-                        eligendi dolorem odit omnis, ut saepe eum
-                        unde asperiores accusamus. Reprehenderit
-                        adipisci delectus optio voluptas non
-                        necessitatibus quibusdam.
-                    </p>
-                    <a class="showMore" href="article.html">
-                        <i class="fas fa-angle-double-left"></i>
-                        <p>اطلاعات بیشتر</p>
-                    </a>
-                </div>
+            <div class="pagination">
+                <a href="products.html" class="page active">1</a>
+                <a href="products.html" class="page">2</a>
+                <a href="products.html" class="page">3</a>
+                <p class="page">...</p>
+                <a href="products.html" class="page">آخر</a>
             </div>
         </div>
     </main>

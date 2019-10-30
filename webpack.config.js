@@ -14,7 +14,9 @@ module.exports = {
         'article' : './src/article/article.js' ,     
         'login' : './src/login/login.js' ,     
         'signup' : './src/signup/signup.js' ,     
-        'forgetPassword' : './src/forgetPassword/forgetPassword.js' ,     
+        'forgetPassword' : './src/forgetPassword/forgetPassword.js',     
+        'products' : './src/products/products.js',     
+        'product' : './src/product/product.js',     
     },
     output: {//for each entry point we create one .js bundle(with the same name of entry point)
         filename: '[name].js',
@@ -167,6 +169,18 @@ module.exports = {
             inject: true,
             chunks: ['forgetPassword'],
             template: './src/forgetPassword/forgetPassword.html' //should point to target html file that we want to add <script>,<link>
+        }),
+        new HtmlWebpackPlugin({ //for each .html file we need new instance of 'HtmlWebpackPlugin'
+            filename: 'products.html' , //name of file inside ./dist folder
+            inject: true,
+            chunks: ['products'],
+            template: './src/products/products.html' //should point to target html file that we want to add <script>,<link>
+        }),
+        new HtmlWebpackPlugin({ //for each .html file we need new instance of 'HtmlWebpackPlugin'
+            filename: 'product.html' , //name of file inside ./dist folder
+            inject: true,
+            chunks: ['product'],
+            template: './src/product/product.html' //should point to target html file that we want to add <script>,<link>
         }),
         new CleanWebpackPlugin()
     ]

@@ -1,0 +1,33 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+main{
+    #products{
+        .filtersWrapper{
+            width: 100%;
+            height: auto;
+            margin-top: $dist2;
+            padding-bottom: $dist3;
+            border-bottom: 1px solid lighten($textGrey,20%);
+            display: flex;
+            @include flex(row,flex-start,center,wrap,flex-start) ;
+            #sortWrapper,#formatWrapper{
+                width: auto;
+                height: auto;
+                &:not(:first-child){margin-right: $dist3;}
+                display: flex;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                label{
+                    font-size: $fontM - .2em;
+                    color: $textDark;
+                }
+                select{
+                    margin-right: $dist1;
+                    font-size: $fontM - .2em;
+                    color: $textDark;
+                    padding-right: $dist1;
+                }
+            }
+        }
+    }
+}
