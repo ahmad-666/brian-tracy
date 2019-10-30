@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body class="bg">
+    <form novalidate id="signup" name="signup" class="validate containerStyle" method="GET" action="#!" enctype="text/plain">
+        <a href="index.html">
+            <img src="../assets/icons/logoBrian.png" alt="logoImg">
+        </a>
+        <h4>ساخت حساب کاربری</h4>
+        <div class="inputWrapper text">
+			<input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+			<label for="name">
+				<i class="fas fa-user icon"></i>
+				<p>نام و نام خانوادگی</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>نام و نام خانوادگی خود را وارد نمایید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text">
+			<input type="text" id="emailPhone" name="emailPhone" class="style1 labelHandler validate" required>
+			<label for="emailPhone">
+				<i class="fas fa-envelope icon"></i>
+				<p>ایمیل یا شماره موبایل</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>لطفا مقداری وارد نمایید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+        </div>
+		<div class="inputWrapper text">
+			<input type="password" id="password" name="password" class="style1 labelHandler validate" required pattern=".{6,}">
+			<label for="password">
+				<i class="fas fa-lock icon"></i>
+				<p>رمز ورود</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>رمز ورود را وارد کنید(حداقل ۶رقم)</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text">
+			<input type="password" id="passwordRepeat" name="passwordRepeat" class="style1 labelHandler validate" required>
+			<label for="passwordRepeat">
+				<i class="fas fa-lock icon"></i>
+				<p>تکرار رمز ورود</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>مقدار وارد شده با رمز ورود یکسان نیست</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>	
+        <button type="submit" class="pulse shadowPrimary">ارسال</button>
+        <div class="inputWrapper checkboxes">
+			<div class="checkbox">
+				<input type="checkbox" id="rememberMe" name="rememberMe" class="style2" value="rememberMe">
+				<label for="rememberMe">
+					<span class="rect">
+						<i class="fas fa-check center-xy"></i>
+					</span>
+					<p>مرا بخاطر بسپار</p>
+				</label>
+			</div>    
+		</div>
+		<a class="login" href="login.html">
+			ورود به حساب کاربری
+		</a>
+    </form>
+</body>
+</html>
