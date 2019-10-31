@@ -7,7 +7,7 @@ header{
         height: auto;
         position: absolute ;
         right: 0;
-        top: $dist4 + $dist2;
+        top: $dist4;
         display: flex;
         @include flex(row,flex-start,center,nowrap,"") ;
         color: $textWhite;
