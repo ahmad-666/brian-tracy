@@ -1,0 +1,14 @@
+<div class="wrapper scrollArrows">
+	<div class="arrows">
+		<i class="fas fa-angle-left"></i>
+		<i class="fas fa-angle-left"></i>
+		<i class="fas fa-angle-left"></i>
+	</div>
+	<div class="content child">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quod ab, nihil modi accusamus eveniet deleniti blanditiis est repellendus eius placeat corrupti ut recusandae deserunt totam minus voluptatum libero fugiat?
+		Magni vel nemo sequi minus eveniet quia, nihil possimus rem at officia ex perferendis officiis tenetur suscipit aliquid ratione, molestias ullam facere quis hic assumenda voluptate ducimus? Placeat, quae nulla?
+		Mollitia voluptatibus suscipit in dicta doloribus voluptatem impedit molestiae corrupti aut saepe magnam ad necessitatibus quia iste expedita placeat vero, eligendi consequuntur ab animi alias! Tempora beatae mollitia nam fuga.
+		Rem suscipit laudantium molestiae reprehenderit. Dolores, quisquam, sequi explicabo tempora repudiandae culpa iure nisi est veniam, quam laborum quos officia hic veritatis! Molestias optio suscipit voluptate quas dicta placeat incidunt?
+		Voluptatum, numquam. Sapiente ex eligendi veniam quod unde, architecto eaque suscipit dignissimos dolorum aut illo, error possimus eum maiores quam molestias quibusdam, laudantium neque! Soluta, molestiae iusto? Officia, assumenda similique.
+	</div>
+</div>

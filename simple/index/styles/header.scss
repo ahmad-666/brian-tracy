@@ -1,0 +1,22 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import './top.scss' ;
+@import './nav.scss' ;
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .fill{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+}
+// @include mediaQ(750px){
+//     header{
+//         display: none ;
+//     }
+// }

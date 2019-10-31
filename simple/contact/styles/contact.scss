@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import '../../utilities/styles/form.scss' ;
+#contactWrapper{
+    width: 100%;
+    height: auto;
+    margin: $dist2 auto;
+    padding: 0 $dist4 * 2 ;
+    display: flex;
+    @include flex(row,flex-start,flex-start,nowrap,"");
+    .sideBar{
+        flex-shrink: 0;
+        width: 27.5em;
+        height: auto;
+        border-top: .4em solid $darkBlue;
+        padding: $dist2;
+        padding-top: $dist1;
+        background-color: lighten($textGrey,35%);
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        .office,.hourWork{
+            width: 100%;
+            height: auto;
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            &:not(:first-child){margin-top: $dist2;}
+            .address,.phone,.email,.hour{
+                max-width: 100%;
+                height: auto;
+                margin-top: $dist1;
+                display: flex;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                color: $textDark;
+                i{
+                    font-size: $fontS + .2em;
+                }
+                p{
+                    margin-right: .3em;
+                    font-size: $fontS + .1em;
+                }
+            }
+            h4{
+                font-size: $fontL - .2em;
+                color: $textDark; 
+                font-weight: 700;
+            }
+        }
+
+    }
+
+}

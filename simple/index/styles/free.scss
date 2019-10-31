@@ -1,0 +1,52 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss';
+#free{
+    width: 100%;
+    min-height: 60em;
+    position: relative;
+    @include bg('../../assets/imgs/free.jpg',center center,no-repeat,cover) ;
+    .content{
+        width: auto;
+        height: auto;
+        left: 15%;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        > * {
+            &:not(:first-child){
+                margin: .2em 0;
+            }        
+        }
+        h1{
+            font-size: $fontXL + .5em;
+            color: $blueColor1;
+            font-weight: 700;
+        }
+        h4{
+            font-size: $fontL;
+            color: $textDark;
+        }
+        .goal{
+            font-size: $fontM;
+            color: $textGrey;
+        }
+        .download{
+            margin: $dist1 + .2em 0;
+            @include swapColor(white,$orangeColor1);
+        }
+        .moreInfo{
+            width: auto;
+            height: auto;
+            display: flex;
+            @include flex(row,flex-start,center,nowrap,"");
+            font-size: $fontM;
+            color: $textGrey;
+            a{
+                color: inherit;
+                font-weight: 700;
+                margin: 0 .3em;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,148 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import '../../utilities/styles/form.scss' ;
+@import '../../utilities/styles/collapse.scss' ;
+#comments{
+    padding: $dist2 ;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    #userCommentWrapper{
+        width: 100%;
+        height: auto;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        h4 {
+            font-size: $fontL - .2em;
+            font-weight: 700;
+            color: $darkColor;
+        }
+        button{
+            margin-top: $dist1;
+            @include swapColor(white,$primaryColor) ;
+        }
+    }
+    .comment,.commentReply{
+        width: 100%;
+        height: auto;
+        padding: $dist2 + .3em $dist1;
+        &:not(:last-child){border-bottom: 1px solid lighten($textGrey,20%);}
+        display: flex;
+        @include flex(column,flex-start,center,nowrap,"") ;
+        .row{
+            width: 100% ;
+            height: auto;
+            display: flex;
+            @include flex(row,flex-start,flex-start,nowrap,"") ;
+            .info{
+                flex-shrink: 0;
+                width: 10em;
+                height: auto;
+                display: flex;
+                @include flex(column,flex-start,center,nowrap,"") ;
+                p{
+                    font-size: $fontM;
+                    color: $textGrey;
+                }
+            }
+            .content{
+                width: 100%;
+                height: auto;
+                margin-right: $dist2;
+                display: flex;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                p{
+                    width: 100% ;
+                    height: auto;
+                    font-size: $fontM;
+                    color: darken($textGrey,20%);
+                    line-height: $dist2 + .2em;
+                }
+                .commentAction{
+                    width: auto;
+                    height: auto;
+                    margin-top: 0;
+                    display: flex;
+                    @include flex(row,flex-start,center,nowrap,"") ;
+                    .like,.reply{
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        &:not(:first-child){margin-right: $dist3;}
+                        cursor: pointer;
+                        i{
+                            font-size: $fontM;
+                            color: $textGrey;
+                        }
+                        p{
+                            font-size: $fontM;
+                        }
+                    }
+                    .like{
+                        p{margin-right: .5em;}
+                        i.active{color: lighten($redColor2,5%);}
+                    }
+                    .reply{
+                        i{margin-right: .5em;}
+                    }
+                }
+            }
+        }
+        .commentReply{
+            width: calc(100% - 10em);
+            margin-right: 10em;
+            border-bottom: none;
+            &:last-child{padding-bottom: 0;}
+        }
+    }
+    .showMore{
+        margin: $dist2 auto 0 auto;
+        @include swapColor(white,$primaryColor) ;
+    }
+
+}
+#adminApprove{
+    width: 45em;
+    height: auto;
+    padding: $dist2;
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    i{
+        font-size: $fontXXL;
+        color: $primaryColor;
+    }
+    p{
+        font-size: $fontL;
+        color: darken($textGrey,20%);
+        margin-top: $dist2;
+    }
+    button.close{
+        margin-top: $dist2;
+        @include swapColor(white,$primaryColor) ;
+    }
+}
+@include resizeTablet('#comments');
+@include resizeTablet('#adminApprove');
+@include resizeMobile('#comments');
+@include resizeMobile('#adminApprove');
+@include mediaQ(750px){
+    #comments{
+        .comment,.commentReply{       
+            .commentReply{
+                width: calc(100% - 5em);
+                margin-right: 5em;
+            }
+        }   
+    }
+}
+@include mediaQ(400px){
+    #adminApprove{
+        width: 90vw;
+    }
+}

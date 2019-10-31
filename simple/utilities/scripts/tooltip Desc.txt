@@ -1,0 +1,18 @@
+<div class="wrapper">
+	<p data-tooltip="item1" class="withTooltip">
+		item1
+		<span class="tooltip"></span>
+	</p>
+	<p data-tooltip="item2" class="withTooltip">
+		item2
+		<span class="tooltip"></span>
+	</p>
+	<p data-tooltip="item3" class="withTooltip">
+		item3
+		<span class="tooltip"></span>
+	</p>
+	<p data-tooltip="item4" class="withTooltip">
+		item4
+		<span class="tooltip"></span>
+	</p>
+</div>

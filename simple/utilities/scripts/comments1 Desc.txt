@@ -1,0 +1,127 @@
+<div id="comments" class="containerStyle">
+	<div id="userCommentWrapper" class="withCollapse">
+		<h4>نظر خود را وارد کنید</h4>
+		<button class="btn small pulse collapseTrigger">ارسال نظر</button>
+		<form novalidate id="userComment" name="userComment" class="validate collapse" method="GET" action="#!" enctype="text/plain">
+			<div class="row">
+				<div class="inputWrapper text">
+					<input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+					<label for="name">
+						<i class="fas fa-user icon"></i>
+						<p>نام و نام خانوادگی</p>
+					</label>
+					<span class="line"></span>
+					<div class="msg">
+						<p>نام و نام خانوادگی خود را وارد نمایید</p>
+						<i class="fas fa-caret-up"></i>
+					</div>
+				</div>
+				<div class="inputWrapper text">
+					<input type="email" id="email" name="email" class="style1 labelHandler validate" required>
+					<label for="email">
+						<i class="fas fa-envelope icon"></i>
+						<p>پست الکترونیکی</p>
+					</label>
+					<span class="line"></span>
+					<div class="msg">
+						<p>ایمیل صحیح وارد نمایید</p>
+						<i class="fas fa-caret-up"></i>
+					</div>
+				</div>
+			</div>
+			<div class="inputWrapper textarea">
+				<textarea name="commentContent" id="commentContent" class="style2 labelHandler autoExpand validate" required></textarea>
+				<label for="commentContent">
+					<i class="fas fa-comments"></i>
+					<p>نظر خود را وارد نمایید</p>
+				</label>
+				<span class="line"></span>
+			</div>
+			<button type="submit" class="modalTrigger" data-modal="adminApprove">ثبت</button>
+		</form>
+	</div>   
+	<div class="comment withCollapse">
+		<div class="row">
+			<div class="info">
+				<p>نام کاربر</p>
+				<p>1398/10/10</p>
+			</div>
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quisquam distinctio officia magni! Enim deleniti eos iusto at illo temporibus, rem accusantium, eaque quos voluptate ut sapiente quam reiciendis delectus.Non corrupti quasi eligendi in, dolor quod vel similique molestiae ratione molestias dignissimos minima facere explicabo iure dicta quisquam neque eos est? Officia exercitationem officiis perspiciatis, cumque ea repellat aliquam!
+				</p>
+				<div class="reply collapseTrigger">
+					<p>پاسخ</p>
+					<i class="fas fa-reply"></i>
+				</div>
+			</div>
+		</div>
+		<form novalidate id="reply1" name="reply1" class="validate reply collapse" method="GET" action="#!" enctype="text/plain">
+			<div class="inputWrapper textarea">
+				<textarea name="reply1Content" id="reply1Content" class="style2 labelHandler autoExpand validate" required></textarea>
+				<label for="reply1Content">
+					<i class="fas fa-comments"></i>
+					<p>نظر خود را وارد نمایید</p>
+				</label>
+				<span class="line"></span>
+			</div>
+
+			<button type="submit" class="modalTrigger" data-modal="adminApprove">ارسال</button>
+		</form>
+		<div class="commentReply">
+			<div class="row">
+				<div class="info">
+					<p>نام کاربر</p>
+					<p>1398/10/10</p>
+				</div>
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore natus quibusdam, quasi perspiciatis, veniam qui unde quidem atque nisi similique cupiditate nobis praesentium at culpa architecto temporibus quisquam, impedit minima.
+					</p>          
+				</div>
+			</div>
+		</div>
+		<div class="commentReply">
+			<div class="row">
+				<div class="info">
+					<p>نام کاربر</p>
+					<p>1398/10/10</p>
+				</div>
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore natus quibusdam, quasi perspiciatis, veniam qui unde quidem atque nisi similique cupiditate nobis praesentium at culpa architecto temporibus quisquam, impedit minima.
+					</p>          
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="comment withCollapse">
+		<div class="row">
+			<div class="info">
+				<p>نام کاربر</p>
+				<p>1398/10/10</p>
+			</div>
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quisquam distinctio officia magni! Enim deleniti eos iusto at illo temporibus, rem accusantium, eaque quos voluptate ut sapiente quam reiciendis delectus.Non corrupti quasi eligendi in, dolor quod vel similique molestiae ratione molestias dignissimos minima facere explicabo iure dicta quisquam neque eos est? Officia exercitationem officiis perspiciatis, cumque ea repellat aliquam!
+				</p>
+				<div class="reply collapseTrigger">
+					<p>پاسخ</p>
+					<i class="fas fa-reply"></i>
+				</div>
+			</div>
+		</div>
+		<form novalidate id="reply1" name="reply1" class="validate reply collapse" method="GET" action="#!" enctype="text/plain">
+			<div class="inputWrapper textarea">
+				<textarea name="reply1Content" id="reply1Content" class="style2 labelHandler autoExpand validate" required></textarea>
+				<label for="reply1Content" class="collapseTrigger">
+					<i class="fas fa-comments"></i>
+					<p>نظر خود را وارد نمایید</p>
+				</label>
+				<span class="line"></span>
+			</div>
+			<button type="submit" class="modalTrigger" data-modal="adminApprove">ارسال</button>
+		</form>
+	</div>
+	<button class="btn mid showMore">نظرات بیشتر</button>
+</div>

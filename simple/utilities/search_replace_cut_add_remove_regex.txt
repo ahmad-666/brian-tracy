@@ -1,0 +1,67 @@
+//search/replace -> 
+    //<str>.indexOf(<str>) , <arr>.indexOf(<val>)
+    //<str>.includes(<str>) , <arr>.includes(<val>)
+    //<str>.search(<str/regex>)
+    //<str>.replace(<searchVal can be string/regex>,<replacement>)
+    //if we use 'replace' with normal string(not regex) it will just replace 
+    //first find and if we want to replace all we should use regex with 'g' flag
+//let str1 = 'hello' ;
+// let str2 = 'lo' ;
+// console.log(str1.indexOf(str2)) ; //3
+// console.log(str1.includes(str2)) ; //true
+// console.log(str1.search(str2)) ; //3
+// let arr = ['a','b','c'] ;
+// console.log(arr.indexOf('c')) ; //2
+// console.log(arr.includes('c')) ; //true
+// console.log(str1.replace('lo','dork')) ; //heldork
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//cut -> 
+    //<str>.slice(<start-pos>,<end-pos>) , <arr>.slide(<start-pos>,<end-pos>)
+// let str = 'abcdefg' ;
+// console.log(str.slice(2,str.length)) ; //cdefg
+// let arr = ['a','b','c','d','e','f','g'] ;
+// console.log(arr.slice(2,arr.length)) ; //["c", "d", "e", "f", "g"]
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//add-remove ->
+    //with `${}` we can add to any pos of string
+    //<str>.slice(<start-pos>,<end-pos>) for remove any part from string
+    //<arr>.push(<newElm>) --> add to end of array
+    //<arr>.unshift(<newElm>) --> add to start of array
+    //<arr>.pop() --> remove from end of array
+    //<arr>.shift() --> remove from start of array
+    //<arr>.splice(<pos-of-add/remove>,<howMany-to-remove>,<item1-to-add>,<item2-to-add>)
+    //*will return nothing and change original array
+// let str = '1234' ;
+// let prepend = '0' ;
+// let append = '5' ;
+// console.log(`${prepend}${str}${append}`) ; //012345
+// let str = '12345' ;
+// console.log(str.slice(0,str.length-1)) ; //1234 .. remove from end of string
+// console.log(str.slice(1,str.length)) ; //2345 .. remove from start of string
+//let arr = ['a','b','c','d','e'] ;
+// arr.push('f') ; //["a", "b", "c", "d", "e", "f"]
+// arr.unshift('f') ; //["f", "a", "b", "c", "d", "e"]
+//arr.pop() ; //["a", "b", "c", "d"]
+//arr.shift() ; //["b", "c", "d", "e"]
+// arr.splice(3,0,'dork1','dork2')
+// console.log(arr) ; //["a", "b", "c", "dork1", "dork2", "d", "e"]
+// arr.splice(1,2)
+// console.log(arr) ; //["a", "d", "e"]
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//regex -> 
+    //<regex>.test(<str>)
+    //<str>.match(<regex>)
+    //<str>.search(<str/regex>)
+    //<str>.replace(<searchVal can be string/regex>,<replacement>)
+// let regex = /hel/gi ;
+// let str = 'hello hell' ;
+// console.log(regex.test(str)) ; //true
+// console.log(str.match(regex)) ; //["hel", "hel"]
+// console.log(str.search(regex)) ;//pos of first result ... -1 if not found
+// console.log(str.replace(regex,'dork')) ; //dorklo dorkl

@@ -1,0 +1,150 @@
+@import '../../variables.scss';
+@import '../../colors.scss';
+@import '../../mixins.scss';
+
+#category {
+    width: 100%;
+    height: auto;
+    padding: $dist3 0;
+    @include bg('../../assets/imgs/advice.jpg', center center, no-repeat, cover);
+    display: flex;
+    @include flex(column, flex-start, center, nowrap, "");
+
+    .title {
+        max-width: 50%;
+        height: auto;
+        display: flex;
+        @include flex(column, flex-start, center, nowrap, "");
+
+        .titleWrapper {
+            width: auto;
+            height: auto;
+            display: flex;
+            @include flex(row, flex-start, center, nowrap, "");
+
+            h2 {
+                font-size: $fontXL;
+                font-weight: 700;
+                color: $blueColor1;
+            }
+
+            h4 {
+                font-size: $fontXL - .2em;
+                color: $textDark;
+                margin-right: .3em;
+            }
+        }
+
+        p {
+            width: 75%;
+            text-align: center;
+            font-size: $fontM;
+            color: lighten($textDark, 15%);
+            margin-top: $dist1
+        }
+    }
+
+    .select {
+        width: auto;
+        height: auto;
+        margin-top: $dist3;
+        padding: $dist3 $dist2;
+        background-color: white;
+        border: 1.2px solid lighten($redColor2, 5%);
+        display: flex;
+        @include flex(row, space-around, center, nowrap, "");
+
+        p {
+            font-size: $fontM;
+            color: $textDark;
+        }
+
+        select {
+            border-radius: $dist2;
+            margin-right: $dist2;
+            padding: $dist1;
+            font-size: $fontS + .2em;
+            color: darken($textGrey,20%);
+            option[value=""]{
+                display: none;    
+            }        
+        }
+    }
+
+    .tabs {
+        width: auto;
+        height: auto;
+        margin-top: $dist2;
+        .tab {
+            display: none;
+            width: auto;
+            height: auto;
+            @include flex(row, flex-start, flex-start, wrap, flex-start);
+            .advice {     
+                display: none ;             
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-$dist4);
+                width: calc((100% - (3 * 3em)) / 3);
+                height: auto;
+                margin: $dist2;
+                padding: 0 $dist2;
+                background-color: white;
+                @include flex(column, flex-start, center, nowrap, "");
+                img {
+                    width: 10em;
+                    height: 10em;
+                }
+                h4 {
+                    font-size: $fontL;
+                    font-weight: 700;
+                    color: $textDark;
+                    margin-top: 0;
+                }
+                p {
+                    font-size: $fontM;
+                    color: $textGrey;
+                    margin-top: $dist1;
+                }
+                a {
+                    width: auto;
+                    height: auto;
+                    margin: $dist1 0;
+                    display: flex;
+                    @include flex(row, flex-start, center, nowrap, "");
+                    font-size: $fontS;
+                    color: $textGrey;
+                    i {
+                        margin-right: .3em;
+                        transform: translateY(40%);
+                    }
+                    p{
+                        font-size: $fontS;
+                    }
+                }
+            }
+            .advice.show{display: flex;}
+            .advice.anime{
+                animation: fadeIn .5s linear forwards ; 
+                &:nth-child(1){animation-delay: 0s;}   
+                &:nth-child(2){animation-delay: .25s;}   
+                &:nth-child(3){animation-delay: .5s;}   
+            }
+            @keyframes fadeIn {
+                from{
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-$dist4);
+                }
+                to{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .tab.active {
+            display: flex;
+        }
+    }
+}

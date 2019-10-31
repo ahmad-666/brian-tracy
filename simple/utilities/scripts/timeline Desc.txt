@@ -1,0 +1,99 @@
+<div id="timelineWrapper" class="containerStyle">
+	<div id="timeline">
+		<span class="line" style="width:0%"></span>
+		<div class="step active">
+			<p>مرحله 1</p>
+			<div class="circle">
+				<i class="fas fa-check center-xy"></i>
+			</div>
+		</div>
+		<div class="step">
+			<p>مرحله 2</p>
+			<div class="circle">
+				<i class="fas fa-check center-xy"></i>
+			</div>
+		</div>
+		<div class="step">
+			<p>مرحله 3</p>
+			<div class="circle">
+				<i class="fas fa-check center-xy"></i>
+			</div>
+		</div>
+		<div class="step">
+			<p>مرحله 4</p>
+			<div class="circle">
+				<i class="fas fa-check center-xy"></i>
+			</div>
+		</div>
+		<div class="step">
+			<p>مرحله 5</p>
+			<div class="circle">
+				<i class="fas fa-check center-xy"></i>
+			</div>
+		</div>
+	</div>
+	<form novalidate id="sample" name="sample" method="GET" action="#!" enctype="text/plain">
+		<div id="timelineSlider" style="right:0%">
+			<div class="slide" id="stage1">
+				<h4>مرحله ۱</h4>
+				<div class="content">
+					<p>اطلاعات مرحله 1</p>
+				</div>
+				<div class="btnWrapper">
+					<button type="button" class="changeSlide next" data-slide="1">مرحله بعد</button>
+				</div>
+			</div>
+			<div class="slide" id="stage2">
+				<h4>مرحله ۲</h4>
+				<div class="content">
+					<p>اطلاعات مرحله ۲</p>
+				</div>
+				<div class="btnWrapper">
+					<button type="button" class="changeSlide prev" data-slide="-1">مرحله قبل</button>
+					<button type="button" class="changeSlide next" data-slide="1">مرحله بعد</button>
+				</div>
+			</div>
+			<div class="slide" id="stage3">
+				<h4>مرحله ۳</h4>
+				<div class="content">
+					<p>اطلاعات مرحله ۳</p>
+				</div>
+				<div class="btnWrapper">
+					<button type="button" class="changeSlide prev" data-slide="-2">مرحله قبل</button>
+					<button type="button" class="changeSlide next" data-slide="1">مرحله بعد</button>
+				</div>
+			</div>
+			<div class="slide" id="stage4">
+				<h4>مرحله ۴</h4>
+				<div class="content">
+					<p>اطلاعات مرحله ۴</p>
+					<div class="inputWrapper text">
+						<input type="text" id="name" name="name" class="style2 labelHandler validate" required>
+						<label for="name">
+							<i class="fas fa-user icon"></i>
+							<p>نام و نام خانوادگی</p>
+						</label>
+						<span class="line"></span>
+						<div class="msg">
+							<p>نام و نام خانوادگی خود را وارد نمایید</p>
+							<i class="fas fa-caret-up"></i>
+						</div>
+					</div>
+				</div>
+				<div class="btnWrapper">
+					<button type="button" class="changeSlide prev" data-slide="-1">مرحله قبل</button>
+					<button type="button" class="changeSlide next validate" data-slide="1">مرحله بعد</button>
+				</div>
+			</div>
+			<div class="slide" id="stage5">
+				<h4>مرحله ۵</h4>
+				<div class="content">
+					<p>اطلاعات مرحله ۵</p>
+				</div>
+				<div class="btnWrapper">
+					<button type="button" class="changeSlide prev" data-slide="-1">مرحله قبل</button>
+				</div>
+			</div>         
+		</div>
+	</form>
+</div>

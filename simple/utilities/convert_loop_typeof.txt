@@ -1,0 +1,108 @@
+//convert -> 
+    //.toString()
+    //parseFloat
+    //<arr>.join(<joiner>)
+    //<str>.split(<separator>)
+    //[...]
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//number-to-string---------------------
+// let num = 123 ;
+// let str = `${num}`; //'123'
+// //number-to-array---------------------
+// let num = 123 ;
+// let arr = [num] ; //[123]
+//OR
+// let num = 123 ;
+// let arr = num.toString().split(''); //['1','2','3']
+// for(let i=0 ; i <arr.length ; i++){arr[i]=parseFloat(arr[i]);} //[1,2,3]
+// //number-to-obj---------------------
+// let num = 123 ;
+// let obj = {num} ; //{num:123}
+//string-to-number---------------------
+// let str = '123' ;
+// let num = parseFloat(str) ; //123
+//string-to-array---------------------
+// let str = '123' ;
+// let arr = [str] ; //['123']
+//OR
+// let str = '123' ;
+// let arr = str.split(''); //['1','2','3']
+//string-to-object---------------------
+// let str = '123' ;
+// let obj = {str} ; //{str:'123'}
+//array-to-num---------------------
+// let arr = [1,2,3] ;
+// let num = parseFloat(arr.join('')); //123
+//array-to-string---------------------
+// let arr = [1,2,3] ;
+// let str = arr.join(''); //'123'
+//array-to-object---------------------
+// let arr = ['a','b','c'] ;
+// let obj = {} ;
+// arr.forEach(elm => obj[`${elm}`] = elm)//{a:'a',b:'b',c:'c'}
+//object-to-number---------------------
+// let obj = {a:'11',b:'22'} ;
+// let str = '' ;
+// let num = null ;
+// for(let key in obj){
+//     let val = obj[`${key}`] ;
+//     str+=val ;
+// }
+// num = parseFloat(str) ; //1122
+//object-to-string---------------------
+// let obj = {a:'a1',b:'b1'} ;
+// let str = '' ;
+// for(let key in obj){
+//     let val = obj[`${key}`] ;
+//     str+=val ; //'a1b1'
+// }
+//object-to-array---------------------
+// let obj = {a:'a1',b:'b1'} ;
+// let arr = [] ;
+// for(let key in obj){
+//     let val = obj[`${key}`] ;
+//     arr.push(val) ; //["a1", "b1"]
+// }
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//loop -> 
+    //for
+    //forEach
+    //for(let key in obj)
+//loop-number---------------------
+// let num = 123 ;
+// let str = num.toString() ;
+// for(let i=0 ; i<str.length ; i++){
+//     let digit = parseFloat(str[i]) ;
+//     console.log(digit) ; // 1 , 2 , 3
+// }
+//loop-array---------------------
+// let arr = ['a','b','c'] ;
+// arr.forEach(elm=>console.log(elm)) ; //'a' , 'b' , 'c'
+//loop-string---------------------
+// let str = 'abc' ;
+// for(let i=0 ; i<str.length ; i++){console.log(str[i]);} //'a' , 'b' , 'c'
+//loop-object---------------------
+// let obj = {a:'a1',b:'b1'} ;
+// for(let key in obj){
+//     let val = obj[`${key}`] ;
+//     console.log(key,val) ; //a 'a1' , b 'b1'
+// }
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//typeof -> 
+    //Array.isArray(<array>)
+// console.log(typeof 123) ; //number
+// console.log(typeof 'abc') ; //string
+// console.log(typeof ['a','b','c']) ; //object
+// console.log(typeof {a:'a1',b:'b1'}) ; //object
+//for typeof Array :
+// let arr = [] ;
+// let type = arr.forEach? 'array': null ; //'array' and null for number/string/obj
+//OR
+// console.log(Array.isArray([])) ; //true .
+

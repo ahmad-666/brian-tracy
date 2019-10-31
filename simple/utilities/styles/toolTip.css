@@ -1,0 +1,39 @@
+.withTooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.withTooltip:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  z-index: 5;
+}
+
+.withTooltip .tooltip {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  text-align: center;
+  line-height: 0;
+  white-space: nowrap;
+  padding: 0.75em 1.1em;
+  font-size: 0.8em;
+  color: #fbfbfb;
+  background-color: #4a4e60;
+  border-radius: 0.75em;
+  position: absolute;
+  top: 105%;
+  right: -10%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.withTooltip .tooltip.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+/*# sourceMappingURL=toolTip.css.map */

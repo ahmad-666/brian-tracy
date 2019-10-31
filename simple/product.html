@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libraries/fontawesome/all.min.css">
+    <link rel="stylesheet" href="./framework.css">
+    <link rel="stylesheet" href="./init.css">
+    <link rel="stylesheet" href="./blog/styles/nav.css">
+    <link rel="stylesheet" href="./blog/styles/wrapper.css">
+    <link rel="stylesheet" href="./blog/styles/sidebar.css">
+    <link rel="stylesheet" href="./product/styles/product.css">
+    <link rel="stylesheet" href="./index/styles/footer.css">
+
+</head>
+
+<body>
+    <nav id="blog">
+        <ul class="content">
+            <li class="basket">
+                <a href="#!">
+                    <i class="fas fa-shopping-basket"></i>
+                    <p>0</p>
+                </a>
+            </li>
+            <li class="dropdownTrigger">
+                <p>حساب من</p>
+                <i class="fas fa-angle-down"></i>
+                <ul class="dropdown">
+                    <li>
+                        <a href="login.html">ورود</a>
+                    </li>
+                    <li>
+                        <a href="signup.html">ساخت حساب کاربری</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdownTrigger">
+                <p>سخنرانی</p>
+                <i class="fas fa-angle-down"></i>
+                <ul class="dropdown">
+                    <li>
+                        <a href="#!">تست سخنرانی</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#!">خرید</a>
+            </li>
+            <li>
+                <a href="blog.html">وبلاگ</a>
+            </li>
+            <li class="dropdownTrigger">
+                <p>دسته بندی</p>
+                <i class="fas fa-angle-down"></i>
+                <ul class="dropdown">
+                    <li>
+                        <a href="#!">رشد و تعالی فردی</a>
+                    </li>
+                    <li>
+                        <a href="#!">مدیریت زمان</a>
+                    </li>
+                    <li>
+                        <a href="#!"> ارزیابی عملکرد</a>
+                    </li>
+                    <li>
+                        <a href="#!"> سخنرانی در جامعه</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="index.html" class="logo">
+            <img src="./assets/icons/logo.jpg" alt="logoImg">
+        </a>
+    </nav>
+    <main>
+        <div id="sidebar">
+            <div class="categories">
+                <p class="title">دسته بندی</p>
+                <a href="blog.html" class="article">
+                    رشد و تعالی فردی
+                </a>
+                <a href="blog.html" class="article">
+                    مدیریت زمان
+                </a>
+                <a href="blog.html" class="article">
+                    ارزیابی عملکرد
+                </a>
+                <a href="blog.html" class="article">
+                    سخنرانی در جامعه
+                </a>
+            </div>
+            <form novalidate id="searchProduct" name="searchProduct">
+                <div class="title">
+                    <div class="skew">
+                        <p>جست و جوی محصول</p>
+                    </div>
+                </div>
+                <div class="inputWrapper withSubmit">
+                    <input type="text" id="search" name="search" class="validate" placeholder="نام محصول را وارد کنید"
+                        required>
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="msg">
+                        <i class="fas fa-caret-up"></i>
+                        <p>نام محصول را باید وارد کنید</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="product">
+            <div id="breadcrumb">
+                <a href="products.html" class="home">
+                    <i class="fas fa-home"></i>
+                    <p>خانه</p>
+                </a>
+                <i class="fas fa-angle-left arrow"></i>
+                <a href="products.html" class="category">نام دسته بندی</a>
+                <i class="fas fa-angle-left arrow"></i>
+                <a href="products.html" class="product">نام محصول</a>
+            </div>
+            <div class="infos">
+                <div class="info">
+                    <h4>نام محصول</h4>
+                    <p>
+                        توضیح کوتاه
+                        توضیح کوتاه
+                        توضیح کوتاه
+                        توضیح کوتاه
+                    </p>
+                    <button class="buy btn mid">خرید</button>
+                    <div class="desc">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, aliquam qui, ipsam odio, optio ea
+                            id quis natus error iusto blanditiis quia maiores sed recusandae. Ipsa delectus id nulla nostrum.
+                            Aliquam nulla assumenda incidunt eligendi neque, quasi officiis temporibus quod odit? Cupiditate sit
+                            est cum laborum, provident nostrum repellat. Beatae et atque itaque qui unde ipsum, quae nihil
+                            assumenda reprehenderit!
+                            Eum repudiandae porro facilis nostrum deleniti debitis nam laboriosam rem at eaque odit ducimus
+                            maiores quisquam, exercitationem, dolore quos. Voluptates quis eligendi perspiciatis. Et porro,
+                            consectetur quidem debitis maiores pariatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="productSlider">
+                    <div class="curr_wrapper">
+                        <div class="curr active fullSize-abs">
+                            <img src="./assets/imgs/productSlide1.jpg" alt="slide1">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="./assets/imgs/productSlide2.jpg" alt="slide2">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="./assets/imgs/productSlide1.jpg" alt="slide1">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="./assets/imgs/productSlide2.jpg" alt="slide2">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="./assets/imgs/productSlide1.jpg" alt="slide1">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="./assets/imgs/productSlide2.jpg" alt="slide2">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="./assets/imgs/productSlide1.jpg" alt="slide1">
+                        </div>
+                        <div class="curr fullSize-abs">
+                            <img src="./assets/imgs/productSlide2.jpg" alt="slide2">
+                        </div>             
+                    </div>
+                    <div class="slider_wrapper">
+                        <i class="fas fa-angle-right arrow prev center-y"></i>
+                        <i class="fas fa-angle-left arrow next center-y"></i>
+                        <div class="slider" style="right:0px">
+                            <div class="slide active">
+                                <img src="./assets/imgs/productSlide1.jpg" alt="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/imgs/productSlide2.jpg" alt="slide2">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/imgs/productSlide1.jpg" alt="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/imgs/productSlide2.jpg" alt="slide2">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/imgs/productSlide1.jpg" alt="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/imgs/productSlide2.jpg" alt="slide2">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/imgs/productSlide1.jpg" alt="slide1">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/imgs/productSlide2.jpg" alt="slide2">
+                            </div>                 
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </main>
+    <footer>
+        <div class="follow">
+            <p>حسین جونی را در شبکه های اجتماعی دنبال کنید</p>
+            <div class="socials">
+                <a href="#!" class="social telegram">
+                    <i class="fab fa-telegram-plane center-xy"></i>
+                </a>
+                <a href="#!" class="social whatsapp">
+                    <i class="fab fa-whatsapp center-xy"></i>
+                </a>
+                <a href="#!" class="social youtube">
+                    <i class="fab fa-youtube center-xy"></i>
+                </a>
+                <a href="#!" class="social twitter">
+                    <i class="fab fa-twitter center-xy"></i>
+                </a>
+                <a href="#!" class="social instagram">
+                    <i class="fab fa-instagram center-xy"></i>
+                </a>
+                <a href="#!" class="social linkedin">
+                    <i class="fab fa-linkedin center-xy"></i>
+                </a>
+            </div>
+        </div>
+        <div class="links">
+            <div class="col">
+                <h4>حمایت</h4>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>تماس با ما</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> دانش محور</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>حمل و نقل و بازگشت </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> نقشه سایت </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> حریم خصوصی</p>
+                </a>
+            </div>
+            <div class="col">
+                <h4>خرید</h4>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>بهترین فروشندگان</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> موفقیت شخصی</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> آموزش فروش </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> آموزش کسب وکار </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> مدیریت زمان </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> رهبری </p>
+                </a>
+            </div>
+            <div class="col">
+                <h4>کشف کردن</h4>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>خانه</p>
+                </a>
+                <a href="blog.html">
+                    <i class="fas fa-caret-left"></i>
+                    <p> وبلاگ</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> یادگیری </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> خبرنامه </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> خرید </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> منابع آزاد </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> اپلیکشین موبایل </p>
+                </a>
+            </div>
+            <div class="col">
+                <h4>درباره ما</h4>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>درباره برایان</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> صحبت کردن</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> مربی گری </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> وابسته </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> برایان توصیه می کند </p>
+                </a>
+            </div>
+            <form novalidate id="searchForm" name="searchForm" class="validate" method="GET" action="#!"
+                enctype="text/plain">
+                <div class="inputWrapper withSubmit">
+                    <input type="text" id="search" name="search" class="validate" placeholder="جست و جو" required>
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="msg">
+                        <i class="fas fa-caret-up"></i>
+                        <p>باید مقداری را وارد کنید</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="copyright">
+            <div class="right">
+                <p>© Copyright 2019 Hossein Jooni.</p>
+                <p>All Rights Reserved.</p>
+            </div>
+            <img class="center-x" src="./assets/icons/logo.jpg" alt="footerImg">
+            <div class="left">
+                <p>Your Privacy is Guaranteed. We will never give, lease or sell your</p>
+                <p>personal information. Period!</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./utilities/scripts/form.js"></script>
+    <script src="./utilities/scripts/productSlider.js"></script>
+    <script src="./blog/scripts/nav.js"></script>
+    <script src="./products/scripts/sideBar.js"></script>
+    <script src="./product/scripts/product.js"></script>
+    <script src="./index/scripts/footer.js"></script>
+</body>
+
+</html>

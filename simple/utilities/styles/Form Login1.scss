@@ -1,0 +1,285 @@
+//just add bellow code to /utilities/styles/form.scss and inside <someFile>.scss use
+//@import '../../utilities/styles/form.scss' 
+form#login{
+    width: 40em;
+    height: auto;
+    padding: $dist2;
+    margin: 0 ;
+    position: fixed ;
+    top: 50% ;
+    right: 50% ;
+    transform: translate(50%,-50%) ;
+    display: flex;
+    @include flex(column, flex-start, center, nowrap, "");
+    img{
+        width: 12em ;
+        height: 4em;
+    }
+    h4 {
+        font-size: $fontL;
+        font-weight: 700;
+        color: $darkColor;
+    }
+    .inputWrapper.text {
+        width: 35em;
+        height: 4em;
+        position: relative;
+        margin-top: $dist2;
+        &:nth-child(4){margin-top: $dist3 ;}
+        input {
+            width: 100%;
+            height: 100%;
+            line-height: 4em;
+            padding: 0 $dist1;
+            font-size: $fontM;
+            color: $darkColor;
+            transition: all .2s linear;
+            &::placeholder {
+                color: $textGrey;
+                font-size: $fontM;
+            }
+        }
+        input.style1 {
+            border: none;
+            border-bottom: 1.2px solid lighten($textGrey, 25%);
+
+            &:focus {
+                ~label {
+                    color: $primaryColor;
+                    font-size: 8px;
+                    bottom: calc(100% + .5em);
+                    transform: translateY(50%);
+                    right: 0;
+                }
+
+                ~.line {
+                    width: 100%;
+                }
+            }
+        }
+        input.style2 {
+            border: 1.2px solid lighten($textGrey, 25%);
+            border-radius: $dist3;
+
+            &:focus {
+                border: 1.2px solid $primaryColor;
+
+                ~label {
+                    color: $primaryColor;
+                    font-size: 8px;
+                    bottom: calc(100% + 1.5em);
+                    transform: translateY(50%);
+                    right: $dist1;
+                }
+
+                ~.line {
+                    width: 0%;
+                }
+            }
+        }
+        input.style1.error {
+            border-bottom: 1.2px solid lighten($redColor2, 5%);
+            ~label {
+                color: lighten($redColor2, 5%);
+            }
+            ~.line {
+                background-color: lighten($redColor2, 5%);
+            }
+        }
+        input.style2.error {
+            border: 1.2px solid lighten($redColor2, 5%);
+
+            ~label {
+                color: lighten($redColor2, 5%);
+            }
+        }
+        label {
+            width: auto;
+            height: auto;
+            position: absolute;
+            right: $dist1;
+            bottom: 50%;
+            transform: translateY(50%);
+            display: flex;
+            @include flex(row, flex-start, center, nowrap, "");
+            color: lighten($textGrey, 20%);
+            transition: all .2s linear;
+            .icon {
+                font-size: $fontM;
+            }
+            p {
+                font-size: $fontM - .1em;
+                transform: translateX(-.3em);
+            }
+        }
+        input.style1 {
+            ~label.top {
+                font-size: 8px;
+                bottom: calc(100% + .5em);
+                transform: translateY(50%);
+                right: 0;
+            }
+        }
+        input.style2 {
+            ~label.top {
+                font-size: 8px;
+                bottom: calc(100% + 1.5em);
+                transform: translateY(50%);
+                right: $dist1;
+            }
+        }
+        .line {
+            width: 0%;
+            height: 1.2px;
+            background-color: $primaryColor;
+            position: absolute;
+            right: 0;
+            top: calc(100% - 1px);
+            transition: all .2s linear;
+        }
+        .msg {
+            width: auto;
+            height: auto;
+            border-radius: $dist3;
+            padding: $dist1 $dist2;
+            position: relative;
+            background-color: lighten($redColor2, 5%);
+            position: absolute;
+            right: 0;
+            top: 115%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .2s linear;
+            p {
+                color: $whiteColor2;
+                font-size: $fontM - .2em;
+            }
+            i {
+                font-size: $fontXL;
+                color: lighten($redColor2, 5%);
+                position: absolute;
+                right: $dist2;
+                top: calc(0% - .6em);
+            }
+        }
+        .msg.show {
+            opacity: 1;
+            visibility: visible;
+            z-index: 2;
+        }
+    }
+    .inputWrapper.checkboxes {
+        width: auto;
+        height: auto;
+        display: flex;
+        @include flex(column, flex-start, flex-start, nowrap, "");
+        margin-top: 0;
+        .checkbox {
+            width: auto;
+            height: auto;
+            padding-right: $dist1;
+            margin-top: $dist2 ;
+            input[type="checkbox"] {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+            input[type="checkbox"].style1 {
+                &:checked {
+                    ~label {
+                        .rect {
+                            width: 2em;
+                            height: 1em;
+                            border-radius: 0;
+                            border-top: none;
+                            border-right: none;
+                            border-left: 1.2px solid $primaryColor;
+                            border-bottom: 1.2px solid $primaryColor;
+                            transform: translateY(-.3em) rotate(-45deg);
+                        }
+
+                        p {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+
+            input[type="checkbox"].style2 {
+                &:checked {
+                    ~label {
+                        .rect {
+                            border: 1px solid transparent;
+                            background-color: $primaryColor;
+
+                            i {
+                                opacity: 1;
+                            }
+                        }
+
+                        p {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+
+            label {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                line-height: 2.5em;
+                display: flex;
+                @include flex(row, flex-start, center, nowrap, "");
+
+                .rect {
+                    flex-shrink: 0;
+                    width: 2em;
+                    height: 2em;
+                    border: 1px solid darken($textGrey, 15%);
+                    position: relative;
+                    transition: all .2s linear;
+                    border-radius: .45em;
+
+                    i {
+                        opacity: 0;
+                        font-size: $fontM;
+                        color: $whiteColor2;
+                        transition: all .2s linear;
+                    }
+                }
+
+                p {
+                    width: auto;
+                    font-size: $fontS + .2em;
+                    color: lighten($textGrey, 0%);
+                    margin-right: .3em;
+                    transition: all .2s linear;
+                }
+            }
+        }
+    }
+    button[type="submit"] {
+        width: auto;
+        height: auto;
+        padding: .3em $dist2 + .5em;
+        margin: $dist3 auto 0 auto;
+        border-radius: $dist3;
+        font-size: $fontL;
+        @include swapColor($textWhite,$primaryColor) ;
+    }
+    a.rememberPassword{
+        font-size: $fontS + .1em;
+        color: lighten($textGrey,0%) ;
+        position: absolute ;
+        right: 0 ;
+        top: 140% ;
+    }
+    a.signup{
+        font-size: $fontM ;
+        color: lighten($textGrey,0%) ;
+        margin-top: $dist2 ;
+    }
+}
+@include resizeTablet('form#login') ;
+@include resizeMobile('form#login') ;

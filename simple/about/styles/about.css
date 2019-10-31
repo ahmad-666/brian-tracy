@@ -1,0 +1,59 @@
+#about {
+  width: 90%;
+  height: auto;
+  margin: 1.5em auto;
+  padding: 1.5em;
+  background-color: #163A5C;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#about h4 {
+  font-size: 2.4em;
+  font-weight: 700;
+  font-weight: 700;
+  color: #FFB44B;
+}
+
+#about .shortDesc {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #90909b;
+  margin-top: 0;
+}
+
+#about .text {
+  width: 100%;
+  height: auto;
+  color: #fbfbfb;
+  font-size: 1.6em;
+  margin-top: 0.75em;
+  line-height: 1.7em;
+}
+/*# sourceMappingURL=about.css.map */
