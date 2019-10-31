@@ -1,0 +1,178 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#mobileHandler{
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+}
+#mobileHeader{
+    z-index: 2;
+    display: none;
+    width: 100%;
+    height: auto;
+    padding: $dist1 ;
+    background-color: white;
+    @include flex(row,space-between,center,nowrap,"") ;
+    overflow: hidden;
+    .logo{
+        width: auto;
+        height: auto;
+        img{
+            width: 12em;
+            height: 3em;
+            position: relative;
+            transform: translateY(15%);
+        }
+    }
+    .bars{
+        width: auto;
+        height: 100%;    
+        display: flex;
+        @include flex(column,flex-start,center,nowrap,"") ;
+        transform: rotate(-45deg) translateX(.3em);
+        cursor: pointer;
+        position: relative;
+        &:hover{
+            .line{
+                &::before{
+                    width: 100%;
+                }
+            }        
+        }
+        .line{     
+            background-color: lighten($primaryColor,10%);
+            transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            height: .4em;
+            position: relative;
+            margin-top: $dist1;      
+            transform: translateX(0);
+            &:nth-child(1){transition-delay: .3s;}
+            &:nth-child(2){transition-delay: 0s;}
+            &:nth-child(3){transition-delay: .3s;}
+            &::before{
+                content: '';
+                @include fullSize-abs ;
+                width: 0;
+                left: 0;
+                background-color: darken($primaryColor,5%);
+                transition: all .2s linear;
+            }
+        }
+        .line.top,.line.bottom{width: 2.5em;}
+        .line.middle{width: 5em;}
+        .line.goOutside{transform: translateX(10em);}
+        .arrow{
+            visibility: hidden;
+            position: absolute;
+            transition: all .2s ease-in;
+            transition-duration: .5s;
+            width: 5em;
+            height: .4em;
+            background-color: $textDark;
+            &:nth-child(4){
+                transition-delay: 0s;
+                top: 50%;
+                transform: translateX(150%);
+            }
+            &:nth-child(5){
+                transition-delay: 0s;
+                transform: rotate(-90deg) translateX(-30%) translateX(150%);
+            }
+           
+        }
+        .arrow.createClose{
+            visibility: visible;
+            transition-duration: .2s;
+            &:nth-child(4){    
+                transition-delay: .5s;    
+                top: 50%;
+                transform: translateX(0%);
+            }
+            &:nth-child(5){   
+                transition-delay: .75s;        
+                transform: rotate(-90deg) translateX(-30%) translateX(0%);
+            }
+        }
+    }
+}
+#mobileNav{
+    z-index: 1;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    .rotate{
+        width: calc(100vw + 100vh);
+        height: 0;
+        position: fixed;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%) rotate(45deg)  ;
+        transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+        background-color: white;
+    }
+    .rotate.open{
+        height: 200vh;
+    }
+    ul{
+        overflow: auto;
+        width: 100vw;
+        height: auto;
+        padding: $dist2;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        transition: all .3s linear;
+        transition-delay: .5s;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(5em);
+        li{    
+            margin-right: $dist4 * 6.5;
+            width: auto;
+            height: auto;
+            &:not(:first-child){margin-top: $dist2;}          
+            a{
+                width: auto;
+                height: auto;
+                font-size: $fontM;
+                position: relative;
+                color: $textDark;
+                &::before{
+                    content: '';
+                    width: 50%;
+                    height: .2em;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .3s ease-in-out;
+                    position: absolute;
+                    background-color: $textDark;
+                    top: 100%;
+                    right: 100%;
+                }
+                &:hover{
+                    &::before{
+                        right: 0%;
+                        visibility: visible;
+                        opacity: 1;
+                    }            
+                }
+            }
+        }
+    }
+    ul.show{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0em);
+    }
+}
+
+@include mediaQ(750px){
+    #mobileHeader{
+        display: flex;
+    }
+    #mobileNav{
+        display: block;
+    }
+}

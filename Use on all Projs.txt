@@ -11,7 +11,7 @@
 	npm i webpack webpack-cli webpack-dev-server cross-env --save-dev
 	npm i core-js regenerator-runtime path-browserify 
 	npm i @babel/core @babel/preset-env babel-loader  --save-dev
-	npm i postcss postcss-loader autoprefixer cssnano @fullhuman/postcss-purgecss --save-dev
+	npm i postcss postcss-loader autoprefixer cssnano @fullhuman/postcss-purgecss mathsass --save-dev
 	npm i css-loader sass-loader node-sass style-loader --save-dev 
 		*if we see error while installing it we should install other packages like webpack first and then install these packages.
 	npm i html-loader file-loader --save-dev 
