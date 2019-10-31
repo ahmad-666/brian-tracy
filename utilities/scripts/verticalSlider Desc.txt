@@ -1,0 +1,65 @@
+<div id="verticalSliderWrapper">
+    <div class="dots center-y">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <i class="fas fa-angle-up btn prev center-x"></i>
+    <i class="fas fa-angle-down btn next center-x"></i>
+    <div class="slider" style="top:0%">
+        <div class="slide">
+            <div class="right">
+                <h4>عنوان اسلاید</h4>
+                <p class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sapiente voluptatum veritatis minus, nulla rem voluptates repellendus reiciendis ullam mollitia eveniet quae corporis obcaecati asperiores cupiditate suscipit recusandae unde modi.
+                    Laborum dicta nemo dolor doloribus, eum cumque illum in dignissimos autem recusandae nobis iusto praesentium fugit eius, facilis architecto at esse quaerat, atque minima distinctio? Cumque corporis in porro rerum.
+                </p>
+                <p class="writer">- حسین جونی </p>
+            </div>
+            <div class="left">
+                <img src="../assets/imgs/slide1.jpg" alt="slide1Img">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="right">
+                <h4>عنوان اسلاید</h4>
+                <p class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sapiente voluptatum veritatis minus, nulla rem voluptates repellendus reiciendis ullam mollitia eveniet quae corporis obcaecati asperiores cupiditate suscipit recusandae unde modi.
+                    Laborum dicta nemo dolor doloribus, eum cumque illum in dignissimos autem recusandae nobis iusto praesentium fugit eius, facilis architecto at esse quaerat, atque minima distinctio? Cumque corporis in porro rerum.
+                </p>
+                <p class="writer">- حسین جونی </p>
+            </div>
+            <div class="left">
+                <img src="../assets/imgs/slide2.jpg" alt="slide2Img">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="right">
+                <h4>عنوان اسلاید</h4>
+                <p class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sapiente voluptatum veritatis minus, nulla rem voluptates repellendus reiciendis ullam mollitia eveniet quae corporis obcaecati asperiores cupiditate suscipit recusandae unde modi.
+                    Laborum dicta nemo dolor doloribus, eum cumque illum in dignissimos autem recusandae nobis iusto praesentium fugit eius, facilis architecto at esse quaerat, atque minima distinctio? Cumque corporis in porro rerum.
+                </p>
+                <p class="writer">- حسین جونی </p>
+            </div>
+            <div class="left">
+                <img src="../assets/imgs/slide3.jpg" alt="slide3Img">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="right">
+                <h4>عنوان اسلاید</h4>
+                <p class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione sapiente voluptatum veritatis minus, nulla rem voluptates repellendus reiciendis ullam mollitia eveniet quae corporis obcaecati asperiores cupiditate suscipit recusandae unde modi.
+                    Laborum dicta nemo dolor doloribus, eum cumque illum in dignissimos autem recusandae nobis iusto praesentium fugit eius, facilis architecto at esse quaerat, atque minima distinctio? Cumque corporis in porro rerum.
+                </p>
+                <p class="writer">- حسین جونی </p>
+            </div>
+            <div class="left">
+                <img src="../assets/imgs/slide1.jpg" alt="slide4Img">
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,32 @@
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+@import '../../colors.scss' ;
+#about{
+    width: 90%;
+    height: auto;
+    margin: $dist2 auto;
+    padding: $dist2;
+    background-color: #163A5C;
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    h4{
+        font-size: $fontXL;
+        font-weight: 700;
+        font-weight: 700;
+        color: #FFB44B;
+    }
+    .shortDesc{
+        font-size: $fontM;
+        font-weight: 700;
+        color: $textGrey;
+        margin-top: 0;
+    }
+    .text{
+        width: 100%;
+        height: auto;
+        color: $textWhite;
+        font-size: $fontM;
+        margin-top: $dist1;
+        line-height: $dist2 + .2em;
+    }
+}

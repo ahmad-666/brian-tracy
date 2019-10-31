@@ -1,0 +1,20 @@
+<form novalidate id="forgetPassword" name="forgetPassword" class="validate containerStyle" method="GET" action="#!" enctype="text/plain">
+	<a href="index.html">
+		<img src="../assets/icons/logoBrian.png" alt="logoImg">
+	</a>
+	<h4>فراموشی رمز عبور</h4>
+	<div class="inputWrapper text">
+		<input type="email" id="email" name="email" class="style1 labelHandler validate" required>
+		<label for="email">
+			<i class="fas fa-envelope icon"></i>
+			<p>پست الکترونیکی</p>
+		</label>
+		<span class="line"></span>
+		<div class="msg">
+			<p>ایمیل صحیح وارد نمایید</p>
+			<i class="fas fa-caret-up"></i>
+		</div>
+	</div>
+	<button type="submit" class="pulse shadowPrimary">ارسال</button>
+	<a class="login" href="login.html">ورود به حساب کاربری</a>
+</form>

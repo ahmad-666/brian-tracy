@@ -1,0 +1,6 @@
+<button class="modalTrigger" data-modal="adminApprove">ثبت</button>
+<div id="adminApprove" class="containerStyle modal">
+    <i class="fas fa-user-shield"></i>
+    <p>نظر شما بعد از تایید مدیر نمایش داده میشود</p>
+    <button class="btn small pulse close">بستن</button>
+</div>

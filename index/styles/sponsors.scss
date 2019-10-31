@@ -1,0 +1,30 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss';
+#sponsors{
+    width: 100%;
+    height: auto;
+    padding: $dist3 $dist4 * 2;
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"");
+    h4{
+        font-size: $fontXL;
+        color: $textDark;
+        font-weight: 700;
+    }
+    .sponsors{
+        width: 100%;
+        height: auto;
+        display: flex;
+        @include flex(row,flex-start,center,wrap,flex-start);
+        .sponsor{
+            width: calc((100% - (6 * 3em)) / 6);
+            height: 9em;
+            margin: $dist2;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

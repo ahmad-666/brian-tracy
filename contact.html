@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libraries/fontawesome/all.min.css">
+    <link rel="stylesheet" href="./framework.css">
+    <link rel="stylesheet" href="./init.css">
+    <link rel="stylesheet" href="./blog/styles/nav.css">
+    <link rel="stylesheet" href="./contact/styles/contact.css">
+    <link rel="stylesheet" href="./index/styles/footer.css">
+</head>
+
+<body>
+    <nav id="blog">
+        <ul class="content">
+            <li class="basket">
+                <a href="#!">
+                    <i class="fas fa-shopping-basket"></i>
+                    <p>0</p>
+                </a>
+            </li>
+            <li class="dropdownTrigger">
+                <p>حساب من</p>
+                <i class="fas fa-angle-down"></i>
+                <ul class="dropdown">
+                    <li>
+                        <a href="login.html">ورود</a>
+                    </li>
+                    <li>
+                        <a href="signup.html">ساخت حساب کاربری</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdownTrigger">
+                <p>سخنرانی</p>
+                <i class="fas fa-angle-down"></i>
+                <ul class="dropdown">
+                    <li>
+                        <a href="#!">تست سخنرانی</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#!">خرید</a>
+            </li>
+            <li>
+                <a href="blog.html">وبلاگ</a>
+            </li>
+            <li class="dropdownTrigger">
+                <p>دسته بندی</p>
+                <i class="fas fa-angle-down"></i>
+                <ul class="dropdown">
+                    <li>
+                        <a href="#!">رشد و تعالی فردی</a>
+                    </li>
+                    <li>
+                        <a href="#!">مدیریت زمان</a>
+                    </li>
+                    <li>
+                        <a href="#!"> ارزیابی عملکرد</a>
+                    </li>
+                    <li>
+                        <a href="#!"> سخنرانی در جامعه</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="index.html" class="logo">
+            <img src="./assets/icons/logo.jpg" alt="logoImg">
+        </a>
+    </nav>
+    <div id="contactWrapper">
+        <div class="sideBar">
+            <div class="office">
+                <h4>دفتر اصلی</h4>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>مشهد - سیدرضی ۵۷ - پلاک ۲۸۸</p>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <p>051-38670000</p>
+                </div>
+                <div class="email">
+                    <i class="fas fa-envelope"></i>
+                    <p>something@gmail.com</p>
+                </div>
+            </div>
+            <div class="hourWork">
+                <h4>ساعات کاری</h4>
+                <div class="hour">
+                    <i class="fas fa-clock"></i>
+                    <p>شنبه تا پنجشنبه - از ساعت ۹ الی ۱۶</p>
+                </div>
+            </div>
+        </div>
+        <form novalidate name="contact" id="contact" class="validate contactForm" method="GET" action="#!" enctype="text/plain">
+            <h4>ارتباط با مدیر</h4>
+            <p class="shortDesc">
+                برای ارسال نظرات خود میتوانید از فرم زیر استفاده کنید یا میتوانید نظر خود را به
+                <a href="#!">something@gamil.com</a>
+                ایمیل کنید
+            </p>
+            <div class="row">
+                <div class="inputWrapper text">
+                    <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+                    <label for="name">
+                        <i class="fas fa-user icon"></i>
+                        <p>نام و نام خانوادگی</p>
+                    </label>
+                    <span class="line"></span>
+                    <div class="msg">
+                        <p>نام و نام خانوادگی خود را وارد نمایید</p>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+                <div class="inputWrapper text">
+                    <input type="email" id="email" name="email" class="style1 labelHandler validate" required>
+                    <label for="email">
+                        <i class="fas fa-envelope icon"></i>
+                        <p>پست الکترونیکی</p>
+                    </label>
+                    <span class="line"></span>
+                    <div class="msg">
+                        <p>ایمیل صحیح وارد نمایید</p>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+                <div class="inputWrapper text">
+                    <input type="text" id="subject" name="subject" class="style1 labelHandler validate" required>
+                    <label for="subject">
+                        <i class="fas fa-envelope icon"></i>
+                        <p>موضوع</p>
+                    </label>
+                    <span class="line"></span>
+                    <div class="msg">
+                        <p>باید موضوع را وارد کنید</p>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="inputWrapper textarea">
+                <textarea name="comment" id="comment" class="style1 labelHandler validate" required></textarea>
+                <label for="comment">
+                    <i class="fas fa-comments"></i>
+                    <p>نظر خود را وارد نمایید</p>
+                </label>
+                <span class="line"></span>
+            </div>
+            <button type="submit" class="btn mid">ارسال</button>
+        </form>
+    </div>
+    <footer>
+        <div class="follow">
+            <p>حسین جونی را در شبکه های اجتماعی دنبال کنید</p>
+            <div class="socials">
+                <a href="#!" class="social telegram">
+                    <i class="fab fa-telegram-plane center-xy"></i>
+                </a>
+                <a href="#!" class="social whatsapp">
+                    <i class="fab fa-whatsapp center-xy"></i>
+                </a>
+                <a href="#!" class="social youtube">
+                    <i class="fab fa-youtube center-xy"></i>
+                </a>
+                <a href="#!" class="social twitter">
+                    <i class="fab fa-twitter center-xy"></i>
+                </a>
+                <a href="#!" class="social instagram">
+                    <i class="fab fa-instagram center-xy"></i>
+                </a>
+                <a href="#!" class="social linkedin">
+                    <i class="fab fa-linkedin center-xy"></i>
+                </a>
+            </div>
+        </div>
+        <div class="links">
+            <div class="col">
+                <h4>حمایت</h4>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>تماس با ما</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> دانش محور</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>حمل و نقل و بازگشت </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> نقشه سایت </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> حریم خصوصی</p>
+                </a>
+            </div>
+            <div class="col">
+                <h4>خرید</h4>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>بهترین فروشندگان</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> موفقیت شخصی</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> آموزش فروش </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> آموزش کسب وکار </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> مدیریت زمان </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> رهبری </p>
+                </a>
+            </div>
+            <div class="col">
+                <h4>کشف کردن</h4>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>خانه</p>
+                </a>
+                <a href="blog.html">
+                    <i class="fas fa-caret-left"></i>
+                    <p> وبلاگ</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> یادگیری </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> خبرنامه </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> خرید </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> منابع آزاد </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> اپلیکشین موبایل </p>
+                </a>
+            </div>
+            <div class="col">
+                <h4>درباره ما</h4>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p>درباره برایان</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> صحبت کردن</p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> مربی گری </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> وابسته </p>
+                </a>
+                <a href="#!">
+                    <i class="fas fa-caret-left"></i>
+                    <p> برایان توصیه می کند </p>
+                </a>
+            </div>
+            <form novalidate id="searchForm" name="searchForm" class="validate" method="GET" action="#!"
+                enctype="text/plain">
+                <div class="inputWrapper withSubmit">
+                    <input type="text" id="search" name="search" class="validate" placeholder="جست و جو" required>
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="msg">
+                        <i class="fas fa-caret-up"></i>
+                        <p>باید مقداری را وارد کنید</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="copyright">
+            <div class="right">
+                <p>© Copyright 2019 Hossein Jooni.</p>
+                <p>All Rights Reserved.</p>
+            </div>
+            <img class="center-x" src="./assets/icons/logo.jpg" alt="footerImg">
+            <div class="left">
+                <p>Your Privacy is Guaranteed. We will never give, lease or sell your</p>
+                <p>personal information. Period!</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./utilities/scripts/form.js"></script>
+    <script src="./blog/scripts/nav.js"></script>
+    <script src="./contact/scripts/contact.js"></script>
+    <script src="./index/scripts/footer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+.topSlider {
+  width: 80%;
+  height: 35em;
+  margin: 4em auto;
+  position: relative;
+}
+
+.topSlider .slide {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .4s linear;
+  -moz-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.topSlider .slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.topSlider .slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.topSlider .arrow {
+  color: #fbfbfb;
+  font-size: 4em;
+  cursor: pointer;
+  padding: 0.75em;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.topSlider .arrow:hover {
+  -webkit-transform: translateY(-50%) scale(1.3);
+     -moz-transform: translateY(-50%) scale(1.3);
+      -ms-transform: translateY(-50%) scale(1.3);
+          transform: translateY(-50%) scale(1.3);
+}
+
+.topSlider .arrow.prev {
+  right: 0;
+}
+
+.topSlider .arrow.next {
+  left: 0;
+}
+
+.topSlider .dots_container {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  bottom: 0.75em;
+}
+
+.topSlider .dots_container .dot {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin: 0 0.75em;
+  cursor: pointer;
+  background-color: #fbfbfb;
+  -webkit-transition: all .4s linear;
+  -moz-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.topSlider .dots_container .dot:not(.active):hover {
+  background-color: #e567c9;
+}
+
+.topSlider .dots_container .dot.active {
+  background-color: #C422A0;
+  -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=sliderFade.css.map */

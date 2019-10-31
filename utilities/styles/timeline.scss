@@ -1,0 +1,187 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#timelineWrapper{
+    height: auto;
+    margin: $dist3 auto ;
+    padding: $dist2 0 ;
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    #timeline{
+        width: 90% ;
+        height: auto;
+        margin-top: $dist3 ;
+        display: flex ;
+        @include flex(row,space-between,center,nowrap,"") ;
+        position: relative ;
+        &::before{
+            content: '' ;
+            width: 100% ;
+            height: .3em;
+            background-color: lighten($textGrey,30%) ;
+            @include center-y ;
+            right: 0 ;
+        }
+        .line{
+            @include center-y ;
+            height: .4em;
+            background-color: $greenColor1 ;
+            right: 0 ;
+            transition: all .3s linear ;
+        }
+        .step{
+            position: relative;
+            p{
+                @include center-x ;
+                width: 200% ;
+                text-align:center ;
+                top: -2em ;
+                font-size: $fontM ;
+                color: lighten($textGrey,20%) ;
+                transition: all .2s linear ;
+            }
+            .circle{
+                width: 4.5em ;
+                height: 4.5em;
+                border-radius: 50% ;
+                background-color: white ;
+                border: 1.2px solid lighten($textGrey,20%) ;
+                transition: all .2s linear ;
+                position: relative ;
+                i{
+                    opacity: 0;
+                    font-size: $fontXL ;
+                    color: $textWhite ;
+                    transition: all .2s linear ;
+                }
+            }
+        }
+        .step.active{
+            p{
+                color: $darkBlue ;
+                font-weight: 700 ;
+            }
+            .circle{
+                border: 1.2px solid transparent ;
+                background-color: $greenColor1 ;
+                i{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    form#sample{
+        width: 100% ;
+        height: auto;
+        margin-top: $dist2 ;
+        overflow: hidden;
+        #timelineSlider{
+            width: 100% ;
+            height: auto;
+            transition: all .3s linear ;
+            display: flex ;
+            @include flex(row,flex-start,flex-start,nowrap,"") ;
+            position: relative ;
+            .slide{
+                flex-shrink: 0;
+                width: 100% ;
+                height: auto;
+                padding: 0 $dist2 $dist3 $dist2 ;
+                display: flex ;
+                @include flex(column,flex-start,center,nowrap,"") ;
+                h4{
+                    font-size: $fontL ;
+                    font-weight: 700 ;
+                    color: $textDark ;
+                }
+                .content{
+                    width: 100% ;
+                    height: auto;
+                    margin-top: $dist1 ;
+                    display: flex ;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    p{
+                        font-size: $fontM ;
+                        color: darken($textGrey,20%) ;
+                    } 
+                }
+                .btnWrapper{
+                    width: auto ;
+                    height: auto;
+                    margin-top: $dist2 ;
+                    display: flex ;
+                    @include flex(row,flex-start,center,wrap,flex-start) ;
+                    .changeSlide{
+                        width: auto ;
+                        height: auto;
+                        border-radius: $dist3 ;
+                        cursor: pointer;
+                        transition: all .2s linear ;
+                        padding: $dist1 - .1em $dist2 + 1em ;
+                        white-space: nowrap ;
+                        font-size: $fontM ;
+                        color: $textWhite ;
+                        &:nth-child(2){
+                            margin-right: $dist3 ;
+                        }
+                    }
+                    .changeSlide.prev{
+                        background-color: lighten($redColor2,5%) ;
+                        &:hover{
+                            border: 1.2px solid lighten($redColor2,5%) ;
+                            color: lighten($redColor2,5%) ;
+                            background-color: $textWhite ;
+                        }
+                    }
+                    .changeSlide.next{
+                        background-color: $greenColor1 ;
+                        &:hover{
+                            border: 1.2px solid $greenColor1 ;
+                            color: $greenColor1 ;
+                            background-color: $textWhite ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include resizeTablet(#timelineWrapper) ;
+@include resizeMobile(#timelineWrapper) ;
+@include mediaQ(500px){
+    #timelineWrapper{
+        padding: $dist2 $dist2 ;
+        @include flex(row,flex-start,flex-start,nowrap,"") ;
+        #timeline{
+            flex-shrink: 0 ;
+            width: auto ;
+            height: 90%;
+            margin-top: $dist2 ;
+            margin-right: $dist3;
+            @include flex(column,space-between,center,nowrap,"") ;
+            &::before{
+                width: .3em ;
+                height: 100%;
+                @include center-x ;
+                top: 0 ;
+            }
+            .line{
+                width: .3em;
+                @include center-x ;
+                top: 0 ;
+            }
+            .step{
+                p{
+                    width: 100% ;
+                    text-align:center ;
+                    @include center-y ;
+                    right: -3em ;
+                }
+            }
+        }
+        form#sample{
+            margin-top: $dist2 ;
+            margin-right: $dist2 ;
+        }
+    } 
+}

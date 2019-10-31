@@ -1,0 +1,26 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#advicesLinks{
+    width: 100%;
+    height: auto;
+    background-color: $darkBlue;
+    padding: $dist2 $dist4 * 2;
+    color: $textWhite;
+    display: flex;
+    @include flex(row,flex-start,center,wrap,flex-start);
+    p{
+        width: auto;
+        height: auto;
+        text-align: center;
+        font-size: $fontM;       
+         color: inherit;       
+    }
+    a{
+        font-size: $fontM;
+        color: inherit;
+        margin: $dist1 .3em;
+        transform: all .2s linear;
+        &:hover{color: lighten($blueColor1,20%);}
+    }
+}

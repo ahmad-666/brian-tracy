@@ -1,0 +1,31 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+main{
+    #products{
+        .pagination{
+            width: auto;
+            height: auto;
+            margin-top: $dist3;
+            display: flex;
+            @include flex(row,flex-start,center,nowrap,"") ;
+            .page{
+                width: auto;
+                height: 100%;
+                padding: $dist1 ;
+                font-size: $fontM;
+                transition: all .2s linear;
+                background-color: white;
+                color: $primaryColor;
+                &:hover{
+                    color: white;
+                    background-color: $primaryColor;
+                }
+            }
+            .page.active{
+                color: white;
+                background-color: $primaryColor;
+            }
+        }
+    }
+}

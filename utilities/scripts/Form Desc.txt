@@ -1,0 +1,295 @@
+<form novalidate id="sample" name="sample" class="validate" method="GET" action="#!" enctype="text/plain">
+	<h4>My Title</h4>
+	<div class="inputs">
+		<div class="inputWrapper text">
+			<input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+			<label for="name">
+				<i class="fas fa-user icon"></i>
+				<p>نام و نام خانوادگی</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>نام و نام خانوادگی خود را وارد نمایید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text">
+			<input type="email" id="email" name="email" class="style1 labelHandler validate" required>
+			<label for="email">
+				<i class="fas fa-envelope icon"></i>
+				<p>پست الکترونیکی</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>ایمیل صحیح وارد نمایید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text">
+			<input type="password" id="password" name="password" class="style1 labelHandler validate" required pattern=".{6,}">
+			<label for="password">
+				<i class="fas fa-lock icon"></i>
+				<p>رمز ورود</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>رمز ورود را وارد کنید(حداقل ۶رقم)</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text">
+			<input type="password" id="passwordRepeat" name="passwordRepeat" class="style1 labelHandler validate" required>
+			<label for="passwordRepeat">
+				<i class="fas fa-lock icon"></i>
+				<p>تکرار رمز ورود</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>مقدار وارد شده با رمز ورود یکسان نیست</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text">
+			<input type="number" id="tel" name="tel" class="style1 labelHandler validate" required>
+			<label for="tel">
+				<i class="fas fa-phone icon"></i>
+				<p>شماره ثابت</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>شماره ثابت وارد نمایید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text">
+			<input type="number" id="mobile" name="mobile" class="style1 labelHandler validate" required pattern="\d{11}">
+			<label for="mobile">
+				<i class="fas fa-mobile-alt icon"></i>
+				<p>شماره موبایل</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>شماره موبایل صحیح(شروع با ۰۹) وارد نمایید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text">
+			<input type="text" id="post" name="post" class="style1 labelHandler validate" required>
+			<label for="post">
+				<i class="fas fa-mail-bulk"></i>
+				<p>کد پستی</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>کد پستی را وارد کنید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>         
+		<div class="inputWrapper text">
+			<input type="text" id="address" name="address" class="style1 labelHandler validate" required>
+			<label for="address">
+				<i class="fas fa-map-marker-alt icon"></i>
+				<p>آدرس محل سکونت</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>آدرس خود را وارد نمایید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper select">
+			<input type="hidden" id="cityHidden" name="cityHidden">
+			<input type="text" id="city" name="city" class="style2 validate" required readonly>
+			<label for="city">
+				<i class="fas fa-map-marker-alt icon"></i>
+				<p>شهر محل سکونت</p>
+			</label>
+			<i class="fas fa-angle-down arrow center-y"></i>
+			<span class="line"></span>
+			<ul>
+				<li data-value="mashhad">مشهد</li>
+				<li data-value="tehran">تهران</li>
+				<li data-value="mashhad">مشهد</li>
+				<li data-value="tehran">تهران</li>
+				<li data-value="mashhad">مشهد</li>
+				<li data-value="tehran">تهران</li>
+				<li data-value="mashhad">مشهد</li>
+				<li data-value="tehran">تهران</li>
+				<li data-value="mashhad">مشهد</li>
+				<li data-value="tehran">تهران</li>
+			</ul>
+		</div>
+		<div class="inputWrapper selectSearch">
+			<input type="hidden" id="stateHidden" name="stateHidden">
+			<input type="text" id="state" name="state" class="style1 validate" required>
+			<label for="state">
+				<i class="fas fa-map-marker-alt icon"></i>
+				<p>استان محل سکونت</p>
+			</label>
+			<i class="fas fa-angle-down arrow center-y"></i>
+			<span class="line"></span>
+			<ul>
+				<li data-value="tehran">تهران</li>
+				<li data-value="razavi">رضوی</li>
+				<li data-value="shomali">شمالی</li>
+				<li data-value="jonubi">جنوبی</li>
+				<li data-value="esfehan">اصفهان</li>
+				<li data-value="tehran">تهران</li>
+				<li data-value="razavi">رضوی</li>
+				<li data-value="shomali">شمالی</li>
+				<li data-value="jonubi">جنوبی</li>
+				<li data-value="esfehan">اصفهان</li>                  
+			</ul>
+		</div>
+		<div class="inputWrapper withSubmit">
+			<input type="text" id="search" name="search" class="validate" placeholder="مقداری را وارد کنید" required>
+			<button type="submit">
+				<i class="fas fa-search"></i>
+			</button>
+			<div class="msg">
+				<i class="fas fa-caret-up"></i>
+				<p>باید مقداری را وارد کنید</p>
+			</div>
+		</div>
+		<div class="inputWrapper numberHandler">
+			<i class="fas fa-plus increase"></i>
+			<input type="number" id="quantity" name="quantity" data-min="1" data-max="10" data-step="1" value="1" required readonly>
+			<i class="fas fa-minus decrease"></i>
+		</div>
+		<div class="inputWrapper checkboxes">
+			<div class="checkbox">
+				<input type="checkbox" id="checkbox1" name="checkbox1" class="style1" value="checkbox1">
+				<label for="checkbox1">
+					<span class="rect">
+						<i class="fas fa-check center-xy"></i>
+					</span>
+					<p class="ellipse">متن مورد نظر برای checkbox1</p>
+				</label>
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="checkbox2" name="checkbox2" class="style2" value="checkbox2">
+				<label for="checkbox2">
+					<span class="rect">
+						<i class="fas fa-check center-xy"></i>
+					</span>
+					<p class="ellipse">متن مورد نظر برای checkbox2</p>
+				</label>
+			</div>         
+		</div>
+		<div class="inputWrapper radios">
+			<div class="radio">
+				<input type="radio" id="radio1" name="radioName" class="style1" value="radio1" checked>
+				<label for="radio1">
+					<span class="circle">
+						<span class="fill"></span>
+					</span>
+					<p>متن مورد نظر برای radio1</p>
+				</label>
+			</div>
+			<div class="radio">
+				<input type="radio" id="radio2" name="radioName" class="style2" value="radio2">
+				<label for="radio2">
+					<span class="circle">
+						<span class="fill"></span>
+					</span>
+					<p>متن مورد نظر برای radio2</p>
+				</label>
+			</div>         
+		</div>
+		<div class="inputWrapper toggle">
+			<input type="hidden">
+			<p class="toggleText right" data-value="فعال">فعال</p>
+			<div class="switch">
+				<span class="circle left center-y"></span>
+			</div>
+			<p class="toggleText left active" data-value="غیر فعال">غیر فعال</p>
+		</div>
+		<div class="inputWrapper textarea">
+			<textarea name="comment1" id="comment1" class="style1 labelHandler validate" required></textarea>
+			<label for="comment1">
+				<i class="fas fa-comments"></i>
+				<p>نظر خود را وارد نمایید</p>
+			</label>
+			<span class="line"></span>
+		</div>
+		<div class="inputWrapper textarea">
+			<textarea name="comment2" id="comment2" class="style2 labelHandler autoExpand validate" required></textarea>
+			<label for="comment2">
+				<i class="fas fa-comments"></i>
+				<p>نظر خود را وارد نمایید</p>
+			</label>
+			<span class="line"></span>
+		</div>
+		<div class="inputWrapper range">
+			<input type="hidden" class="min">
+			<input type="hidden" class="max">
+			<h4>عنوان رنجر</h4>
+			<div class="ranger" data-min="0" data-max="10000" data-step="100"></div>
+			<p class="text"></p>
+		</div>
+		<div class="inputWrapper text code">
+			<input type="text" id="code" name="code" class="style2 labelHandler validate" required>
+			<label for="code">
+				<i class="fas fa-lock icon"></i>
+				<p>کد امنیتی</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>کد وارد شده صحیح نیست</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+			<div class="row">
+				<div id="timer">
+					<p class="sec"></p>
+					<p>:</p>
+					<p class="min"></p>
+				</div>
+				<button type="button" id="resendCode">ارسال مجدد کد</button>
+			</div>
+		</div>
+		<div class="inputWrapper star">
+			<input type="hidden" id="starScore" name="starScore">
+			<div class="stars">
+				<i class="fas fa-star active" data-score="0"></i>
+				<i class="fas fa-star" data-score="1"></i>
+				<i class="fas fa-star" data-score="2"></i>
+				<i class="fas fa-star" data-score="3"></i>
+				<i class="fas fa-star" data-score="4"></i>
+			</div>
+			<button type="button">ثبت</button>
+		</div>
+		<div class="inputWrapper text separate3Num">
+			<input type="text" id="money" name="money" class="style1 labelHandler validate" required>
+			<label for="money">               
+				<i class="fas fa-money-check-alt icon"></i>
+				<p>هزینه محصول</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>هزینه محصول را وارد کنید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text searchList">
+			<input type="hidden" id="searchListHidden" name="searchListHidden">
+			<input type="text" id="searchList" name="searchList" class="style1 labelHandler validate" required>
+			<label for="searchList">
+				<i class="fas fa-search icon"></i>
+				<p>عبارت جست و جو</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>عبارتی را برای جست و جو وارد نکرده اید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+			<ul>
+				<li data-search="aaaa">aaaa</li>
+				<li data-search="bbb">bbb</li>
+				<li data-search="ccccccc">ccccccc</li>
+				<li data-search="abababa">abababa</li>
+				<li data-search="ccbbaa">ccbbaa</li>
+			</ul>
+		</div>
+		<button type="submit" class="final" id="validateCode">ارسال</button>
+	</div>
+</form>

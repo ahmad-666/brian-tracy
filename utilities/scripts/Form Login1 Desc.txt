@@ -1,0 +1,46 @@
+<form novalidate id="login" name="login" class="validate containerStyle" method="GET" action="#!" enctype="text/plain">
+	<a href="index.html">
+		<img src="../assets/icons/logoBrian.png" alt="logoImg">
+	</a>
+	<h4>ورود</h4>
+	<div class="inputWrapper text">
+		<input type="email" id="email" name="email" class="style1 labelHandler validate" required>
+		<label for="email">
+			<i class="fas fa-envelope icon"></i>
+			<p>پست الکترونیکی</p>
+		</label>
+		<span class="line"></span>
+		<div class="msg">
+			<p>ایمیل صحیح وارد نمایید</p>
+			<i class="fas fa-caret-up"></i>
+		</div>
+	</div>
+	<div class="inputWrapper text">
+		<input type="password" id="password" name="password" class="style1 labelHandler validate" required>
+		<a class="rememberPassword" href="forgetPassword.html">رمز عبور خود را فراموش کرده اید؟</a>
+		<label for="password">
+			<i class="fas fa-lock icon"></i>
+			<p>رمز ورود</p>
+		</label>
+		<span class="line"></span>
+		<div class="msg">
+			<p>رمز صحیح وارد نکرده اید</p>
+			<i class="fas fa-caret-up"></i>
+		</div>
+	</div>
+	<button type="submit" class="pulse shadowPrimary">ورود</button>
+	<div class="inputWrapper checkboxes">
+		<div class="checkbox">
+			<input type="checkbox" id="rememberMe" name="rememberMe" class="style2" value="rememberMe">
+			<label for="rememberMe">
+				<span class="rect">
+					<i class="fas fa-check center-xy"></i>
+				</span>
+				<p>مرا بخاطر بسپار</p>
+			</label>
+		</div>    
+	</div>
+	<a class="signup" href="signup.html">
+		ساخت حساب کاربری
+	</a>
+</form>

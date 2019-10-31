@@ -1,0 +1,33 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+main{
+    #product{
+        #breadcrumb{
+            width: auto;
+            height: auto;
+            padding: $dist1 ;
+            display: flex;
+            @include flex(row,flex-start,center,nowrap,"") ;
+            a,.arrow{
+                font-size: $fontM;
+                color: $textGrey;
+                &:hover{
+                    color: $primaryColor;
+                }
+            }
+            .home{
+                width: auto;
+                height: auto;
+                display: flex;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                p{
+                    margin-right: .3em;
+                }
+            }
+            > * {
+                &:not(:first-child){margin-right: $dist2;}
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+header{
+    nav{
+        width: 100%;
+        height: auto;
+        position: absolute ;
+        right: 0;
+        top: $dist4;
+        display: flex;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        color: $textWhite;
+        padding-right: $dist4 * 2;
+        .logo{
+            width: 12em;
+            height: 4em;
+        }
+        .navigation{
+            width: auto;
+            height: auto;
+            margin-right: $dist3;
+            display: flex;
+            @include flex(row,flex-start,center,nowrap,"") ;
+            > li{
+                width: auto;
+                height: auto;
+                cursor: pointer;
+                margin-right: $dist2 + .5em;
+                font-size: $fontM;
+                color: inherit;
+                padding: $dist1 ;
+                &:not(.search){
+                    transition: all .3s linear;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: #333E55;
+                    }
+                }
+                
+            }
+            .dropdownTrigger{
+                cursor: pointer;
+                display: flex;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                position: relative;      
+                p,i{
+                    color: inherit;
+                }
+                i{margin-right: $dist1;}
+                &:hover{
+                    .dropdown{
+                        height: auto;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .dropdown{
+                    transition: all .3s linear;
+                    width: 10em;
+                    height: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    top: calc(100% + 1em);
+                    right: 0;
+                    box-shadow: 0 0 .3em .05em darken($textWhite,20%);
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    li{
+                        width: 100%;
+                        height: auto;
+                        font-size: 10px;
+                        color: $textWhite;
+                        background-color: adjust-color(#333E55,$alpha: -.35);
+                        transition: all .3s linear;
+                        a{
+                            display: inline-block;
+                            padding: $dist1;
+                            width: 100%;
+                            height: auto;
+                            color: inherit;
+                            font-size: $fontM;
+                        }
+                        &:hover{
+                            background-color: darken(#333E55,15%);
+                        }
+                    }
+                }
+            }
+            .shop,.blog,.search{
+                width: auto;
+                height: auto;
+                font-size: 10px;
+                padding: 0;
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    padding: .5em $dist2;
+                    color: inherit;
+                    font-size: $fontM;
+                }           
+            }
+            .blog{
+                border: 1.2px solid $textWhite ;
+                &:hover{
+                    border: 1.2px solid transparent ;
+                }
+            }
+            .search{
+                padding: 0 ;
+                margin-right: $dist3 + 2em;
+                a{font-size: 10px;}
+                i{
+                    font-size: $fontXL;
+                }
+            }
+        }
+    }
+}
