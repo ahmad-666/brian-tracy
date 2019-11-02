@@ -4,7 +4,7 @@
 nav#blog{
     width: 100%;
     height: 5em;
-    padding: 0 $dist4 * 2;
+    padding: 0 10vw;
     background-color: #163A5C;
     display: flex;
     @include flex(row,space-between,center,nowrap,"") ;
@@ -91,6 +91,127 @@ nav#blog{
                         color: inherit;
                         font-size: $fontS + .1em;
                         padding: $dist1;
+                    }
+                }
+            }
+        }
+    }
+    .mobile{
+        display: none;
+    }
+}
+@include mediaQ(1000px){
+    nav#blog{
+        font-size: 7px;
+    }
+}
+@include mediaQ(750px){
+    nav#blog{
+        padding: 0 $dist2;
+        .content{
+            display: none;
+        }
+        .mobile{
+            display: block;
+            width: 5em;
+            height: 100%;
+            cursor: pointer;
+            position: relative;
+            .fa-bars{
+                color: $textWhite;
+                font-size: $fontSpecial;
+            }
+            .menu{
+                box-shadow: 0 .2em .6em .1em $shadowColor;
+                width: 30em;
+                height: auto;
+                position: absolute;
+                right: 0;
+                top: 100%;
+                display: flex;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                > li {
+                    width: 100%;
+                    height: auto;
+                    padding: $dist1;
+                    background-color: #163A5C;
+                    cursor: pointer;
+                    border-bottom: 1px solid darken($textWhite,20%);
+                    &:last-child{border-bottom: none;}
+                                                  
+                }
+                li.basket{
+                    a{
+                        width: 100%;
+                        height: 100%;
+                        color: $textWhite;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        i{font-size: $fontXL;}
+                        p{
+                            font-size: $fontM;
+                            margin-right: .5em;
+                        }
+                    }
+                    &:hover{
+                        background-color: darken(#163A5C,5%);
+                    }      
+                }
+                li:not(.basket):not(.withCollapse){
+                    a{
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        font-size: $fontL;
+                        color: $textWhite;
+                    }
+                    &:hover{
+                        background-color: darken(#163A5C,5%);
+                    }      
+                }
+                li.withCollapse{
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"");
+                    padding: 0;           
+                    .collapseTrigger{
+                        width: 100%;
+                        height: auto;
+                        padding: $dist1;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        color: $textWhite;
+                        p{
+                            font-size: $fontL;
+                        }
+                        i{
+                            font-size: $fontL;
+                            margin-right: .5em;
+                        }
+                        &:hover{
+                            background-color: darken(#163A5C,5%);                    
+                        }   
+                    }
+                    .collapse{
+                        width: 100%;
+                        display: flex;
+                        @include flex(column,flex-start,flex-start,nowrap,"") ;
+                        li{
+                            width: 100%;
+                            height: auto;
+                            padding: $dist1 $dist3 $dist1 $dist1;
+                            background-color: #163A5C;
+                            // border-bottom: 1px solid darken($textWhite,20%);
+                            // &:last-child{border-bottom: none;}
+                            &:hover{
+                                background-color: darken(#163A5C,5%);
+                            }
+                            a{
+                                width: 100%;
+                                height: 100%;
+                                font-size: $fontM;
+                                color: $textWhite;
+                            }
+                        }
                     }
                 }
             }

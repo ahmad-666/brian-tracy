@@ -8,7 +8,7 @@ header{
         position: absolute;
         top: 0;
         right: 0;
-        padding: $dist1 $dist4 * 2;
+        padding: $dist1 10vw;
         background-color: darken($textDark,5%);
         color: $textWhite;
         display: flex;
@@ -39,5 +39,10 @@ header{
                 p{margin-right: $dist1;}
             }
         }
+    }
+}
+@include mediaQ(750px){
+    header{
+        .top{display: none;}
     }
 }

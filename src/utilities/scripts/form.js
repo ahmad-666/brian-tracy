@@ -275,9 +275,13 @@ SelectSearch.prototype.createList = function(lis){
 function LabelHandler(input){
     this.input = input ;
     this.label = this.input.parentElement.querySelector('label') ;
+    this.checkLabel() ;
     this.input.addEventListener('blur',this.focusLost.bind(this)) ;
 }
 LabelHandler.prototype.focusLost = function(e){
+    this.checkLabel() ;
+}
+LabelHandler.prototype.checkLabel = function(){
     if(this.input.value.length!=0) this.label.classList.add('top');
     else this.label.classList.remove('top');
 }
@@ -490,15 +494,7 @@ Timer.prototype.resetTimer = function(){
 //GenerateCode(timer,resend,validate) --------------------------
 //GenerateCode(timer,resend,validate) --------------------------
 //GenerateCode(timer,resend,validate) --------------------------
-let getRandInt = (min,max) => Math.floor(Math.random()*(max-min+1)+min) ;
-function getAlphaNumArray(){
-    let num = '0123456789' ;
-    let alphaLow = 'abcdefghijklmnopqrstuvwxyz' ;
-    let alphaUp = alphaLow.toUpperCase() ;
-    let special = `!@#$%^&*?`
-    let allStr = num+alphaLow+alphaUp+special ;
-    return allStr.split('') ;
-}
+//let getRandInt = (min,max) => Math.floor(Math.random()*(max-min+1)+min) ;
 function RandomCode(wrapper,digit,min,sec,timerElm){
     this.wrapper = wrapper ;
     this.digit = digit ;
@@ -511,7 +507,7 @@ function RandomCode(wrapper,digit,min,sec,timerElm){
     this.submit = this.wrapper.parentElement.querySelector('#validateCode') ;
     this.code = '' ;
     this.valid = false ;
-    this.alphaNumArr = getAlphaNumArray() ;
+    this.alphaNumArr = util.etAlphaNumArray() ;
     this.msg = this.wrapper.querySelector('.msg') ;
     this.generateCode() ;
     this.submit.addEventListener('click',this.validateCode.bind(this)) ;
@@ -520,7 +516,7 @@ function RandomCode(wrapper,digit,min,sec,timerElm){
 RandomCode.prototype.generateCode = function(){
     this.code = '' ;
     for(let i=0 ; i<this.digit ; i++){
-        this.code+= this.alphaNumArr[getRandInt(0,this.alphaNumArr.length-1)];
+        this.code+= this.alphaNumArr[util.getRandInt(0,this.alphaNumArr.length-1)];
     }
     console.log(this.code) ;
 }
@@ -769,8 +765,6 @@ export default{
 	Toggle,
 	Ranger,
 	Timer,
-	getRandInt,
-	getAlphaNumArray,
 	RandomCode,
 	StarScore,
 	Separate3Num,

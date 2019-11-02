@@ -11,7 +11,7 @@ header{
         display: flex;
         @include flex(row,flex-start,center,nowrap,"") ;
         color: $textWhite;
-        padding-right: $dist4 * 2;
+        padding-right: 10vw;
         .logo{
             width: 12em;
             height: 4em;
@@ -19,14 +19,14 @@ header{
         .navigation{
             width: auto;
             height: auto;
-            margin-right: $dist3;
+            margin-right: $dist2;
             display: flex;
             @include flex(row,flex-start,center,nowrap,"") ;
             > li{
                 width: auto;
                 height: auto;
                 cursor: pointer;
-                margin-right: $dist2 + .5em;
+                margin-right: $dist2;
                 font-size: $fontM;
                 color: inherit;
                 padding: $dist1 ;
@@ -117,5 +117,29 @@ header{
                 }
             }
         }
+    }
+}
+@include mediaQ(1000px){
+    header{
+        nav{font-size: 7px;}
+    }
+}
+@include mediaQ(800px){
+    header{
+        nav{
+            padding-right: 10vw;
+            .navigation{         
+                margin-right: $dist1;
+                > li{
+                    
+                    margin-right: $dist1;                  
+                }
+            }
+        }
+    }
+}
+@include mediaQ(750px){
+    header{
+        nav{display: none;}
     }
 }

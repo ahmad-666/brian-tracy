@@ -1,8 +1,8 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-@import '../../utilities/styles/form.scss' ;
 @import '../../utilities/styles/collapse.scss' ;
+//import form.scss inside entry point ;
 #comments{
     padding: $dist2 ;
     display: flex;

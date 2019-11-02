@@ -1,0 +1,206 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+header{
+    #mobileWrapper{
+        width: 100%;
+        height: auto;
+        display: none;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        #mobileTop{
+            width: 100%;
+            height: auto;
+            padding: $dist1 $dist2;
+            background-color: white;
+            display: flex;
+            @include flex(row,space-between,center,nowrap,"") ;
+            z-index: 2;
+            .logo{
+                width: auto;
+                height: auto;
+                img{
+                    width: 12em;
+                    height: 3em;
+                    transform: translateY(15%);
+                }
+            }
+            .iconWrapper{
+                width: 7em;
+                height: 5em;
+                position: relative;
+                cursor: pointer;
+                .bars,.close{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+                .bars{
+                    display: flex;
+                    @include flex(column,flex-start,center,nowrap,"") ;
+                    transform: rotate(45deg) translate(1em,-1em);
+                    z-index: 2;
+                    &:hover{
+                        .line{&::before{transform: scaleX(1);}}           
+                    }
+                    .line{
+                        width: 100%;
+                        background-color: lighten($primaryColor,10%);
+                        height: .4em;
+                        margin-top: $dist1;
+                        position: relative;
+                        transform: translateX(0);
+                        transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                        &::before{
+                            content: '';
+                            @include fullSize-abs ;
+                            transition: all .2s linear;
+                            transform: scaleX(0);
+                            background-color: darken($primaryColor,5%);
+                        }
+                        &:nth-child(1){
+                            width: 40%;
+                            transition-delay: .25s;
+                            &::before{transform-origin: right center;}
+                        }
+                        &:nth-child(2){
+                            width: 75%;
+                            transition-delay: 0s;
+                            &::before{transform-origin: left center;}
+                        }
+                        &:nth-child(3){
+                            width: 40%;
+                            transition-delay: .25s;
+                            &::before{transform-origin: right center;}
+                        }                   
+                    }
+
+                }
+                .bars.animate{          
+                    .line{transform: translateX(-10em);}
+                }
+                .close{
+                    transform: translateX(5em);
+                    .line{
+                        width: 60%;
+                        height: .3em;
+                        background-color: $textDark;
+                        transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                        &:nth-child(1){
+                            transform: rotate(-45deg) translateX(10em);
+                            transition-delay: 0s;
+                        }
+                        &:nth-child(2){
+                            transform: rotate(45deg) translateX(-10em);
+                            transition-delay: 0s;
+                        }
+                    }
+                }
+                .close.animate{
+                    .line{
+                        &:nth-child(1){
+                            transform: rotate(-45deg) translateX(0em);
+                            transition-delay: .4s;
+                        }
+                        &:nth-child(2){
+                            transform: rotate(45deg) translateX(0em);
+                            transition-delay: .4s;
+                        }
+                    }
+                }
+            }
+        }
+        #mobileMenu{      
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+            padding: 0 0;
+            .rotate{
+                width: calc(100vw + 100vh);
+                height: 0;
+                background-color: white;
+                position: fixed;
+                top: 50% ;
+                right: 50%;
+                transform: translate(50%,-50%) rotate(45deg);
+                visibility: hidden;
+                opacity: 0;
+                transition: all .65s ease-in-out;       
+            }    
+            ul{
+                width: auto;
+                height: 0;
+                overflow: auto;
+                display: flex;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                transition: all .5s linear;
+                transition-delay: 0s;
+                transform: translateY(5em);
+                visibility: hidden;
+                opacity: 0;
+                li{
+                    width: auto ;
+                    height: auto;
+                    margin-top: $dist2;        
+                    a{
+                        display: inline-block;
+                        font-size: $fontM;
+                        position: relative;
+                        color: $textDark;
+                        &::before{
+                            content: '';
+                            width: 2em;
+                            height: .2em;
+                            background-color: lighten($textDark,15);
+                            position: absolute;
+                            top: 102%;
+                            right: 120%;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all .3s linear;
+                        }
+                        &:hover{
+                            &::before{
+                                right: 0;
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }     
+        }
+        #mobileMenu.show{
+            padding: $dist1 $dist2;
+            .rotate{
+                height:calc(100vw + 100vh) ;
+                transform: translate(50%,-50%) rotate(45deg);
+                visibility: visible;
+                opacity: 1;
+            }
+            ul{
+                height: calc(100vh - ((2 * .75em) + 5em + (2 * .75em)));
+                transform: translateY(0em);
+                transition-delay: .5s;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+@include mediaQ(750px){
+    header{
+        #mobileWrapper{
+            display: flex;
+        }
+    }
+}
+@include mediaQ(450px){
+    header{
+        #mobileWrapper{
+            font-size: 7px;
+        }
+    }
+}
