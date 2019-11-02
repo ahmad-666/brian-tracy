@@ -6,23 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./libraries/fontawesome/all.min.css">
-    <link rel="stylesheet" href="./framework.css">
-    <link rel="stylesheet" href="./init.css">
-    <link rel="stylesheet" href="./index/styles/header.css">
-    <link rel="stylesheet" href="./index/styles/journey.css">
-    <link rel="stylesheet" href="./index/styles/free.css">
-    <link rel="stylesheet" href="./index/styles/advice.css">
-    <link rel="stylesheet" href="./index/styles/advicesLinks.css">
-    <link rel="stylesheet" href="./index/styles/articles.css">
-    <link rel="stylesheet" href="./index/styles/slider.css">
-    <link rel="stylesheet" href="./index/styles/sponsors.css">
-    <link rel="stylesheet" href="./index/styles/rss.css">
-    <link rel="stylesheet" href="./index/styles/footer.css">
-</head>
+<link href="index.css" rel="stylesheet"></head>
+
 <body>
     <header>
-        <img class="fill" src="./assets/imgs/header.jpg" alt="headerImg">
         <div class="top">
             <div class="right">
                 <a href="videos.html">برای دیدن ویدیوهای ما اینجا را کلیک کنید</a>
@@ -39,7 +26,7 @@
             </div>
         </div>
         <nav>
-            <img class="logo" src="./assets/icons/logo.jpg" alt="logoImg">
+            <img class="logo" src="assets/imgs/logo.jpg" alt="logoImg">
             <ul class="navigation">
                 <li class="dropdownTrigger">
                     <p>دسته بندی ها</p>
@@ -108,69 +95,87 @@
                 </li>
             </ul>
         </nav>
-    </header>
-    <!-- <div id="mobileHandler">
-        <div id="mobileHeader">
-            <div class="bars">
-                <span class="line top"></span>
-                <span class="line middle"></span>
-                <span class="line bottom"></span>
-                <span class="left arrow"></span>
-                <span class="left arrow"></span>
+        <div id="mobileWrapper">
+            <div id="mobileTop">
+                <div class="iconWrapper">
+                    <div class="bars">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="close">
+                        <span class="line center-xy"></span>
+                        <span class="line center-xy"></span>
+                    </div>
+                </div>
+                <a class="logo" href="index.html">
+                    <img src="assets/imgs/logoBrian.png" alt="logoImg">
+                </a>
             </div>
-            <a href="index.html" class="logo">
-                <img src="./assets/icons/logoBrian.png" alt="logoImg">
-            </a>
+            <div id="mobileMenu">
+                <div class="rotate"></div>
+                <ul>
+                    <li>
+                        <a href="#!">آیتم ۱</a>                     
+                    </li>
+                    <li>
+                        <a href="#!">آیتم ۲</a>                     
+                    </li>
+                    <li>
+                        <a href="#!">آیتم ۳</a>                     
+                    </li>
+                    <li>
+                        <a href="#!">آیتم ۴</a>                     
+                    </li>
+                    <li>
+                        <a href="#!">آیتم ۵</a>                     
+                    </li>
+                    <li>
+                        <a href="#!">آیتم ۶</a>                     
+                    </li>
+                    <li>
+                        <a href="#!">آیتم ۷</a>                     
+                    </li>
+                    <li>
+                        <a href="#!">آیتم ۸</a>                     
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div id="mobileNav">
-            <div class="rotate"></div>
-            <ul>
-                <li>
-                    <a href="#!">مورد۱</a>
-                </li>
-                <li>
-                    <a href="#!">مورد۲</a>
-                </li>
-                <li>
-                    <a href="#!">مورد۳</a>
-                </li>
-                <li>
-                    <a href="#!">مورد۴</a>
-                </li>
-                <li>
-                    <a href="#!">مورد۱</a>
-                </li>
-                <li>
-                    <a href="#!">مورد۲</a>
-                </li>
-                <li>
-                    <a href="#!">مورد۳</a>
-                </li>
-                <li>
-                    <a href="#!">مورد۴</a>
-                </li>
-            </ul>
-        </div>
-    </div> -->
+        <img class="fill" src="assets/imgs/header.jpg" alt="headerImg">
+
+    </header>
     <div id="journey">
         <div class="text">
             <p>مسیر موفقیت</p>
             <p>فقط یک کلیک با شما فاصله دارد</p>
         </div>
-        <button class="btn large">سفر خود را شروع کنید</button>
+        <a href="#!" class="btn large">سفر خود را شروع کنید</a>
     </div>
     <div id="free">
-        <div class="content center-y">
+        <form novalidate id="freeForm" name="freeForm" class="content center-y" method="GET" action="#!" enctype="text/plain">
             <h1>مقالات مجانی برایان تریسی</h1>
             <h4>راهنمای رسیدن به هدف در ۱۴ قدم</h4>
             <p class="goal">برنامه ریزی خود را مشخص کنید و به اهداف خود برسید</p>
-            <a class="download btn mid" href="#!">دانلود کنید</a>
+            <div class="inputWrapper text">
+                <input type="email" id="email" name="email" class="style2 labelHandler validate" required>
+                <label for="email">
+                    <i class="fas fa-envelope icon"></i>
+                    <p>پست الکترونیکی</p>
+                </label>
+                <span class="line"></span>
+                <div class="msg">
+                    <p>ایمیل صحیح وارد نمایید</p>
+                    <i class="fas fa-caret-up"></i>
+                </div>
+            </div>
+            <button type="submit" class="download btn mid">دانلود کنید</button>   
             <p class="moreInfo">
                 درباره
                 <a href="#!" class="underline">برنامه ریزی برای رسیدن به اهداف</a>
                 بیشتر بدانید
             </p>
-        </div>
+        </form>
     </div>
     <form novalidate id="category" name="category" method="GET" action="#!" enctype="text/plain">
         <div class="title">
@@ -197,7 +202,7 @@
         <div class="tabs">
             <div class="tab active" id="default">
                 <div class="advice">
-                    <img src="./assets/icons/advice1.png" alt="adviceImg">
+                    <img src="assets/imgs/advice1.png" alt="adviceImg">
                     <h4>عنوان باکس پیش فرض</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -211,7 +216,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice2.png" alt="adviceImg">
+                    <img src="assets/imgs/advice2.png" alt="adviceImg">
                     <h4>عنوان باکس پیش فرض</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -225,7 +230,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice3.png" alt="adviceImg">
+                    <img src="assets/imgs/advice3.png" alt="adviceImg">
                     <h4>عنوان باکس پیش فرض</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -245,7 +250,7 @@
             </div>
             <div class="tab" id="category1">
                 <div class="advice">
-                    <img src="./assets/icons/advice1.png" alt="adviceImg">
+                    <img src="assets/imgs/advice1.png" alt="adviceImg">
                     <h4>عنوان باکس ۱</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -259,7 +264,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice2.png" alt="adviceImg">
+                    <img src="assets/imgs/advice2.png" alt="adviceImg">
                     <h4>عنوان باکس ۱</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -273,7 +278,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice3.png" alt="adviceImg">
+                    <img src="assets/imgs/advice3.png" alt="adviceImg">
                     <h4>عنوان باکس ۱</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -289,7 +294,7 @@
             </div>
             <div class="tab" id="category2">
                 <div class="advice">
-                    <img src="./assets/icons/advice1.png" alt="adviceImg">
+                    <img src="assets/imgs/advice1.png" alt="adviceImg">
                     <h4>عنوان باکس ۲</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -303,7 +308,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice2.png" alt="adviceImg">
+                    <img src="assets/imgs/advice2.png" alt="adviceImg">
                     <h4>عنوان باکس ۲</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -317,7 +322,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice3.png" alt="adviceImg">
+                    <img src="assets/imgs/advice3.png" alt="adviceImg">
                     <h4>عنوان باکس ۲</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -333,7 +338,7 @@
             </div>
             <div class="tab" id="category3">
                 <div class="advice">
-                    <img src="./assets/icons/advice1.png" alt="adviceImg">
+                    <img src="assets/imgs/advice1.png" alt="adviceImg">
                     <h4>عنوان باکس ۳</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -347,7 +352,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice2.png" alt="adviceImg">
+                    <img src="assets/imgs/advice2.png" alt="adviceImg">
                     <h4>عنوان باکس ۳</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -361,7 +366,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice3.png" alt="adviceImg">
+                    <img src="assets/imgs/advice3.png" alt="adviceImg">
                     <h4>عنوان باکس ۳</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -377,7 +382,7 @@
             </div>
             <div class="tab" id="category4">
                 <div class="advice">
-                    <img src="./assets/icons/advice1.png" alt="adviceImg">
+                    <img src="assets/imgs/advice1.png" alt="adviceImg">
                     <h4>عنوان باکس ۴</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -391,7 +396,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice2.png" alt="adviceImg">
+                    <img src="assets/imgs/advice2.png" alt="adviceImg">
                     <h4>عنوان باکس ۴</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -405,7 +410,7 @@
                     </a>
                 </div>
                 <div class="advice">
-                    <img src="./assets/icons/advice3.png" alt="adviceImg">
+                    <img src="assets/imgs/advice3.png" alt="adviceImg">
                     <h4>عنوان باکس ۴</h4>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur
@@ -445,7 +450,7 @@
         </p>
         <div class="articles">
             <a href="#!" class="article">
-                <img src="./assets/imgs/articleSmall.jpg" alt="articleSmall">
+                <img src="assets/imgs/articleSmall.jpg" alt="articleSmall">
                 <h6>
                     عنوان مقاله
                     عنوان مقاله
@@ -456,7 +461,7 @@
                 </h6>
             </a>
             <a href="#!" class="article">
-                <img src="./assets/imgs/articleSmall.jpg" alt="articleSmall">
+                <img src="assets/imgs/articleSmall.jpg" alt="articleSmall">
                 <h6>
                     عنوان مقاله
                     عنوان مقاله
@@ -467,7 +472,7 @@
                 </h6>
             </a>
             <a href="#!" class="article">
-                <img src="./assets/imgs/articleSmall.jpg" alt="articleSmall">
+                <img src="assets/imgs/articleSmall.jpg" alt="articleSmall">
                 <h6>
                     عنوان مقاله
                     عنوان مقاله
@@ -478,7 +483,7 @@
                 </h6>
             </a>
             <a href="#!" class="article">
-                <img src="./assets/imgs/articleSmall.jpg" alt="articleSmall">
+                <img src="assets/imgs/articleSmall.jpg" alt="articleSmall">
                 <h6>
                     عنوان مقاله
                     عنوان مقاله
@@ -491,7 +496,7 @@
         </div>
     </div>
     <div id="verticalSliderWrapper">
-        <div class="dots center-y">
+        <div class="dots">
             <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
@@ -514,7 +519,7 @@
                     <p class="writer">- حسین جونی </p>
                 </div>
                 <div class="left">
-                    <img src="./assets/imgs/slide1.jpg" alt="slide1Img">
+                    <img src="assets/imgs/slide1.jpg" alt="slide1Img">
                 </div>
             </div>
             <div class="slide">
@@ -531,7 +536,7 @@
                     <p class="writer">- حسین جونی </p>
                 </div>
                 <div class="left">
-                    <img src="./assets/imgs/slide2.jpg" alt="slide2Img">
+                    <img src="assets/imgs/slide2.jpg" alt="slide2Img">
                 </div>
             </div>
             <div class="slide">
@@ -548,7 +553,7 @@
                     <p class="writer">- حسین جونی </p>
                 </div>
                 <div class="left">
-                    <img src="./assets/imgs/slide3.jpg" alt="slide3Img">
+                    <img src="assets/imgs/slide3.jpg" alt="slide3Img">
                 </div>
             </div>
             <div class="slide">
@@ -565,7 +570,7 @@
                     <p class="writer">- حسین جونی </p>
                 </div>
                 <div class="left">
-                    <img src="./assets/imgs/slide1.jpg" alt="slide4Img">
+                    <img src="assets/imgs/slide1.jpg" alt="slide4Img">
                 </div>
             </div>
 
@@ -575,28 +580,28 @@
         <h4>بهترین راه برای شناختن ما</h4>
         <div class="sponsors">
             <a href="#!" class="sponsor">
-                <img src="./assets/icons/fox.png" alt="sponserImg">
+                <img src="assets/imgs/fox.png" alt="sponserImg">
             </a>
             <a href="#!" class="sponsor">
-                <img src="./assets/icons/fox.png" alt="sponserImg">
+                <img src="assets/imgs/fox.png" alt="sponserImg">
             </a>
             <a href="#!" class="sponsor">
-                <img src="./assets/icons/fox.png" alt="sponserImg">
+                <img src="assets/imgs/fox.png" alt="sponserImg">
             </a>
             <a href="#!" class="sponsor">
-                <img src="./assets/icons/fox.png" alt="sponserImg">
+                <img src="assets/imgs/fox.png" alt="sponserImg">
             </a>
             <a href="#!" class="sponsor">
-                <img src="./assets/icons/fox.png" alt="sponserImg">
+                <img src="assets/imgs/fox.png" alt="sponserImg">
             </a>
             <a href="#!" class="sponsor">
-                <img src="./assets/icons/fox.png" alt="sponserImg">
+                <img src="assets/imgs/fox.png" alt="sponserImg">
             </a>
             <a href="#!" class="sponsor">
-                <img src="./assets/icons/fox.png" alt="sponserImg">
+                <img src="assets/imgs/fox.png" alt="sponserImg">
             </a>
             <a href="#!" class="sponsor">
-                <img src="./assets/icons/fox.png" alt="sponserImg">
+                <img src="assets/imgs/fox.png" alt="sponserImg">
             </a>
         </div>
     </div>
@@ -779,21 +784,13 @@
                 <p>© Copyright 2019 Hossein Jooni.</p>
                 <p>All Rights Reserved.</p>
             </div>
-            <img class="center-x" src="./assets/icons/logo.jpg" alt="footerImg">
+            <img src="assets/imgs/logo.jpg" alt="footerImg">
             <div class="left">
                 <p>Your Privacy is Guaranteed. We will never give, lease or sell your</p>
                 <p>personal information. Period!</p>
             </div>
         </div>
     </footer>
-    <script src="./utilities/utilities.js"></script>
-    <script src="./utilities/scripts/verticalSlider.js"></script>
-    <script src="./utilities/scripts/form.js"></script>
-    <script src="./index/scripts/header.js"></script>
-    <script src="./index/scripts/advice.js"></script>
-    <script src="./index/scripts/slider.js"></script>
-    <script src="./index/scripts/rss.js"></script>
-    <script src="./index/scripts/footer.js"></script>
-</body>
+<script type="text/javascript" src="index.js"></script></body>
 
 </html>
