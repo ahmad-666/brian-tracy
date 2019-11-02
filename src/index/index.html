@@ -150,20 +150,32 @@
             <p>مسیر موفقیت</p>
             <p>فقط یک کلیک با شما فاصله دارد</p>
         </div>
-        <button class="btn large">سفر خود را شروع کنید</button>
+        <a href="#!" class="btn large">سفر خود را شروع کنید</a>
     </div>
     <div id="free">
-        <div class="content center-y">
+        <form novalidate id="freeForm" name="freeForm" class="content center-y" method="GET" action="#!" enctype="text/plain">
             <h1>مقالات مجانی برایان تریسی</h1>
             <h4>راهنمای رسیدن به هدف در ۱۴ قدم</h4>
             <p class="goal">برنامه ریزی خود را مشخص کنید و به اهداف خود برسید</p>
-            <a class="download btn mid" href="#!">دانلود کنید</a>
+            <div class="inputWrapper text">
+                <input type="email" id="email" name="email" class="style2 labelHandler validate" required>
+                <label for="email">
+                    <i class="fas fa-envelope icon"></i>
+                    <p>پست الکترونیکی</p>
+                </label>
+                <span class="line"></span>
+                <div class="msg">
+                    <p>ایمیل صحیح وارد نمایید</p>
+                    <i class="fas fa-caret-up"></i>
+                </div>
+            </div>
+            <button type="submit" class="download btn mid">دانلود کنید</button>   
             <p class="moreInfo">
                 درباره
                 <a href="#!" class="underline">برنامه ریزی برای رسیدن به اهداف</a>
                 بیشتر بدانید
             </p>
-        </div>
+        </form>
     </div>
     <form novalidate id="category" name="category" method="GET" action="#!" enctype="text/plain">
         <div class="title">
@@ -484,7 +496,7 @@
         </div>
     </div>
     <div id="verticalSliderWrapper">
-        <div class="dots center-y">
+        <div class="dots">
             <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
@@ -772,7 +784,7 @@
                 <p>© Copyright 2019 Hossein Jooni.</p>
                 <p>All Rights Reserved.</p>
             </div>
-            <img class="center-x" src="../assets/icons/logo.jpg" alt="footerImg">
+            <img src="../assets/icons/logo.jpg" alt="footerImg">
             <div class="left">
                 <p>Your Privacy is Guaranteed. We will never give, lease or sell your</p>
                 <p>personal information. Period!</p>

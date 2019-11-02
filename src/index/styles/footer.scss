@@ -1,8 +1,6 @@
 @import '../../variables.scss' ;
 @import '../../mixins.scss' ;
 @import '../../colors.scss' ;
-
-// @import '../../utilities/styles/form.scss' ;
 footer{
     width: 100%;
     height: auto;
@@ -11,22 +9,24 @@ footer{
     .follow{
         width: 100%;
         height: auto;
-        padding: 0 $dist4 * 2;
+        padding: 0 $dist2 0 0;
         background-color: #042F50;
         display: flex;
         @include flex(row,space-between,center,nowrap,"") ;
         p{
+            flex-shrink: 0;
+            width: auto;
             font-size: $fontM;
             color: white;
         }
         .socials{
-            width: auto;
-            height: 100%;
+            width: 100%;
+            height: auto;
             margin-right: $dist2;
             display: flex;
-            @include flex(row,flex-start,flex-start,nowrap,"") ;
+            @include flex(row,flex-start,flex-start,wrap,flex-start) ;
             .social{
-                width: 8em;
+                width: calc(100% / 8);
                 height: 8em;
                 padding: $dist1 $dist2;
                 position: relative;
@@ -81,7 +81,7 @@ footer{
     .links{
         width: 100%;
         height: auto;
-        padding: $dist3 $dist4 * 2;
+        padding: $dist2;
         background-color: #163A5C;
         display: flex;
         @include flex(row,flex-start,flex-start,wrap,flex-start);
@@ -127,7 +127,7 @@ footer{
         width: 100%;
         height: auto;
         background-color: #123759;
-        padding: $dist2 $dist4 * 2;
+        padding: $dist2;
         position: relative;
         display: flex;
         @include flex(row,space-between,center,nowrap,"");
@@ -150,5 +150,103 @@ footer{
         .left{
             margin-right: $dist2;
         }
+    }
+}
+@include mediaQ(1100px){
+    footer{
+        .follow{
+            .socials{
+                .social{
+                    width: calc(100% / 7);
+                    height: 8.5em;
+                }
+            }
+        }
+    }
+}
+@include resizeTablet('footer');
+@include mediaQ(800px){
+    footer{
+        .follow{    
+            padding: 0 $dist2;
+            padding-left: 0;
+            .socials{
+                .social{
+                    width: calc(100% / 6);
+                    height: 9em;
+                }
+            }
+        }   
+        .links{   
+            padding: $dist3 $dist2;
+        }
+        .copyright{      
+            padding: $dist2 $dist2;
+        }
+    }
+}
+@include resizeMobile('footer');
+@include mediaQ(550px){
+    footer{
+        .follow{    
+            .socials{
+                .social{
+                    width: calc(100% / 5);
+                    height: 9.5em;
+                }
+            }
+        }   
+    }
+}
+@include mediaQ(480px){
+    footer{
+        .follow{    
+            .socials{
+                .social{
+                    width: calc(100% / 4);
+                    height: 10em;
+                }
+            }
+        }
+        .copyright{
+            @include flex(column,flex-start,center,nowrap,"");
+            img{
+                margin-top: $dist2;
+            }
+            .right,.left{
+                margin-top: $dist2;             
+            }
+            .left{
+                margin-right: 0;
+            }
+        }  
+    }
+}
+@include mediaQ(410px){
+    footer{
+        .follow{
+            padding: $dist2 0;
+            @include flex(column,flex-start,center,nowrap,"") ;
+            .socials{
+                margin-right: 0;
+                margin-top: $dist2;
+                .social{
+                    width: calc(100% / 5);
+                    height: 10em;
+                }
+            }
+        } 
+    }
+}
+@include mediaQ(300px){
+    footer{
+        .follow{
+            .socials{
+                .social{
+                    width: calc(100% / 4);
+                    height: 11em;
+                }
+            }
+        } 
     }
 }

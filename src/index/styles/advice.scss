@@ -1,7 +1,6 @@
 @import '../../variables.scss';
 @import '../../colors.scss';
 @import '../../mixins.scss';
-
 #category {
     width: 100%;
     height: auto;
@@ -9,19 +8,16 @@
     @include bg('../../assets/imgs/advice.jpg', center center, no-repeat, cover);
     display: flex;
     @include flex(column, flex-start, center, nowrap, "");
-
     .title {
         max-width: 50%;
         height: auto;
         display: flex;
         @include flex(column, flex-start, center, nowrap, "");
-
         .titleWrapper {
             width: auto;
             height: auto;
             display: flex;
             @include flex(row, flex-start, center, nowrap, "");
-
             h2 {
                 font-size: $fontXL;
                 font-weight: 700;
@@ -34,16 +30,14 @@
                 margin-right: .3em;
             }
         }
-
         p {
-            width: 75%;
+            width: 90%;
             text-align: center;
             font-size: $fontM;
             color: lighten($textDark, 15%);
             margin-top: $dist1
         }
     }
-
     .select {
         width: auto;
         height: auto;
@@ -70,7 +64,6 @@
             }        
         }
     }
-
     .tabs {
         width: auto;
         height: auto;
@@ -145,6 +138,59 @@
         }
         .tab.active {
             display: flex;
+        }
+    }
+}
+@include resizeTablet('#category') ;
+@include mediaQ(800px){
+    #category{
+        .title {
+            max-width: 75%;
+        }
+        .tabs {
+            .tab {
+                .advice {     
+                    width: calc((100% - (2 * 3em)) / 2);              
+                }
+            }
+        }
+    }
+}
+@include resizeMobile('#category') ;
+@include mediaQ(400px){
+    #category{
+        .title {
+            max-width: 90%;
+        }
+        .select {
+            width: 90%;
+            @include flex(column, flex-start, center, nowrap, "");
+            select{
+                margin-top: $dist1;
+            }
+        }
+        .tabs {
+            .tab {
+                .advice {     
+                    width: 90%;              
+                }
+            }
+        }
+    }
+}
+@include mediaQ(350px){
+    #category{
+        .title {
+            max-width: 90%;
+            .titleWrapper {
+                h2 {
+                    font-size: $fontL;
+               
+                }
+                h4 {
+                    font-size: $fontL;
+                }
+            }
         }
     }
 }

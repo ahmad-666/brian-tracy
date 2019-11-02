@@ -1,11 +1,10 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-
 #articles{
     width: 100%;
     height: auto;
-    padding: $dist3 $dist4 * 2;
+    padding: $dist3 10vw;
     display: flex;
     @include flex(column,flex-start,center,nowrap,"") ;
     h4{
@@ -56,4 +55,37 @@
             }
         }
     }
+}
+@include resizeTablet('#articles') ;
+@include mediaQ(800px){
+    #articles{
+        padding: $dist3 $dist2;
+        .articles{
+            .article{
+                width: calc((100% - (3 * 3em)) / 3);
+            }
+        }
+    }
+   
+}
+@include resizeMobile('#articles') ;
+@include mediaQ(500px){
+    #articles{
+        .articles{
+            .article{
+                width: calc((100% - (2 * 3em)) / 2);
+            }
+        }
+    }
+   
+}
+@include mediaQ(330px){
+    #articles{
+        .articles{
+            .article{
+                width: 90%;
+            }
+        }
+    }
+   
 }
