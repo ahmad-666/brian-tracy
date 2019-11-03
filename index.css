@@ -8454,9 +8454,9 @@ header {
       top: -webkit-calc(100% - 3em);
       top: calc(100% - 3em);
       right: 50%;
-      -webkit-transform: translateX(50%);
-          -ms-transform: translateX(50%);
-              transform: translateX(50%); }
+      -webkit-transform: translateX(50%) rotate(180deg);
+          -ms-transform: translateX(50%) rotate(180deg);
+              transform: translateX(50%) rotate(180deg); }
       #verticalSliderWrapper .dots .dot {
         margin-top: 0; }
         #verticalSliderWrapper .dots .dot:not(:first-child) {
