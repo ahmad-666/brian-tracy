@@ -73,7 +73,7 @@
             @include flex(row,flex-start,center,nowrap,"") ;
             top: calc(100% - 3em);            
             right: 50% ;
-            transform: translateX(50%);
+            transform: translateX(50%) rotate(180deg);
             .dot{
                 margin-top: 0;         
                 &:not(:first-child){margin-right: $dist3;}
