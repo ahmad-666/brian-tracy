@@ -5,7 +5,7 @@ main{
     width: 100%;
     height: auto;
     margin: $dist2 0;
-    padding: 0 $dist4 * 2;
+    padding: 0 10vw;
     display: flex;
     @include flex(row,flex-start,flex-start,nowrap,"") ;
     #sidebar{
@@ -17,5 +17,46 @@ main{
         width: 100%;
         height: auto;
         margin-right: $dist4;      
+    }
+}
+main#productWrapper{
+    padding: 0 $dist2;
+    @include flex(row,flex-start,flex-start,nowrap,"") ;
+    #sidebar{
+        width: 22em;
+    }
+    #product{
+        margin-right: $dist3;      
+    }
+}
+@include resizeTablet('main') ;
+@include mediaQ(800px){
+    main{
+        padding: 0 $dist2;
+    }
+    main#productWrapper{
+        @include flex(column,flex-start,center,nowrap,"") ;
+        #sidebar{
+            width: 28em;
+        }
+        #product{
+            margin-right: 0;      
+            margin-top: $dist3;      
+        }
+    }
+}
+@include resizeMobile('main') ;
+@include mediaQ(550px){
+    main{
+        @include flex(column,flex-start,center,nowrap,"") ;
+        #sidebar{
+            flex-shrink: 1;
+            width: 30em;
+        }
+        #products,.articles,#article,#product{
+            width: 95%;
+            margin-right: 0;      
+            margin-top: $dist3;      
+        }
     }
 }

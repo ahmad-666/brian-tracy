@@ -1,12 +1,11 @@
 @import '../../variables.scss';
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-// @import '../../utilities/styles/form.scss' ;
 #contactWrapper{
     width: 100%;
     height: auto;
     margin: $dist2 auto;
-    padding: 0 $dist4 * 2 ;
+    padding: 0 10vw ;
     display: flex;
     @include flex(row,flex-start,flex-start,nowrap,"");
     .sideBar{
@@ -48,5 +47,17 @@
         }
 
     }
-
 }
+@include resizeTablet('#contactWrapper') ;
+@include mediaQ(800px){
+    #contactWrapper{
+        padding: 0 $dist2 ;
+        display: flex;
+        @include flex(column,flex-start,center,nowrap,"");
+        .sideBar{
+            flex-shrink: 1;
+            width: 28em;
+        }
+    }
+}
+@include resizeMobile('#contactWrapper') ;
