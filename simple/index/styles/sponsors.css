@@ -1,7 +1,7 @@
 #sponsors {
   width: 100%;
   height: auto;
-  padding: 3em 12em;
+  padding: 3em 10vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -82,5 +82,59 @@
 #sponsors .sponsors .sponsor img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  #sponsors {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #sponsors .sponsors .sponsor {
+    width: -webkit-calc((100% - (5 * 3em)) / 5);
+    width: -moz-calc((100% - (5 * 3em)) / 5);
+    width: calc((100% - (5 * 3em)) / 5);
+    height: 10em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #sponsors {
+    padding: 3em 1.5em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #sponsors {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #sponsors .sponsors .sponsor {
+    width: -webkit-calc((100% - (4 * 3em)) / 4);
+    width: -moz-calc((100% - (4 * 3em)) / 4);
+    width: calc((100% - (4 * 3em)) / 4);
+    height: 11em;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #sponsors .sponsors .sponsor {
+    width: -webkit-calc((100% - (3 * 3em)) / 3);
+    width: -moz-calc((100% - (3 * 3em)) / 3);
+    width: calc((100% - (3 * 3em)) / 3);
+    height: 12em;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #sponsors .sponsors .sponsor {
+    width: -webkit-calc((100% - (2 * 3em)) / 2);
+    width: -moz-calc((100% - (2 * 3em)) / 2);
+    width: calc((100% - (2 * 3em)) / 2);
+    height: 13em;
+  }
 }
 /*# sourceMappingURL=sponsors.css.map */

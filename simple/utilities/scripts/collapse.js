@@ -43,6 +43,6 @@ Collapse.prototype.toggleCollapse = function(e){
 //    let font = new FontFaceObserver('iranSans');
 //    font.load().then(()=>new Collapse(withCollapse,others));
 //})
-export default{
-	Collapse
-}
+// export default{
+// 	Collapse
+// }

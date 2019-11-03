@@ -1,7 +1,7 @@
 #journey {
   width: 100%;
   height: auto;
-  padding: 0.75em 24em;
+  padding: 0.75em 10vw;
   background-color: #4a4e60;
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,7 +78,7 @@
   margin-right: .3em;
 }
 
-#journey button {
+#journey a {
   border: 1.2px solid #00BC9A;
   color: white;
   background-color: transparent;
@@ -88,8 +88,73 @@
   transition: all .3s linear;
 }
 
-#journey button:hover {
+#journey a:hover {
   background-color: #00BC9A;
   border: 1.2px solid transparent;
+}
+
+@media screen and (max-width: 1000px) {
+  #journey {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #journey {
+    padding: 0.75em 1.5em;
+    font-size: 5px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #journey {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+  }
+  #journey a {
+    margin-top: 0.75em;
+  }
 }
 /*# sourceMappingURL=journey.css.map */

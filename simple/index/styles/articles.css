@@ -1,7 +1,7 @@
 #articles {
   width: 100%;
   height: auto;
-  padding: 3em 12em;
+  padding: 3em 10vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -143,5 +143,42 @@
   position: absolute;
   right: 0;
   top: 105%;
+}
+
+@media screen and (max-width: 1000px) {
+  #articles {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #articles {
+    padding: 3em 1.5em;
+  }
+  #articles .articles .article {
+    width: -webkit-calc((100% - (3 * 3em)) / 3);
+    width: -moz-calc((100% - (3 * 3em)) / 3);
+    width: calc((100% - (3 * 3em)) / 3);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #articles {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #articles .articles .article {
+    width: -webkit-calc((100% - (2 * 3em)) / 2);
+    width: -moz-calc((100% - (2 * 3em)) / 2);
+    width: calc((100% - (2 * 3em)) / 2);
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #articles .articles .article {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=articles.css.map */

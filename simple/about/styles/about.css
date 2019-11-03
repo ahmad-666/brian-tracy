@@ -56,4 +56,22 @@
   margin-top: 0.75em;
   line-height: 1.7em;
 }
+
+@media screen and (max-width: 1000px) {
+  #about {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #about {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #about {
+    width: 96%;
+  }
+}
 /*# sourceMappingURL=about.css.map */

@@ -117,4 +117,16 @@
   font-weight: 700;
   margin: 0 .3em;
 }
+
+@media screen and (max-width: 1000px) {
+  #free {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #free {
+    font-size: 6px;
+  }
+}
 /*# sourceMappingURL=free.css.map */

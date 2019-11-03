@@ -275,9 +275,13 @@ SelectSearch.prototype.createList = function(lis){
 function LabelHandler(input){
     this.input = input ;
     this.label = this.input.parentElement.querySelector('label') ;
+    this.checkLabel() ;
     this.input.addEventListener('blur',this.focusLost.bind(this)) ;
 }
 LabelHandler.prototype.focusLost = function(e){
+    this.checkLabel() ;
+}
+LabelHandler.prototype.checkLabel = function(){
     if(this.input.value.length!=0) this.label.classList.add('top');
     else this.label.classList.remove('top');
 }
@@ -490,7 +494,7 @@ Timer.prototype.resetTimer = function(){
 //GenerateCode(timer,resend,validate) --------------------------
 //GenerateCode(timer,resend,validate) --------------------------
 //GenerateCode(timer,resend,validate) --------------------------
-
+//let getRandInt = (min,max) => Math.floor(Math.random()*(max-min+1)+min) ;
 function RandomCode(wrapper,digit,min,sec,timerElm){
     this.wrapper = wrapper ;
     this.digit = digit ;
@@ -761,8 +765,6 @@ SearchList.prototype.handleEvent = function(e){
 // 	Toggle,
 // 	Ranger,
 // 	Timer,
-// 	getRandInt,
-// 	getAlphaNumArray,
 // 	RandomCode,
 // 	StarScore,
 // 	Separate3Num,

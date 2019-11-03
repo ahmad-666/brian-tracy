@@ -37,6 +37,6 @@ topSlider.prototype.changeSlide = function(e){
     this.slides[this.currIndex].classList.add('active') ;
 }
 //new topSlider(document.querySelector('.topSlider'),3000) ;
-// export default{
-// 	topSlider
-// }
+export default{
+	topSlider
+}

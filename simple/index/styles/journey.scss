@@ -4,7 +4,7 @@
 #journey{
     width: 100%;
     height: auto;
-    padding: $dist1 $dist4 * 4;
+    padding: $dist1 10vw;
     background-color: $darkBlue;
     display: flex;
     @include flex(row,space-between,center,nowrap,"") ;
@@ -26,7 +26,7 @@
             }
         }
     }
-    button{
+    a{
         border: 1.2px solid $greenColor1 ;
         color: white;
         background-color: transparent;
@@ -37,4 +37,22 @@
             border: 1.2px solid transparent ;
         }
     }
+}
+@include mediaQ(1000px){
+    #journey{font-size: 7px;}
+}
+@include mediaQ(600px){
+    #journey{
+        padding: $dist1 $dist2;
+        font-size: 5px;
+        @include flex(row,space-around,center,nowrap,"") ;
+    }    
+}
+@include mediaQ(400px){
+    #journey{
+        @include flex(column,flex-start,center,nowrap,"") ;
+        a{
+            margin-top: $dist1;
+        }
+    }    
 }

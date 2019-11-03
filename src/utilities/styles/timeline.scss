@@ -148,7 +148,7 @@
 }
 @include resizeTablet(#timelineWrapper) ;
 @include resizeMobile(#timelineWrapper) ;
-@include mediaQ-w(500px){
+@include mediaQ(500px){
     #timelineWrapper{
         padding: $dist2 $dist2 ;
         @include flex(row,flex-start,flex-start,nowrap,"") ;

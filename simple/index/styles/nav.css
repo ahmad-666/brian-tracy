@@ -33,7 +33,7 @@ header nav {
       -ms-flex-line-pack: "";
           align-content: "";
   color: #fbfbfb;
-  padding-right: 12em;
+  padding-right: 10vw;
 }
 
 header nav .logo {
@@ -44,7 +44,7 @@ header nav .logo {
 header nav .navigation {
   width: auto;
   height: auto;
-  margin-right: 3em;
+  margin-right: 1.5em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -79,7 +79,7 @@ header nav .navigation > li {
   width: auto;
   height: auto;
   cursor: pointer;
-  margin-right: 2em;
+  margin-right: 1.5em;
   font-size: 1.6em;
   color: inherit;
   padding: 0.75em;
@@ -247,5 +247,29 @@ header nav .navigation .search a {
 
 header nav .navigation .search i {
   font-size: 2.4em;
+}
+
+@media screen and (max-width: 1000px) {
+  header nav {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header nav {
+    padding-right: 10vw;
+  }
+  header nav .navigation {
+    margin-right: 0.75em;
+  }
+  header nav .navigation > li {
+    margin-right: 0.75em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=nav.css.map */

@@ -4,7 +4,7 @@ header .top {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.75em 12em;
+  padding: 0.75em 10vw;
   background-color: #212124;
   color: #fbfbfb;
   display: -webkit-box;
@@ -124,5 +124,11 @@ header .top .left a i, header .top .left a p {
 
 header .top .left a p {
   margin-right: 0.75em;
+}
+
+@media screen and (max-width: 750px) {
+  header .top {
+    display: none;
+  }
 }
 /*# sourceMappingURL=top.css.map */

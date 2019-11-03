@@ -48,3 +48,16 @@ main{
        }
     }
 }
+@include mediaQ(550px){
+    main{
+        #product{
+           .infos{
+               @include flex(column,flex-start,center,nowrap,"") ;
+               .productSlider{
+                   margin-right: 0;
+                   margin-top: $dist2;
+               }
+            }
+        }
+    }
+}

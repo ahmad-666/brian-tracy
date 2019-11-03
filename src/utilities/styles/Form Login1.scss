@@ -1,5 +1,8 @@
 //just add bellow code to /utilities/styles/form.scss and inside <someFile>.scss use
 //import form.scss inside entry point
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
 form#login{
     width: 40em;
     height: auto;

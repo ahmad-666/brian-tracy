@@ -1,11 +1,10 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-@import '../../utilities/styles/form.scss' ;
 form#rss{
     width: 100%;
     height: auto;
-    padding: $dist2 $dist4 * 2;
+    padding: $dist2 10vw;
     background-color: darken(white,6%);
     display: flex;
     @include flex(column,flex-start,center,nowrap,"") ;
@@ -24,5 +23,17 @@ form#rss{
         height: auto;
         display: flex;
         @include flex(row,space-around,center,wrap,flex-start) ;
+    }
+}
+@include mediaQ(800px){
+    form#rss{
+        padding: $dist2; 
+    }
+}
+@include mediaQ(500px){
+    form#rss{
+        .inputs{
+            @include flex(row,flex-start,center,wrap,flex-start) ;
+        }
     }
 }

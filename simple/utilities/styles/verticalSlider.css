@@ -38,6 +38,12 @@
   -webkit-align-content: "";
       -ms-flex-line-pack: "";
           align-content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #verticalSliderWrapper .dots .dot {
@@ -129,5 +135,62 @@
           flex-shrink: 0;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  #verticalSliderWrapper {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #verticalSliderWrapper {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #verticalSliderWrapper {
+    height: 100vh;
+  }
+  #verticalSliderWrapper .dots {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+    top: -webkit-calc(100% - 3em);
+    top: -moz-calc(100% - 3em);
+    top: calc(100% - 3em);
+    right: 50%;
+    -webkit-transform: translateX(50%) rotate(180deg);
+       -moz-transform: translateX(50%) rotate(180deg);
+        -ms-transform: translateX(50%) rotate(180deg);
+            transform: translateX(50%) rotate(180deg);
+  }
+  #verticalSliderWrapper .dots .dot {
+    margin-top: 0;
+  }
+  #verticalSliderWrapper .dots .dot:not(:first-child) {
+    margin-right: 3em;
+  }
 }
 /*# sourceMappingURL=verticalSlider.css.map */

@@ -507,7 +507,7 @@ function RandomCode(wrapper,digit,min,sec,timerElm){
     this.submit = this.wrapper.parentElement.querySelector('#validateCode') ;
     this.code = '' ;
     this.valid = false ;
-    this.alphaNumArr = util.etAlphaNumArray() ;
+    this.alphaNumArr = util.getAlphaNumArray() ;
     this.msg = this.wrapper.querySelector('.msg') ;
     this.generateCode() ;
     this.submit.addEventListener('click',this.validateCode.bind(this)) ;

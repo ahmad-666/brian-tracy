@@ -8,11 +8,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="./libraries/fontawesome/all.min.css">
     <link rel="stylesheet" href="./framework.css">
+    <link rel="stylesheet" href="./utilities/styles/form.css">
     <link rel="stylesheet" href="./init.css">
     <link rel="stylesheet" href="./blog/styles/nav.css">
     <link rel="stylesheet" href="./about/styles/about.css">
     <link rel="stylesheet" href="./index/styles/footer.css">
 </head>
+
 <body>
     <nav id="blog">
         <ul class="content">
@@ -68,6 +70,70 @@
                 </ul>
             </li>
         </ul>
+        <div class="mobile">
+            <div class="bars">
+                <i class="fas fa-bars center-xy"></i>
+                <ul class="menu fadeIn">
+                    <li class="withCollapse">
+                        <div class="collapseTrigger">
+                            <p>حساب من</p>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <ul class="collapse">
+                            <li>
+                                <a href="login.html">ورود</a>
+                            </li>
+                            <li>
+                                <a href="signup.html">ساخت حساب کاربری</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="withCollapse">
+                        <div class="collapseTrigger">
+                            <p>سخنرانی</p>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <ul class="collapse">
+                            <li>
+                                <a href="#!">تست سخنرانی</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="products.html">خرید</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">وبلاگ</a>
+                    </li>
+                    <li class="withCollapse">
+                        <div class="collapseTrigger">
+                            <p>دسته بندی</p>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <ul class="collapse">
+                            <li>
+                                <a href="blog.html">رشد و تعالی فردی</a>
+                            </li>
+                            <li>
+                                <a href="blog.html">مدیریت زمان</a>
+                            </li>
+                            <li>
+                                <a href="blog.html">ارزیابی عملکرد</a>
+                            </li>
+                            <li>
+                                <a href="blog.html">سخنرانی در جامعه</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="basket">
+                        <a href="#!">
+                            <i class="fas fa-shopping-basket"></i>
+                            <p>0</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <a href="index.html" class="logo">
             <img src="./assets/icons/logo.jpg" alt="logoImg">
         </a>
@@ -75,17 +141,33 @@
     <div id="about">
         <h4>درباره حسین جونی</h4>
         <p class="shortDesc">
-            Brian Tracy is Chairman and CEO of Brian Tracy International, a company specializing in the training and development of individuals and organizations.
+            Brian Tracy is Chairman and CEO of Brian Tracy International, a company specializing in the training and
+            development of individuals and organizations.
         </p>
         <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cupiditate unde fugit voluptatum velit modi soluta iusto saepe! Totam nobis voluptate eius, temporibus iste suscipit at ab ut eligendi voluptatibus?
-            Totam eaque explicabo quod ea perspiciatis quibusdam optio, delectus dolor consectetur nulla dolorem velit dolore fugiat commodi sunt adipisci doloribus veniam praesentium? Fuga nesciunt atque dignissimos qui labore, similique eum.
-            Aliquam culpa quasi dolorem totam obcaecati fugit dolorum minima consequatur deleniti mollitia! Repellat, velit cumque ullam animi provident nulla delectus sequi eaque nisi earum impedit error consequatur voluptatum voluptatibus aliquam.
-            Natus aliquam eveniet dignissimos dolore? Excepturi ex dicta laborum consectetur beatae laudantium aliquid quam cum officiis eum dignissimos ipsum nisi reprehenderit rem repellat ducimus, magni placeat, ad inventore? Eveniet, est!
-            Eius minima et vitae itaque asperiores voluptatibus soluta molestias necessitatibus nihil, quam ducimus distinctio quis accusamus recusandae neque numquam quod ab aliquid unde assumenda debitis voluptatum voluptates. Voluptatem, quaerat ipsum?
-            Placeat ipsum velit consequuntur, architecto quibusdam voluptatibus odio quas id harum pariatur blanditiis debitis dignissimos consectetur itaque, sapiente at repellat impedit repudiandae nemo? Expedita inventore doloremque ratione voluptates accusantium iure!
-            Hic dolores ut odio repudiandae iusto in distinctio aliquam nemo ex, laborum obcaecati, sequi quidem porro ea, reprehenderit aliquid earum aspernatur accusantium repellendus dolorum. Ullam dicta autem sequi ratione illo?
-            Animi ad, minus totam ipsum accusantium eius rem laudantium nesciunt alias excepturi! Expedita, sunt praesentium explicabo dolorum asperiores veniam quia iusto delectus harum, quos illo fuga eveniet modi tempore officiis?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cupiditate unde fugit voluptatum velit modi
+            soluta iusto saepe! Totam nobis voluptate eius, temporibus iste suscipit at ab ut eligendi voluptatibus?
+            Totam eaque explicabo quod ea perspiciatis quibusdam optio, delectus dolor consectetur nulla dolorem velit
+            dolore fugiat commodi sunt adipisci doloribus veniam praesentium? Fuga nesciunt atque dignissimos qui
+            labore, similique eum.
+            Aliquam culpa quasi dolorem totam obcaecati fugit dolorum minima consequatur deleniti mollitia! Repellat,
+            velit cumque ullam animi provident nulla delectus sequi eaque nisi earum impedit error consequatur
+            voluptatum voluptatibus aliquam.
+            Natus aliquam eveniet dignissimos dolore? Excepturi ex dicta laborum consectetur beatae laudantium aliquid
+            quam cum officiis eum dignissimos ipsum nisi reprehenderit rem repellat ducimus, magni placeat, ad
+            inventore? Eveniet, est!
+            Eius minima et vitae itaque asperiores voluptatibus soluta molestias necessitatibus nihil, quam ducimus
+            distinctio quis accusamus recusandae neque numquam quod ab aliquid unde assumenda debitis voluptatum
+            voluptates. Voluptatem, quaerat ipsum?
+            Placeat ipsum velit consequuntur, architecto quibusdam voluptatibus odio quas id harum pariatur blanditiis
+            debitis dignissimos consectetur itaque, sapiente at repellat impedit repudiandae nemo? Expedita inventore
+            doloremque ratione voluptates accusantium iure!
+            Hic dolores ut odio repudiandae iusto in distinctio aliquam nemo ex, laborum obcaecati, sequi quidem porro
+            ea, reprehenderit aliquid earum aspernatur accusantium repellendus dolorum. Ullam dicta autem sequi ratione
+            illo?
+            Animi ad, minus totam ipsum accusantium eius rem laudantium nesciunt alias excepturi! Expedita, sunt
+            praesentium explicabo dolorum asperiores veniam quia iusto delectus harum, quos illo fuga eveniet modi
+            tempore officiis?
         </p>
     </div>
     <footer>
@@ -243,11 +325,11 @@
             </div>
         </div>
     </footer>
+    <script src="./libraries/fontfaceobserver/fontfaceobserver.js"></script>
     <script src="./utilities/utilities.js"></script>
     <script src="./utilities/scripts/form.js"></script>
+    <script src="./utilities/scripts/collapse.js"></script>
     <script src="./blog/scripts/nav.js"></script>
     <script src="./index/scripts/footer.js"></script>
-
 </body>
-
 </html>

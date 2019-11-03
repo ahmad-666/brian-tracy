@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   background-color: #4a4e60;
-  padding: 1.5em 12em;
+  padding: 1.5em 10vw;
   color: #fbfbfb;
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,5 +54,23 @@
 
 #advicesLinks a:hover {
   color: #4fafff;
+}
+
+@media screen and (max-width: 1000px) {
+  #advicesLinks {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #advicesLinks {
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #advicesLinks {
+    font-size: 6px;
+  }
 }
 /*# sourceMappingURL=advicesLinks.css.map */

@@ -4,7 +4,7 @@
 #sponsors{
     width: 100%;
     height: auto;
-    padding: $dist3 $dist4 * 2;
+    padding: $dist3 10vw;
     display: flex;
     @include flex(column,flex-start,center,nowrap,"");
     h4{
@@ -24,6 +24,53 @@
             img{
                 width: 100%;
                 height: 100%;
+            }
+        }
+    }
+}
+@include resizeTablet('#sponsors') ;
+@include mediaQ(850px){
+    #sponsors{
+        .sponsors{
+            .sponsor{
+                width: calc((100% - (5 * 3em)) / 5);
+                height: 10em;
+            }
+        }
+    }
+}
+@include mediaQ(800px){
+    #sponsors{  
+        padding: $dist3 $dist2;
+    }
+}
+@include resizeMobile('#sponsors') ;
+@include mediaQ(600px){
+    #sponsors{
+        .sponsors{
+            .sponsor{
+                width: calc((100% - (4 * 3em)) / 4);
+                height: 11em;
+            }
+        }
+    }
+}
+@include mediaQ(430px){
+    #sponsors{
+        .sponsors{
+            .sponsor{
+                width: calc((100% - (3 * 3em)) / 3);
+                height: 12em;
+            }
+        }
+    }
+}
+@include mediaQ(330px){
+    #sponsors{
+        .sponsors{
+            .sponsor{
+                width: calc((100% - (2 * 3em)) / 2);
+                height: 13em;
             }
         }
     }

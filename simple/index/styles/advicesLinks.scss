@@ -5,7 +5,7 @@
     width: 100%;
     height: auto;
     background-color: $darkBlue;
-    padding: $dist2 $dist4 * 2;
+    padding: $dist2 10vw;
     color: $textWhite;
     display: flex;
     @include flex(row,flex-start,center,wrap,flex-start);
@@ -24,3 +24,10 @@
         &:hover{color: lighten($blueColor1,20%);}
     }
 }
+@include resizeTablet('#advicesLinks') ;
+@include mediaQ(800px){
+    #advicesLinks{
+        padding: $dist2;
+    }
+}
+@include resizeMobile('#advicesLinks') ;

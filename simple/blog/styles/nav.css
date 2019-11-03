@@ -1,7 +1,7 @@
 nav#blog {
   width: 100%;
   height: 5em;
-  padding: 0 12em;
+  padding: 0 10vw;
   background-color: #163A5C;
   display: -webkit-box;
   display: -webkit-flex;
@@ -265,5 +265,257 @@ nav#blog .content li.dropdownTrigger .dropdown li a {
   color: inherit;
   font-size: 1.3em;
   padding: 0.75em;
+}
+
+nav#blog .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  nav#blog {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  nav#blog {
+    padding: 0 1.5em;
+  }
+  nav#blog .content {
+    display: none;
+  }
+  nav#blog .mobile {
+    display: block;
+    width: 5em;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+  nav#blog .mobile .fa-bars {
+    color: #fbfbfb;
+    font-size: 3em;
+  }
+  nav#blog .mobile .menu {
+    -webkit-box-shadow: 0 0.2em 0.6em 0.1em rgba(70, 69, 85, 0.3);
+            box-shadow: 0 0.2em 0.6em 0.1em rgba(70, 69, 85, 0.3);
+    width: 30em;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+  }
+  nav#blog .mobile .menu > li {
+    width: 100%;
+    height: auto;
+    padding: 0.75em;
+    background-color: #163A5C;
+    cursor: pointer;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  nav#blog .mobile .menu > li:last-child {
+    border-bottom: none;
+  }
+  nav#blog .mobile .menu li.basket a {
+    width: 100%;
+    height: 100%;
+    color: #fbfbfb;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+  }
+  nav#blog .mobile .menu li.basket a i {
+    font-size: 2.4em;
+  }
+  nav#blog .mobile .menu li.basket a p {
+    font-size: 1.6em;
+    margin-right: .5em;
+  }
+  nav#blog .mobile .menu li.basket:hover {
+    background-color: #112d47;
+  }
+  nav#blog .mobile .menu li:not(.basket):not(.withCollapse) a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    color: #fbfbfb;
+  }
+  nav#blog .mobile .menu li:not(.basket):not(.withCollapse):hover {
+    background-color: #112d47;
+  }
+  nav#blog .mobile .menu li.withCollapse {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+    padding: 0;
+  }
+  nav#blog .mobile .menu li.withCollapse .collapseTrigger {
+    width: 100%;
+    height: auto;
+    padding: 0.75em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+    color: #fbfbfb;
+  }
+  nav#blog .mobile .menu li.withCollapse .collapseTrigger p {
+    font-size: 2em;
+  }
+  nav#blog .mobile .menu li.withCollapse .collapseTrigger i {
+    font-size: 2em;
+    margin-right: .5em;
+  }
+  nav#blog .mobile .menu li.withCollapse .collapseTrigger:hover {
+    background-color: #112d47;
+  }
+  nav#blog .mobile .menu li.withCollapse .collapse {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+  }
+  nav#blog .mobile .menu li.withCollapse .collapse li {
+    width: 100%;
+    height: auto;
+    padding: 0.75em 3em 0.75em 0.75em;
+    background-color: #163A5C;
+  }
+  nav#blog .mobile .menu li.withCollapse .collapse li:hover {
+    background-color: #112d47;
+  }
+  nav#blog .mobile .menu li.withCollapse .collapse li a {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6em;
+    color: #fbfbfb;
+  }
 }
 /*# sourceMappingURL=nav.css.map */

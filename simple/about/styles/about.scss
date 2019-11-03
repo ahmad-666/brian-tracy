@@ -30,3 +30,10 @@
         line-height: $dist2 + .2em;
     }
 }
+@include resizeTablet('#about') ;
+@include resizeMobile('#about') ;
+@include mediaQ(500px){
+    #about{
+        width: 96%;
+    }
+}

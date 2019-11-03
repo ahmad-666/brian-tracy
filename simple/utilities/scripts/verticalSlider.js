@@ -51,4 +51,4 @@ class VerticalSlider{
 // }
 // let vs = new VerticalSlider(document.querySelector('#verticalSliderWrapper'),verticalSliderConfig) ;
 // vs.init() ;
-//export default VerticalSlider ;
+// export default VerticalSlider ;
