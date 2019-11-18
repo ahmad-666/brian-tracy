@@ -1,0 +1,54 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+.pagination{
+    width: auto;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    @include flex(row,flex-start,center,wrap,flex-start) ;
+    .page-item{
+        width: auto;
+        height: auto;
+        margin: $dist2;
+        transition: all .2s linear;
+        cursor: pointer;
+        border: 1px solid $primaryColor ;
+        background-color: white;
+        color: $primaryColor;
+        &:not(.disabled){
+            &:hover{
+                border: 1px solid transparent ;
+                background-color: $primaryColor;
+                color: white;
+            }
+            
+        }
+        a{
+            display: inline-block;
+            font-size: $fontM;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding: .5em $dist1;
+            color: inherit;
+            i{
+                transform: translateY(.2em);
+            }
+        }
+    }
+    .page-item.disabled{
+        cursor: auto;
+        border: 1px solid $textGrey ;
+        background-color: lighten($textGrey,30%);
+        color: $primaryColor;
+        a{
+            cursor: auto;
+        }
+    }
+    .page-item.active{
+        border: 1px solid transparent ;
+        background-color: $primaryColor;
+        color: white;
+    }
+}

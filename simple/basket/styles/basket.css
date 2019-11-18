@@ -1,0 +1,3676 @@
+form#freeForm .inputWrapper.text {
+  width: 25em;
+  height: 4em;
+  position: relative;
+  margin: 2em 0 0.75em 0;
+}
+
+form#freeForm .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#freeForm .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#freeForm .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#freeForm .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#freeForm .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#freeForm .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#freeForm .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#freeForm .inputWrapper.text input.style1 {
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#freeForm .inputWrapper.text input.style1:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#freeForm .inputWrapper.text input.style1:focus ~ .line {
+  width: 100%;
+}
+
+form#freeForm .inputWrapper.text input.style2 {
+  border: 1.2px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#freeForm .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#freeForm .inputWrapper.text input.style2:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#freeForm .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#freeForm .inputWrapper.text input.style1.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#freeForm .inputWrapper.text input.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#freeForm .inputWrapper.text input.style1.error ~ .line {
+  background-color: #ea6161;
+}
+
+form#freeForm .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#freeForm .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#freeForm .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#freeForm .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#freeForm .inputWrapper.text label p {
+  font-size: 1.3em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#freeForm .inputWrapper.text input.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#freeForm .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#freeForm .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - 1px);
+  top: -moz-calc(100% - 1px);
+  top: calc(100% - 1px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#freeForm .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#freeForm .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#freeForm .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#freeForm .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#rss .inputWrapper.text {
+  width: -webkit-calc((100% - (3 * 3em)) / 3);
+  width: -moz-calc((100% - (3 * 3em)) / 3);
+  width: calc((100% - (3 * 3em)) / 3);
+  height: 5em;
+  position: relative;
+  margin: 1.5em;
+}
+
+form#rss .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#rss .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#rss .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#rss .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#rss .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#rss .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#rss .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#rss .inputWrapper.text input.style2 {
+  border: 1px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#rss .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#rss .inputWrapper.text input.style2:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#rss .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#rss .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#rss .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#rss .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#rss .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#rss .inputWrapper.text label p {
+  font-size: 1.5em;
+  -webkit-transform: translate(-0.3em, -0.3em);
+     -moz-transform: translate(-0.3em, -0.3em);
+      -ms-transform: translate(-0.3em, -0.3em);
+          transform: translate(-0.3em, -0.3em);
+}
+
+form#rss .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#rss .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - 1px);
+  top: -moz-calc(100% - 1px);
+  top: calc(100% - 1px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#rss .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#rss .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#rss .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#rss .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#rss button[type="submit"] {
+  margin: 1.5em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #fbfbfb;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#rss button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: #fbfbfb;
+  border: 1.2px solid #1976d2;
+}
+
+@media screen and (max-width: 1000px) {
+  form#rss {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#rss {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  form#rss .inputWrapper.text {
+    width: -webkit-calc((100% - (2 * 3em)) / 2);
+    width: -moz-calc((100% - (2 * 3em)) / 2);
+    width: calc((100% - (2 * 3em)) / 2);
+  }
+  form#rss button[type="submit"] {
+    margin: 1.5em auto;
+  }
+}
+
+form#searchForm {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#searchForm .inputWrapper.withSubmit {
+  width: 30em;
+  height: 5em;
+  position: relative;
+}
+
+form#searchForm .inputWrapper.withSubmit input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  color: #2d2d31;
+  font-size: 1.6em;
+  border-radius: 3em;
+  border: 1.2px solid #d3d3d7;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#searchForm .inputWrapper.withSubmit input::-webkit-input-placeholder {
+  font-size: 1em;
+  color: #c0c0c7;
+}
+
+form#searchForm .inputWrapper.withSubmit input:-moz-placeholder {
+  font-size: 1em;
+  color: #c0c0c7;
+}
+
+form#searchForm .inputWrapper.withSubmit input::-moz-placeholder {
+  font-size: 1em;
+  color: #c0c0c7;
+}
+
+form#searchForm .inputWrapper.withSubmit input:-ms-input-placeholder {
+  font-size: 1em;
+  color: #c0c0c7;
+}
+
+form#searchForm .inputWrapper.withSubmit input::-ms-input-placeholder {
+  font-size: 1em;
+  color: #c0c0c7;
+}
+
+form#searchForm .inputWrapper.withSubmit input::placeholder {
+  font-size: 1em;
+  color: #c0c0c7;
+}
+
+form#searchForm .inputWrapper.withSubmit input:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#searchForm .inputWrapper.withSubmit input.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#searchForm .inputWrapper.withSubmit button[type="submit"] {
+  width: 4em;
+  height: -webkit-calc(100%);
+  height: -moz-calc(100%);
+  height: calc(100%);
+  line-height: 2.5em;
+  border-top-left-radius: 3em;
+  border-bottom-left-radius: 3em;
+  padding: 0 1.3em;
+  position: absolute;
+  left: -.1em;
+  top: 0em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #fbfbfb;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#searchForm .inputWrapper.withSubmit button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: #fbfbfb;
+  border: 1.2px solid #1976d2;
+}
+
+form#searchForm .inputWrapper.withSubmit button[type="submit"] i {
+  font-size: 1.6em;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+form#searchForm .inputWrapper.withSubmit .msg {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  width: auto;
+  height: auto;
+  padding: 0.75em 1.5em;
+  border-radius: 3em;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+}
+
+form#searchForm .inputWrapper.withSubmit .msg i {
+  font-size: 2em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -.6em;
+}
+
+form#searchForm .inputWrapper.withSubmit .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#searchForm .inputWrapper.withSubmit .msg.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+form#searchProduct {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#searchProduct .inputWrapper.withSubmit {
+  margin: 1.5em auto;
+  width: 95%;
+  height: 4em;
+  position: relative;
+}
+
+form#searchProduct .inputWrapper.withSubmit input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  color: #2d2d31;
+  font-size: 1.6em;
+  border-radius: 3em;
+  border: 1.2px solid #d3d3d7;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#searchProduct .inputWrapper.withSubmit input::-webkit-input-placeholder {
+  font-size: .8em;
+  color: #c0c0c7;
+}
+
+form#searchProduct .inputWrapper.withSubmit input:-moz-placeholder {
+  font-size: .8em;
+  color: #c0c0c7;
+}
+
+form#searchProduct .inputWrapper.withSubmit input::-moz-placeholder {
+  font-size: .8em;
+  color: #c0c0c7;
+}
+
+form#searchProduct .inputWrapper.withSubmit input:-ms-input-placeholder {
+  font-size: .8em;
+  color: #c0c0c7;
+}
+
+form#searchProduct .inputWrapper.withSubmit input::-ms-input-placeholder {
+  font-size: .8em;
+  color: #c0c0c7;
+}
+
+form#searchProduct .inputWrapper.withSubmit input::placeholder {
+  font-size: .8em;
+  color: #c0c0c7;
+}
+
+form#searchProduct .inputWrapper.withSubmit input:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#searchProduct .inputWrapper.withSubmit input.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#searchProduct .inputWrapper.withSubmit button[type="submit"] {
+  width: 4em;
+  height: -webkit-calc(100%);
+  height: -moz-calc(100%);
+  height: calc(100%);
+  line-height: 2.5em;
+  border-top-left-radius: 3em;
+  border-bottom-left-radius: 3em;
+  padding: 0 1.3em;
+  position: absolute;
+  left: -.1em;
+  top: 0em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #fbfbfb;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#searchProduct .inputWrapper.withSubmit button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: #fbfbfb;
+  border: 1.2px solid #1976d2;
+}
+
+form#searchProduct .inputWrapper.withSubmit button[type="submit"] i {
+  font-size: 1.6em;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+form#searchProduct .inputWrapper.withSubmit .msg {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  width: auto;
+  height: auto;
+  padding: 0.75em 1.5em;
+  border-radius: 3em;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+}
+
+form#searchProduct .inputWrapper.withSubmit .msg i {
+  font-size: 2em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -.6em;
+}
+
+form#searchProduct .inputWrapper.withSubmit .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#searchProduct .inputWrapper.withSubmit .msg.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 1000px) {
+  form#searchProduct {
+    font-size: 8px;
+  }
+  form#searchProduct .inputWrapper.withSubmit button[type="submit"] {
+    width: 1em;
+    line-height: 2em;
+  }
+  form#searchProduct .inputWrapper.withSubmit button[type="submit"] i {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#searchProduct {
+    font-size: 6px;
+  }
+  form#searchProduct .inputWrapper.withSubmit button[type="submit"] {
+    padding: 0 1.05em;
+  }
+}
+
+form#login {
+  width: 40em;
+  height: auto;
+  padding: 1.5em;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#login img {
+  width: 12em;
+  height: 4em;
+}
+
+form#login h4 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+form#login .inputWrapper.text {
+  width: 35em;
+  height: 4em;
+  position: relative;
+  margin-top: 1.5em;
+}
+
+form#login .inputWrapper.text:nth-child(4) {
+  margin-top: 3em;
+}
+
+form#login .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#login .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#login .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#login .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#login .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#login .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#login .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#login .inputWrapper.text input.style1 {
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#login .inputWrapper.text input.style1:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#login .inputWrapper.text input.style1:focus ~ .line {
+  width: 100%;
+}
+
+form#login .inputWrapper.text input.style2 {
+  border: 1.2px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#login .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#login .inputWrapper.text input.style2:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#login .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#login .inputWrapper.text input.style1.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#login .inputWrapper.text input.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#login .inputWrapper.text input.style1.error ~ .line {
+  background-color: #ea6161;
+}
+
+form#login .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#login .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#login .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#login .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#login .inputWrapper.text label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#login .inputWrapper.text input.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#login .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#login .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - 1px);
+  top: -moz-calc(100% - 1px);
+  top: calc(100% - 1px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#login .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#login .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#login .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#login .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#login .inputWrapper.checkboxes {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  margin-top: 0;
+}
+
+form#login .inputWrapper.checkboxes .checkbox {
+  width: auto;
+  height: auto;
+  padding-right: 0.75em;
+  margin-top: 1.5em;
+}
+
+form#login .inputWrapper.checkboxes .checkbox input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+form#login .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label .rect {
+  width: 2em;
+  height: 1em;
+  border-radius: 0;
+  border-top: none;
+  border-right: none;
+  border-left: 1.2px solid #1976d2;
+  border-bottom: 1.2px solid #1976d2;
+  -webkit-transform: translateY(-0.3em) rotate(-45deg);
+     -moz-transform: translateY(-0.3em) rotate(-45deg);
+      -ms-transform: translateY(-0.3em) rotate(-45deg);
+          transform: translateY(-0.3em) rotate(-45deg);
+}
+
+form#login .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label p {
+  color: #1976d2;
+}
+
+form#login .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect {
+  border: 1px solid transparent;
+  background-color: #1976d2;
+}
+
+form#login .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect i {
+  opacity: 1;
+}
+
+form#login .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label p {
+  color: #1976d2;
+}
+
+form#login .inputWrapper.checkboxes .checkbox label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  line-height: 2.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#login .inputWrapper.checkboxes .checkbox label .rect {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #696975;
+  position: relative;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  border-radius: .45em;
+}
+
+form#login .inputWrapper.checkboxes .checkbox label .rect i {
+  opacity: 0;
+  font-size: 1.6em;
+  color: #fbfbfb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#login .inputWrapper.checkboxes .checkbox label p {
+  width: auto;
+  font-size: 1.4em;
+  color: #90909b;
+  margin-right: .3em;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#login button[type="submit"] {
+  width: auto;
+  height: auto;
+  padding: 0.3em 2em;
+  margin: 3em auto 0 auto;
+  border-radius: 3em;
+  font-size: 2em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #fbfbfb;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#login button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: #fbfbfb;
+  border: 1.2px solid #1976d2;
+}
+
+form#login a.rememberPassword {
+  font-size: 1.3em;
+  color: #90909b;
+  position: absolute;
+  right: 0;
+  top: 140%;
+}
+
+form#login a.signup {
+  font-size: 1.6em;
+  color: #90909b;
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 1000px) {
+  form#login {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#login {
+    font-size: 6px;
+  }
+}
+
+form#forgetPassword {
+  width: 40em;
+  height: auto;
+  padding: 1.5em;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#forgetPassword img {
+  width: 12em;
+  height: 4em;
+}
+
+form#forgetPassword h4 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+form#forgetPassword .inputWrapper.text {
+  width: 35em;
+  height: 4em;
+  position: relative;
+  margin-top: 1.5em;
+}
+
+form#forgetPassword .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#forgetPassword .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#forgetPassword .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#forgetPassword .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#forgetPassword .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#forgetPassword .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#forgetPassword .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#forgetPassword .inputWrapper.text input.style1 {
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#forgetPassword .inputWrapper.text input.style1:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#forgetPassword .inputWrapper.text input.style1:focus ~ .line {
+  width: 100%;
+}
+
+form#forgetPassword .inputWrapper.text input.style2 {
+  border: 1.2px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#forgetPassword .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#forgetPassword .inputWrapper.text input.style2:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#forgetPassword .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#forgetPassword .inputWrapper.text input.style1.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#forgetPassword .inputWrapper.text input.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#forgetPassword .inputWrapper.text input.style1.error ~ .line {
+  background-color: #ea6161;
+}
+
+form#forgetPassword .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#forgetPassword .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#forgetPassword .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#forgetPassword .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#forgetPassword .inputWrapper.text label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#forgetPassword .inputWrapper.text input.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#forgetPassword .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#forgetPassword .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - .6px);
+  top: -moz-calc(100% - .6px);
+  top: calc(100% - .6px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#forgetPassword .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#forgetPassword .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#forgetPassword .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#forgetPassword .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#forgetPassword .inputWrapper.text .rememberPassword {
+  font-size: 1.2em;
+  color: #ababb3;
+  position: absolute;
+  right: 0;
+  top: 140%;
+}
+
+form#forgetPassword button[type="submit"] {
+  width: auto;
+  height: auto;
+  padding: 0.3em 2em;
+  margin-top: 1.5em;
+  border-radius: 3em;
+  font-size: 2em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #fbfbfb;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#forgetPassword button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: #fbfbfb;
+  border: 1.2px solid #1976d2;
+}
+
+form#forgetPassword a.login {
+  font-size: 1.4em;
+  color: #90909b;
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 1000px) {
+  form#forgetPassword {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#forgetPassword {
+    font-size: 6px;
+  }
+}
+
+form#signup {
+  width: 40em;
+  height: auto;
+  padding: 1.5em;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#signup img {
+  width: 12em;
+  height: 4em;
+}
+
+form#signup h4 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+form#signup .inputWrapper.text {
+  width: 35em;
+  height: 4em;
+  position: relative;
+  margin-top: 2em;
+}
+
+form#signup .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input.style1 {
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#signup .inputWrapper.text input.style1:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#signup .inputWrapper.text input.style1:focus ~ .line {
+  width: 100%;
+}
+
+form#signup .inputWrapper.text input.style2 {
+  border: 1.2px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#signup .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#signup .inputWrapper.text input.style2:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#signup .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#signup .inputWrapper.text input.style1.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#signup .inputWrapper.text input.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#signup .inputWrapper.text input.style1.error ~ .line {
+  background-color: #ea6161;
+}
+
+form#signup .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#signup .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#signup .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#signup .inputWrapper.text input.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#signup .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#signup .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - 1px);
+  top: -moz-calc(100% - 1px);
+  top: calc(100% - 1px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#signup .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#signup .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#signup .inputWrapper.checkboxes {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  margin-top: 0;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox {
+  width: auto;
+  height: auto;
+  padding-right: 0.75em;
+  margin-top: 1.5em;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label .rect {
+  width: 2em;
+  height: 1em;
+  border-radius: 0;
+  border-top: none;
+  border-right: none;
+  border-left: 1.2px solid #1976d2;
+  border-bottom: 1.2px solid #1976d2;
+  -webkit-transform: translateY(-0.3em) rotate(-45deg);
+     -moz-transform: translateY(-0.3em) rotate(-45deg);
+      -ms-transform: translateY(-0.3em) rotate(-45deg);
+          transform: translateY(-0.3em) rotate(-45deg);
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label p {
+  color: #1976d2;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect {
+  border: 1px solid transparent;
+  background-color: #1976d2;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect i {
+  opacity: 1;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label p {
+  color: #1976d2;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  line-height: 2.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#signup .inputWrapper.checkboxes .checkbox label .rect {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #696975;
+  position: relative;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  border-radius: .45em;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox label .rect i {
+  opacity: 0;
+  font-size: 1.6em;
+  color: #fbfbfb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox label p {
+  width: auto;
+  font-size: 1.4em;
+  color: #90909b;
+  margin-right: .3em;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup button[type="submit"] {
+  width: auto;
+  height: auto;
+  padding: 0.3em 2em;
+  margin-top: 1.5em;
+  border-radius: 3em;
+  font-size: 2em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #fbfbfb;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#signup button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: #fbfbfb;
+  border: 1.2px solid #1976d2;
+}
+
+form#signup a.login {
+  font-size: 1.6em;
+  color: #90909b;
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 1000px) {
+  form#signup {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#signup {
+    font-size: 6px;
+  }
+}
+
+form#contact {
+  width: 100%;
+  height: auto;
+  margin-right: 3em;
+  border: 1px solid #d3d3d7;
+  padding: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#contact h4 {
+  font-size: 2.3em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+form#contact .shortDesc {
+  width: auto;
+  height: auto;
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#contact .shortDesc a {
+  margin: 0 .2em;
+  font-weight: 700;
+  color: #1976d2;
+}
+
+form#contact .row {
+  width: 100%;
+  height: auto;
+  margin-top: 0.75em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+form#contact .row .inputWrapper.text {
+  width: -webkit-calc((100% - (3 * 3em)) / 3);
+  width: -moz-calc((100% - (3 * 3em)) / 3);
+  width: calc((100% - (3 * 3em)) / 3);
+  height: 4em;
+  position: relative;
+  margin: 1.5em;
+}
+
+form#contact .row .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#contact .row .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#contact .row .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#contact .row .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#contact .row .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#contact .row .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#contact .row .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#contact .row .inputWrapper.text input.style1 {
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#contact .row .inputWrapper.text input.style1:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#contact .row .inputWrapper.text input.style1:focus ~ .line {
+  width: 100%;
+}
+
+form#contact .row .inputWrapper.text input.style2 {
+  border: 1.2px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#contact .row .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#contact .row .inputWrapper.text input.style2:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#contact .row .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#contact .row .inputWrapper.text input.style1.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#contact .row .inputWrapper.text input.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#contact .row .inputWrapper.text input.style1.error ~ .line {
+  background-color: #ea6161;
+}
+
+form#contact .row .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#contact .row .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#contact .row .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#contact .row .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#contact .row .inputWrapper.text label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#contact .row .inputWrapper.text input.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#contact .row .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#contact .row .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - 1px);
+  top: -moz-calc(100% - 1px);
+  top: calc(100% - 1px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#contact .row .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#contact .row .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#contact .row .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#contact .row .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#contact .inputWrapper.textarea {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form#contact .inputWrapper.textarea textarea {
+  width: 100%;
+  font-size: 1.6em;
+  color: #2d2d31;
+  padding: 0.75em;
+  line-height: 1.5em;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  resize: none;
+}
+
+form#contact .inputWrapper.textarea textarea::-webkit-input-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#contact .inputWrapper.textarea textarea:-moz-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#contact .inputWrapper.textarea textarea::-moz-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#contact .inputWrapper.textarea textarea:-ms-input-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#contact .inputWrapper.textarea textarea::-ms-input-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#contact .inputWrapper.textarea textarea::placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#contact .inputWrapper.textarea textarea.style1 {
+  height: 11em;
+  border: 1.2px solid #d3d3d7;
+  border-radius: 1.5em;
+}
+
+form#contact .inputWrapper.textarea textarea.style1 ~ label {
+  bottom: 100%;
+  -webkit-transform: translateY(150%);
+     -moz-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+          transform: translateY(150%);
+}
+
+form#contact .inputWrapper.textarea textarea.style1:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+  font-size: 8px;
+  right: 0.75em;
+  color: #1976d2;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+form#contact .inputWrapper.textarea textarea.style2 {
+  overflow: hidden;
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#contact .inputWrapper.textarea textarea.style2 ~ label {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+form#contact .inputWrapper.textarea textarea.style2:focus {
+  border-bottom: 1.2px solid #1976d2;
+}
+
+form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+  font-size: 8px;
+  right: 0;
+  color: #1976d2;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+form#contact .inputWrapper.textarea textarea.style2:focus ~ .line {
+  width: 100%;
+}
+
+form#contact .inputWrapper.textarea textarea.style1.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#contact .inputWrapper.textarea textarea.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#contact .inputWrapper.textarea textarea.style2.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#contact .inputWrapper.textarea textarea.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 2em);
+  bottom: -moz-calc(100% + 2em);
+  bottom: calc(100% + 2em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+  font-size: 8px;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  right: 0;
+}
+
+form#contact .inputWrapper.textarea label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  color: #c6c6cb;
+}
+
+form#contact .inputWrapper.textarea label i {
+  font-size: 1.6em;
+}
+
+form#contact .inputWrapper.textarea label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#contact .inputWrapper.textarea .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - .6px);
+  top: -moz-calc(100% - .6px);
+  top: calc(100% - .6px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#contact button[type="submit"] {
+  margin: 1.5em auto 0 auto;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: white;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#contact button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: white;
+  border: 1.2px solid #1976d2;
+}
+
+@media screen and (max-width: 1200px) {
+  form#contact .row .inputWrapper.text {
+    width: -webkit-calc((100% - (2 * 3em)) / 2);
+    width: -moz-calc((100% - (2 * 3em)) / 2);
+    width: calc((100% - (2 * 3em)) / 2);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  form#contact {
+    width: 95%;
+    margin-right: 0;
+    margin-top: 1.5em;
+  }
+  form#contact .row .inputWrapper.text {
+    width: -webkit-calc((100% - (3 * 3em)) / 3);
+    width: -moz-calc((100% - (3 * 3em)) / 3);
+    width: calc((100% - (3 * 3em)) / 3);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  form#contact .row .inputWrapper.text {
+    width: -webkit-calc((100% - (2 * 3em)) / 2);
+    width: -moz-calc((100% - (2 * 3em)) / 2);
+    width: calc((100% - (2 * 3em)) / 2);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  form#contact .row .inputWrapper.text {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  form#sample {
+    font-size: 8px;
+  }
+  form#sample .inputWrapper.text input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.text input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.text input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.text input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.select input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.select input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.select input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.select input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.selectSearch input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.selectSearch input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.selectSearch input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.selectSearch input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.textarea textarea.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.textarea textarea.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.textarea textarea.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#freeForm {
+    font-size: 8px;
+  }
+  form#freeForm .inputWrapper.text input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#freeForm .inputWrapper.text input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#freeForm .inputWrapper.text input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#freeForm .inputWrapper.text input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#rss {
+    font-size: 8px;
+  }
+  form#rss .inputWrapper.text input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#rss .inputWrapper.text input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#rss .inputWrapper.text input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#rss .inputWrapper.text input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#login {
+    font-size: 8px;
+  }
+  form#login .inputWrapper.text input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#login .inputWrapper.text input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#login .inputWrapper.text input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#login .inputWrapper.text input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#forgetPassword {
+    font-size: 8px;
+  }
+  form#forgetPassword .inputWrapper.text input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#forgetPassword .inputWrapper.text input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#forgetPassword .inputWrapper.text input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#forgetPassword .inputWrapper.text input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#signup {
+    font-size: 8px;
+  }
+  form#signup .inputWrapper.text input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#signup .inputWrapper.text input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#signup .inputWrapper.text input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#signup .inputWrapper.text input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#contact {
+    font-size: 8px;
+  }
+  form#contact .row .inputWrapper.text input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#contact .row .inputWrapper.text input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#contact .row .inputWrapper.text input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#contact .row .inputWrapper.text input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  form#sample {
+    font-size: 6px;
+  }
+  form#sample .inputWrapper.text input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.text input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.text input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.text input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.select input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.select input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.select input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.select input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.selectSearch input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.selectSearch input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.selectSearch input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.selectSearch input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.textarea textarea.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.textarea textarea.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.textarea textarea.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#freeForm {
+    font-size: 6px;
+  }
+  form#freeForm .inputWrapper.text input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#freeForm .inputWrapper.text input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#freeForm .inputWrapper.text input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#freeForm .inputWrapper.text input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#rss {
+    font-size: 6px;
+  }
+  form#rss .inputWrapper.text input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#rss .inputWrapper.text input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#rss .inputWrapper.text input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#rss .inputWrapper.text input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#login {
+    font-size: 6px;
+  }
+  form#login .inputWrapper.text input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#login .inputWrapper.text input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#login .inputWrapper.text input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#login .inputWrapper.text input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#forgetPassword {
+    font-size: 6px;
+  }
+  form#forgetPassword .inputWrapper.text input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#forgetPassword .inputWrapper.text input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#forgetPassword .inputWrapper.text input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#forgetPassword .inputWrapper.text input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#signup {
+    font-size: 6px;
+  }
+  form#signup .inputWrapper.text input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#signup .inputWrapper.text input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#signup .inputWrapper.text input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#signup .inputWrapper.text input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#contact {
+    font-size: 6px;
+  }
+  form#contact .row .inputWrapper.text input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#contact .row .inputWrapper.text input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#contact .row .inputWrapper.text input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#contact .row .inputWrapper.text input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+    font-size: 4px;
+  }
+}
+
+form#basket {
+  margin: 3em auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket h4 {
+  font-size: 2em;
+  color: #2d2d31;
+  font-weight: 700;
+}
+
+form#basket table {
+  width: 90%;
+  height: auto;
+  margin: 0.75em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead, form#basket table tbody {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr, form#basket table tbody tr {
+  width: 100%;
+  height: auto;
+  padding: 0.75em 0;
+  background-color: white;
+  border-bottom: 1px solid #d3d3d7;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr th, form#basket table thead tr td, form#basket table tbody tr th, form#basket table tbody tr td {
+  height: auto;
+  font-size: 16px;
+}
+
+form#basket table thead tr th:nth-child(1), form#basket table thead tr td:nth-child(1), form#basket table tbody tr th:nth-child(1), form#basket table tbody tr td:nth-child(1) {
+  width: 100%;
+}
+
+form#basket table thead tr th:nth-child(2), form#basket table thead tr td:nth-child(2), form#basket table tbody tr th:nth-child(2), form#basket table tbody tr td:nth-child(2) {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 6em;
+  margin-right: 1.5em;
+}
+
+form#basket table thead tr th:nth-child(3), form#basket table thead tr td:nth-child(3), form#basket table tbody tr th:nth-child(3), form#basket table tbody tr td:nth-child(3) {
+  width: 50%;
+  margin-right: 3em;
+}
+
+form#basket table thead tr th:nth-child(4), form#basket table thead tr td:nth-child(4), form#basket table tbody tr th:nth-child(4), form#basket table tbody tr td:nth-child(4) {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 3em;
+  margin-right: 1.5em;
+}
+
+form#basket table thead tr th, form#basket table tbody tr th {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+form#basket table thead tr td:nth-child(1), form#basket table tbody tr td:nth-child(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+form#basket table thead tr td:nth-child(1) a, form#basket table tbody tr td:nth-child(1) a {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form#basket table thead tr td:nth-child(1) a img, form#basket table tbody tr td:nth-child(1) a img {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
+
+form#basket table thead tr td:nth-child(1) .col, form#basket table tbody tr td:nth-child(1) .col {
+  width: auto;
+  height: auto;
+  margin-right: 0.75em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr td:nth-child(1) .col p, form#basket table tbody tr td:nth-child(1) .col p {
+  font-size: 1em;
+  color: #90909b;
+}
+
+form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler .increase, form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler .decrease, form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler input, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler .increase, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler .decrease, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler input {
+  margin-right: 0;
+}
+
+form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler .increase:first-child, form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler .decrease:first-child, form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler input:first-child, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler .increase:first-child, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler .decrease:first-child, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler input:first-child {
+  margin-right: 0;
+}
+
+form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler .increase, form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler .decrease, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler .increase, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler .decrease {
+  font-size: .8em;
+  cursor: pointer;
+  color: #39393e;
+}
+
+form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler input, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler input {
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  color: #2d2d31;
+  font-size: 1.2em;
+  border: 1.2px solid #c6c6cb;
+}
+
+form#basket table thead tr td:nth-child(2) .inputWrapper.numberHandler input.error, form#basket table tbody tr td:nth-child(2) .inputWrapper.numberHandler input.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#basket table thead tr td:nth-child(3), form#basket table tbody tr td:nth-child(3) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr td:nth-child(3) p, form#basket table tbody tr td:nth-child(3) p {
+  width: auto;
+  height: auto;
+  font-size: 1.2em;
+  color: #90909b;
+  margin-top: 0.75em;
+}
+
+form#basket table thead tr td:nth-child(3) p:first-child, form#basket table tbody tr td:nth-child(3) p:first-child {
+  margin-top: 0;
+  font-size: .9em;
+}
+
+form#basket table thead tr td:nth-child(3) p:nth-child(2), form#basket table tbody tr td:nth-child(3) p:nth-child(2) {
+  font-size: .9em;
+}
+
+form#basket table thead tr td:nth-child(4), form#basket table tbody tr td:nth-child(4) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket table thead tr td:nth-child(4) i, form#basket table tbody tr td:nth-child(4) i {
+  cursor: pointer;
+  font-size: 1em;
+  color: #90909b;
+}
+
+form#basket table tbody tr {
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+form#basket table tbody tr:hover {
+  background-color: #ededed;
+}
+
+form#basket .row {
+  width: 100%;
+  height: auto;
+  margin-top: 0.75em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+form#basket .row .totalBasket {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket .row .totalBasket p:nth-child(1) {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#basket .row .totalBasket p:nth-child(2) {
+  font-size: 2em;
+  color: #2d2d31;
+}
+
+form#basket .row button[type="submit"] {
+  font-size: 1.5em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: white;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#basket .row button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: white;
+  border: 1.2px solid #1976d2;
+}
+
+form#basket .row.start {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket .row#remove {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#basket .row#remove button#removeAll {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  color: #ea6161;
+  font-size: 1.6em;
+  background-color: transparent;
+  margin-left: 1.5em;
+}
+/*# sourceMappingURL=basket.css.map */
