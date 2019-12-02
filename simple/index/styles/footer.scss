@@ -132,11 +132,13 @@ footer{
         display: flex;
         @include flex(row,space-between,center,nowrap,"");
         img{
+            border: 1px solid blue ;
             width: 12em;
             height: 5em;
             margin-right: $dist2;
         }
         .right,.left{
+            border: 1px solid blue ;
             width: auto;
             height: auto;
             display: flex;

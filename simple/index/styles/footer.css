@@ -349,12 +349,14 @@ footer .copyright {
 }
 
 footer .copyright img {
+  border: 1px solid blue;
   width: 12em;
   height: 5em;
   margin-right: 1.5em;
 }
 
 footer .copyright .right, footer .copyright .left {
+  border: 1px solid blue;
   width: auto;
   height: auto;
   display: -webkit-box;
