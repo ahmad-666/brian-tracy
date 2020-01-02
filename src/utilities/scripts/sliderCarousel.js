@@ -1,3 +1,4 @@
+import util from '../../utilities/utilities.js' ;
 function SliderCarousel(wrapper){
     this.wrapper = wrapper ;
     this.slidesWrapper = this.wrapper.querySelector('.slides') ;
@@ -6,7 +7,7 @@ function SliderCarousel(wrapper){
     this.prevBtn = this.wrapper.querySelector('.btn.prev') ;
     this.slidesNum = this.slides.length ;
     this.currIndex = 0 ;
-    this.offset = this.slides[this.currIndex].offsetWidth+parseFloat(getStyle(this.slides[this.currIndex],'margin-right'))+parseFloat(getStyle(this.slides[this.currIndex],'margin-left')) ;
+    this.offset = this.slides[this.currIndex].offsetWidth+parseFloat(util.getStyle(this.slides[this.currIndex],'margin-right'))+parseFloat(util.getStyle(this.slides[this.currIndex],'margin-left')) ;
     this.viewportSlides = Math.floor(this.slidesWrapper.offsetWidth/this.offset) ;// how many slides are inside this.slidesWrapper at one time   
     if(this.slidesNum>this.viewportSlides){    
         this.nextBtn.addEventListener('click',this.nextSlide.bind(this)) ;
@@ -15,7 +16,7 @@ function SliderCarousel(wrapper){
     window.addEventListener('resize',this.update.bind(this)) ;
 }
 SliderCarousel.prototype.update = function(e){
-    this.offset = this.slides[this.currIndex].offsetWidth+parseFloat(getStyle(this.slides[this.currIndex],'margin-right'))+parseFloat(getStyle(this.slides[this.currIndex],'margin-left')) ;
+    this.offset = this.slides[this.currIndex].offsetWidth+parseFloat(util.getStyle(this.slides[this.currIndex],'margin-right'))+parseFloat(util.getStyle(this.slides[this.currIndex],'margin-left')) ;
     this.viewportSlides = Math.floor(this.slidesWrapper.offsetWidth/this.offset) ;
 }
 SliderCarousel.prototype.nextSlide = function(e){

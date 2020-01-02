@@ -1,6 +1,9 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
+@import './wrapper.scss' ;
+@import './sidebar.scss' ;
+
 main{
     .articles{
         display: flex;

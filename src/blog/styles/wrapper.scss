@@ -2,61 +2,38 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 main{
-    width: 100%;
+    width: 95%;
     height: auto;
-    margin: $dist2 0;
-    padding: 0 10vw;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     @include flex(row,flex-start,flex-start,nowrap,"") ;
     #sidebar{
         flex-shrink: 0;
         width: 25em;
         height: auto;
+        margin-bottom: $dist3;
     }
-    #products,.articles,#article,#product{
+    .articles,#article,#products{
+        margin-right: $dist3;
         width: 100%;
         height: auto;
-        margin-right: $dist4;      
-    }
-}
-main#productWrapper{
-    padding: 0 $dist2;
-    @include flex(row,flex-start,flex-start,nowrap,"") ;
-    #sidebar{
-        width: 22em;
-    }
-    #product{
-        margin-right: $dist3;      
+        padding-bottom: $dist3;
     }
 }
 @include resizeTablet('main') ;
-@include mediaQ(800px){
-    main{
-        padding: 0 $dist2;
-    }
-    main#productWrapper{
-        @include flex(column,flex-start,center,nowrap,"") ;
-        #sidebar{
-            width: 28em;
-        }
-        #product{
-            margin-right: 0;      
-            margin-top: $dist3;      
-        }
-    }
-}
 @include resizeMobile('main') ;
-@include mediaQ(550px){
+@include mediaQ(600px){
     main{
         @include flex(column,flex-start,center,nowrap,"") ;
         #sidebar{
-            flex-shrink: 1;
-            width: 30em;
+            width: 100%;
+            margin-bottom: 0;
         }
-        #products,.articles,#article,#product{
-            width: 95%;
-            margin-right: 0;      
-            margin-top: $dist3;      
+        .articles,#article,#products{
+            margin-right: 0;
+            margin-top: $dist3;
         }
     }
 }

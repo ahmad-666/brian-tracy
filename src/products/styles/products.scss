@@ -1,6 +1,8 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
+@import '../../blog/styles/wrapper.scss';
+@import '../../blog/styles/sideBar.scss';
 @import './filters.scss' ;
 @import './pagination.scss' ;
 main{
