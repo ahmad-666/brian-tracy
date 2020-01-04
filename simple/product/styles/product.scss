@@ -4,7 +4,88 @@
 @import './breadcrumb.scss' ;
 @import '../../utilities/styles/productSlider.scss' ;
 main{
+    width: 95%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    @include flex(row,flex-start,flex-start,nowrap,"") ;
+    margin-top: 2em;
+    #sidebar{
+        width: 25em;
+        height: auto;
+        flex-shrink: 0;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        border: 1px solid lighten($textGrey,15%) ;
+        border-radius: $dist2;
+        box-shadow: 0 0 .5em .1em $shadowColor;
+        .guarantee,.comments,.allComments,.warning{
+            width: 100%;
+            height: auto;
+            display: flex;
+            padding: $dist2 $dist1;
+            &:not(:last-child){border-bottom: 1px solid lighten($textGrey,15%);}
+        }
+        .guarantee{
+            @include flex(column,flex-start,center,nowrap,"") ;
+            img{
+                width: 12em;
+                height: 12em;
+            }
+            p{
+                font-size: $fontM;
+                color: $primaryColor;
+            }
+        }
+        .comments{
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            h6{
+                font-size: $fontM ;
+                color: $textDark;
+                font-weight: 700;
+            }
+            .comment{
+                width: 100%;
+                height: auto;
+                margin-top: $dist2;
+                display: flex;
+                @include flex(column,flex-start,flex-start,nowrap,"") ;
+                .title{
+                    font-size: $fontM;
+                    font-weight: 700;
+                    color: $primaryColor;
+                }
+                .content{
+                    font-size: $fontM - .2em;
+                    color: $textGrey;
+                    line-height: $dist2 + .5em;
+                    margin-top: .5em;
+                }
+            }
+        }
+        .allComments{
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            a{
+                width: 100%;
+                height: auto;
+                color: $primaryColor;
+                font-size: $fontM;
+            }
+        }
+        .warning{
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            p{
+                width: 100%;
+                font-size: $fontM;
+                color: $textGrey;
+            }
+        }
+    }
     #product{
+        width: calc(100% - 25em - 2em) ;
+        height: auto;
+        margin-right: 2em;
         display: flex;
         @include flex(column,flex-start,flex-start,nowrap,"") ;
        .infos{
@@ -47,17 +128,173 @@ main{
            }
        }
     }
+
 }
-@include mediaQ(550px){
+.sliderCarousel{
+    padding: $dist2 $dist3;
+    border-top: 1px solid $textGrey;
+    border-bottom: 1px solid $textGrey;
+    width: 100%;
+    height: auto;
+    h4{
+        width: 100%;
+        text-align: right;
+        font-size: $fontM;
+    }
+    .helper{
+        .slides{
+            .slide{
+                width: calc((100% - (6 * 1.5em)) / 6);
+                height: 20em;
+                border: 1px solid $textGrey ;
+                padding: $dist1;
+                margin: $dist1;
+                display: flex;
+                @include flex(column,flex-start,center,nowrap,"") ;
+                a{
+                    width: 100%;
+                    height: 75%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                button{
+                    width: auto;
+                    height: auto;
+                    margin-top: $dist1;
+                    padding: .5em $dist2;
+                    display: flex;
+                    @include flex(row,flex-start,center,nowrap,"") ;
+                    border-radius: $dist2;
+                    background-color: $primaryColor;
+                    color: $textWhite ;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    i,p{
+                        font-size: 1em;
+                    }
+                    p{
+                        margin-right: .3em;
+                    }
+                }
+            }
+        }
+    }   
+}
+.caution{
+    width: 100%;
+    height: auto;
+    padding: $dist2 $dist3;
+    margin-top: $dist2;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    h6{
+        font-size: $fontL;
+        font-weight: 700;
+        color: $primaryColor;
+    }
+    p{
+        width: 100%;
+        height: auto;
+        line-height: $dist2 + .5em;
+        color: $textDark ;
+        font-size: $fontM;
+    }
+}
+@include mediaQ(1150px){
+    main,.caution,.sliderCarousel{font-size: 8px;}
+    .sliderCarousel{
+        .helper{
+            .slides{
+                .slide{
+                    width: calc((100% - (5 * 1.5em)) / 5);
+                    height: 24em;
+                }
+            }
+        }   
+    }
+}
+@include mediaQ(980px){
+    .sliderCarousel{
+        .helper{
+            .slides{
+                .slide{
+                    width: calc((100% - (4 * 1.5em)) / 4);
+                    height: 24em;
+                }
+            }
+        }   
+    }
+}
+@include mediaQ(800px){
+    main,.caution,.sliderCarousel{font-size: 6px;}
+    .sliderCarousel{
+        .helper{
+            .slides{
+                .slide{
+                    width: calc((100% - (3 * 1.5em)) / 3);
+                    height: 32em;
+                }
+            }
+        }   
+    }
+}
+@include mediaQ(600px){
+    .sliderCarousel{
+        .btn{
+            display: none;
+        }
+        .helper{
+            .slides{
+                overflow: auto;
+                .slide{
+                    width: calc((100% - (2 * 1.5em)) / 2);
+                    height: 32em;
+                }
+            }
+        }   
+    }
+    main{
+        @include flex(column,flex-start,center,nowrap,"") ;
+        margin-top: 2em;
+        #sidebar{
+            width: 100%;
+            @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+            .guarantee,.comments,.allComments,.warning{
+                width: 100%;
+            }
+            .guarantee{
+                border: none;
+                border-bottom: 1px solid $textGrey;
+            }
+        }
+        #product{
+            width: 100% ;
+            margin-top: 2em;
+            margin-right: 0em;
+        }
+    }
+}
+@include mediaQ(480px){
     main{
         #product{
            .infos{
-               @include flex(column,flex-start,center,nowrap,"") ;
-               .productSlider{
-                   margin-right: 0;
-                   margin-top: $dist2;
-               }
-            }
+               @include flex(column-reverse,flex-start,center,nowrap,"") ;
+           }
         }
+    }
+    
+}
+@include mediaQ(420px){
+    .sliderCarousel{
+        .helper{
+            .slides{
+                .slide{
+                    width: 75%;
+                    height: 32em;
+                }
+            }
+        }   
     }
 }

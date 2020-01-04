@@ -1,0 +1,488 @@
+form#signup {
+  width: 40em;
+  height: auto;
+  padding: 2em;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#signup img {
+  width: 12em;
+  height: 4em;
+}
+
+form#signup h4 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #2d2d31;
+}
+
+form#signup .inputWrapper.text {
+  width: 35em;
+  height: 4em;
+  position: relative;
+  margin-top: 2em;
+}
+
+form#signup .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text input.style1 {
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#signup .inputWrapper.text input.style1:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#signup .inputWrapper.text input.style1:focus ~ .line {
+  width: 100%;
+}
+
+form#signup .inputWrapper.text input.style2 {
+  border: 1.2px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#signup .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#signup .inputWrapper.text input.style2:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#signup .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#signup .inputWrapper.text input.style1.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#signup .inputWrapper.text input.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#signup .inputWrapper.text input.style1.error ~ .line {
+  background-color: #ea6161;
+}
+
+form#signup .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#signup .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#signup .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#signup .inputWrapper.text label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#signup .inputWrapper.text input.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#signup .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#signup .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - 1px);
+  top: -moz-calc(100% - 1px);
+  top: calc(100% - 1px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#signup .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#signup .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#signup .inputWrapper.checkboxes {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  margin-top: 0;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox {
+  width: auto;
+  height: auto;
+  padding-right: 0.75em;
+  margin-top: 1.5em;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label .rect {
+  width: 2em;
+  height: 1em;
+  border-radius: 0;
+  border-top: none;
+  border-right: none;
+  border-left: 1.2px solid #1976d2;
+  border-bottom: 1.2px solid #1976d2;
+  -webkit-transform: translateY(-0.3em) rotate(-45deg);
+     -moz-transform: translateY(-0.3em) rotate(-45deg);
+      -ms-transform: translateY(-0.3em) rotate(-45deg);
+          transform: translateY(-0.3em) rotate(-45deg);
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style1:checked ~ label p {
+  color: #1976d2;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect {
+  border: 1px solid transparent;
+  background-color: #1976d2;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect i {
+  opacity: 1;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label p {
+  color: #1976d2;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  line-height: 2.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#signup .inputWrapper.checkboxes .checkbox label .rect {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #696975;
+  position: relative;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  border-radius: .45em;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox label .rect i {
+  opacity: 0;
+  font-size: 1.6em;
+  color: #fbfbfb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup .inputWrapper.checkboxes .checkbox label p {
+  width: auto;
+  font-size: 1.4em;
+  color: #90909b;
+  margin-right: .3em;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#signup button[type="submit"] {
+  width: auto;
+  height: auto;
+  padding: 0.3em 2em;
+  margin-top: 1.5em;
+  border-radius: 3em;
+  font-size: 2em;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+  color: #fbfbfb;
+  background-color: #1976d2;
+  border: 1.2px solid transparent;
+}
+
+form#signup button[type="submit"]:hover {
+  color: #1976d2;
+  background-color: #fbfbfb;
+  border: 1.2px solid #1976d2;
+}
+
+form#signup a.login {
+  font-size: 1.6em;
+  color: #90909b;
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 1000px) {
+  form#signup {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#signup {
+    font-size: 6px;
+  }
+}
+/*# sourceMappingURL=Form Signup1.css.map */

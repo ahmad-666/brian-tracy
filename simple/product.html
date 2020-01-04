@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="./framework.css">
     <link rel="stylesheet" href="./utilities/styles/form.css">
     <link rel="stylesheet" href="./init.css">
+    <link rel="stylesheet" href="./utilities/styles/sliderCarousel.css">
     <link rel="stylesheet" href="./blog/styles/nav.css">
-    <link rel="stylesheet" href="./blog/styles/wrapper.css">
-    <link rel="stylesheet" href="./blog/styles/sidebar.css">
     <link rel="stylesheet" href="./product/styles/product.css">
     <link rel="stylesheet" href="./index/styles/footer.css">
 </head>
+
 <body>
     <nav id="blog">
         <ul class="content">
@@ -141,39 +141,41 @@
     </nav>
     <main id="productWrapper">
         <div id="sidebar">
-            <div class="categories">
-                <p class="title">دسته بندی</p>
-                <a href="blog.html" class="article">
-                    رشد و تعالی فردی
-                </a>
-                <a href="blog.html" class="article">
-                    مدیریت زمان
-                </a>
-                <a href="blog.html" class="article">
-                    ارزیابی عملکرد
-                </a>
-                <a href="blog.html" class="article">
-                    سخنرانی در جامعه
+            <div class="guarantee">
+                <img src="./assets/icons/gaurantee.png" alt="guaranteeAlt">
+                <p>تضمین بازگشت وجه در صورت نارضایتی</p>
+            </div>
+            <div class="comments">
+                <h6>نظرات مشتریان:</h6>
+                <div class="comment">
+                    <p class="title">عنوان نظر</p>
+                    <p class="content">
+                        متن متن متن متن متن متن متن متن متن
+                        متن متن متن متن متن متن متن متن متن
+                        متن متن متن متن متن متن متن متن متن
+                        متن متن متن متن متن متن متن متن متن
+                    </p>
+                </div>
+                <div class="comment">
+                    <p class="title">عنوان نظر</p>
+                    <p class="content">
+                        متن متن متن متن متن متن متن متن متن
+                        متن متن متن متن متن متن متن متن متن
+                        متن متن متن متن متن متن متن متن متن
+                        متن متن متن متن متن متن متن متن متن
+                    </p>
+                </div>
+            </div>
+            <div class="allComments">
+                <a href="comments.html">
+                    تمام نظرات مشتریان
                 </a>
             </div>
-            <form novalidate id="searchProduct" name="searchProduct">
-                <div class="title">
-                    <div class="skew">
-                        <p>جست و جوی محصول</p>
-                    </div>
-                </div>
-                <div class="inputWrapper withSubmit">
-                    <input type="text" id="search" name="search" class="validate" placeholder="نام محصول را وارد کنید"
-                        required>
-                    <button type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <div class="msg">
-                        <i class="fas fa-caret-up"></i>
-                        <p>نام محصول را باید وارد کنید</p>
-                    </div>
-                </div>
-            </form>
+            <div class="warning">
+                <p>
+                    توجه: نظارت مشتریان ثبت شده توسط خودشان ابراز گردیده و ممکن است برای همه نتیجۀ یکسان نداشته باشد
+                </p>
+            </div>
         </div>
         <div id="product">
             <div id="breadcrumb">
@@ -274,9 +276,137 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
+    <div id="similars" class="sliderCarousel scrollArrows">
+        <h4>خریداران این محصول، محصولات زیر را هم خریده‌اند</h4>
+        <div class="helper">
+            <button class="btn prev center-y">
+                <i class="fas fa-angle-right center-xy"></i>
+            </button>
+            <button class="btn next center-y">
+                <i class="fas fa-angle-left center-xy"></i>
+            </button>
+            <div class="slides" style="right:0px">
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+                <div class="slide">
+                    <a href="product.html">
+                        <img src="./assets/imgs/slide3.jpg" alt="slideAlt">
+                    </a>
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>افزودن به سبد خرید</p>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+        <a href="products.html" class="show_more">
+            نمایش همه
+            <i class="fas fa-angle-double-left"></i>
+        </a>
+        <div class="arrows">
+            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-left"></i>
+        </div>
+    </div>
+    <div class="caution">
+        <h6>توجه</h6>
+        <p>
+            ممکن است اجرای این برنامه برای همه نتیجه مشابهی نداشته باشد
+        </p>
+    </div>
     <footer>
         <div class="follow">
             <p>حسین جونی را در شبکه های اجتماعی دنبال کنید</p>
@@ -437,8 +567,8 @@
     <script src="./utilities/scripts/form.js"></script>
     <script src="./utilities/scripts/collapse.js"></script>
     <script src="./utilities/scripts/productSlider.js"></script>
+    <script src="./utilities/scripts/sliderCarousel.js"></script>
     <script src="./blog/scripts/nav.js"></script>
-    <script src="./products/scripts/sideBar.js"></script>
     <script src="./product/scripts/product.js"></script>
     <script src="./index/scripts/footer.js"></script>
 </body>

@@ -1,9 +1,12 @@
 //just add bellow code to /utilities/styles/form.scss and inside <someFile>.scss use
 //import form.scss inside entry point
+@import '../../colors.scss';
+@import '../../mixins.scss';
+@import '../../variables.scss';
 form#signup {
     width: 40em;
     height: auto;
-    padding: $dist2;
+    padding: 2em;
     margin: 0 ;
     position: fixed ;
     top: 50% ;

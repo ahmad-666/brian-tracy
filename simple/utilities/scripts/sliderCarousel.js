@@ -40,6 +40,6 @@ SliderCarousel.prototype.moveSlider = function(dir){
     this.slidesWrapper.style.right = `${movement}px` ;
 }
 //new SliderCarousel(document.querySelector('.sliderCarousel')) ;
-export default{
-	SliderCarousel
-}
+// export default{
+// 	SliderCarousel
+// }

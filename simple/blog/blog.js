@@ -4,8 +4,6 @@ import '../framework.scss' ;
 import '../utilities/styles/form.scss'
 import '../init.scss' ;
 import '../blog/styles/nav.scss' ;
-import '../blog/styles/wrapper.scss' ;
-import '../blog/styles/sidebar.scss' ;
 import '../blog/styles/articles.scss' ;
 import '../index/styles/footer.scss' ;
 //load scripts

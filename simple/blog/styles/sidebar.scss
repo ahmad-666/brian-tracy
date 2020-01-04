@@ -1,33 +1,157 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-// @import '../../utilities/styles/form.scss' ;
-main{
-    #sidebar{
+#sidebar{
+    box-shadow: 0 0 .5em .1em $shadowColor;
+    display: flex;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    .myAdd,.mySocials,.myProducts{
+        width: 100%;
+        height: auto;
+        padding: $dist2 $dist1;
         display: flex;
         @include flex(column,flex-start,flex-start,nowrap,"") ;
-        box-shadow: 0 0 .5em .1em $shadowColor;
-        .categories,#searchProduct{
+        &:not(:last-child){border-bottom: 1px solid $textGrey;}
+        h6{
+            font-size: $fontM;
+            color: $primaryColor;
+            font-weight: 700;
+        }
+        .imgs,.socials,.products{
             width: 100%;
             height: auto;
+            margin-top: $dist1;
             display: flex;
-            @include flex(column,flex-start,flex-start,nowrap,"") ;
-            .title,.article{
-                width: 100%;
-                height: auto;
-                padding: $dist1;
-                font-size: $fontM;
+            @include flex(column,flex-start,center,nowrap,"") ;
+        }
+        .imgs{
+            a{
+                width: 90%;
+                height: 17em;
+                &:not(:first-child){margin-top: $dist1;}
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
             }
-            .title{
-                background-color: $darkBlue;
-                color: $textWhite;
+        }
+        .socials{
+            width: auto;
+            @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+            margin-left: auto;
+            margin-right: auto;
+            a{
+                width: 3.5em;
+                height: 3.5em;
+                i{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        font-size: $fontL;
+                        color: $textWhite;
+                        top: 50%;
+                        right: 50%;
+                        transform: translate(50%,-50%);
+                    }
+                }
+                i.fa-telegram-plane{background-color: lighten($blueColor1,7%);}
+                i.fa-pinterest{background-color: lighten($redColor2,1%);}
+                i.fa-instagram{background-color: lighten($blueColor1,20%);}
+                i.fa-facebook{background-color: lighten($blueColor1,10%);}
+                i.fa-linkedin{background-color: lighten($blueColor1,5%);}
+                i.fa-youtube{background-color: lighten($redColor2,5%);}
             }
-            .article{
-                background-color: white;
-                transition: all .2s linear;
-                color: $primaryColor;
-                &:hover{
-                    background-color: darken(white,10%);
+        }
+        .products{
+            a{
+                width: 90%;
+                height: 15em;
+                &:not(:first-child){margin-top: $dist1;}
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .categories,#searchProduct{
+        width: 100%;
+        height: auto;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        .title,.article{
+            width: 100%;
+            height: auto;
+            padding: $dist1;
+            font-size: $fontM;
+        }
+        .title{
+            background-color: $darkBlue;
+            color: $textWhite;
+        }
+        .article{
+            background-color: white;
+            transition: all .2s linear;
+            color: $primaryColor;
+            &:hover{
+                background-color: darken(white,10%);
+            }
+        }
+    }
+}
+@include mediaQ(600px){
+    main{
+        @include flex(column,flex-start,center,nowrap,"") ;
+        #sidebar{     
+            .myAdd,.mySocials,.myProducts{
+                .imgs,.socials,.products{
+                    @include flex(row,center,center,wrap,flex-start) ;
+                }
+                .imgs{
+                    a{
+                        width: calc((100% - (3 * 1.5em)) / 3);
+                        height: 20em;
+                        margin: $dist1;
+                        &:not(:first-child){margin-top: 0;}                 
+                    }
+                }
+                .socials{
+                    width: 100%;
+                    a{
+                        width: 6em;
+                        height: 6em;
+
+                    }
+                }
+                .products{
+                    a{
+                        width: calc((100% - (3 * 1.5em)) / 3);
+                        height: 20em;
+                        margin: $dist1;
+                        &:not(:first-child){margin-top: 0;}   
+                    }
+                }
+            }
+        }
+    }
+}
+@include mediaQ(400px){
+    main{
+        #sidebar{     
+            .myAdd,.mySocials,.myProducts{    
+                .imgs{
+                    a{
+                        width: calc((100% - (2 * 1.5em)) / 2);
+                        height: 20em;
+                    }
+                }
+                .products{
+                    a{
+                        width: calc((100% - (2 * 1.5em)) / 2);
+                        height: 20em;                
+                    }
                 }
             }
         }
