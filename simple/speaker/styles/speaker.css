@@ -1,0 +1,85 @@
+main {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 4em auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+main img {
+  width: 100%;
+  height: 45em;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+main h4 {
+  font-size: 2.5em;
+  color: #2d2d31;
+  font-weight: 700;
+  margin-top: 0.75em;
+}
+
+main .text {
+  width: 90%;
+  height: auto;
+  border-radius: 1.5em;
+  background-color: white;
+  -webkit-box-shadow: 0 0 0.5em 0.1em rgba(70, 69, 85, 0.3);
+          box-shadow: 0 0 0.5em 0.1em rgba(70, 69, 85, 0.3);
+  margin: 1.5em auto 0 auto;
+  padding: 1.5em;
+}
+
+main .text p {
+  width: 100%;
+  height: auto;
+  line-height: 1.8em;
+  font-size: 1.6em;
+  color: #83838f;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main .text {
+    width: 98%;
+  }
+}
+/*# sourceMappingURL=speaker.css.map */

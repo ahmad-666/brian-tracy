@@ -177,6 +177,68 @@
             </p>
         </form>
     </div>
+    <form novalidate name="popup" id="popup" method="GET" action="#!" enctype="text/plain">
+        <i class="fas fa-times close"></i>
+        <h2>اطلاعات خود را وارد کنید</h2>
+        <div class="inputs"> 
+            <div class="inputWrapper text">
+                <input type="email" id="popupEmail" name="popupEmail" class="style2 labelHandler validate" required>
+                <label for="popupEmail">
+                    <i class="fas fa-envelope icon"></i>
+                    <p>پست الکترونیکی</p>
+                </label>
+                <span class="line"></span>
+                <div class="msg">
+                    <p>ایمیل صحیح وارد نمایید</p>
+                    <i class="fas fa-caret-up"></i>
+                </div>
+            </div>
+            <div class="inputWrapper text">
+                <input type="text" id="namePopup" name="namePopup" class="style2 labelHandler validate" required>
+                <label for="namePopup">
+                    <i class="fas fa-user icon"></i>
+                    <p>نام و نام خانوادگی</p>
+                </label>
+                <span class="line"></span>
+                <div class="msg">
+                    <p>نام و نام خانوادگی خود را وارد نمایید</p>
+                    <i class="fas fa-caret-up"></i>
+                </div>
+            </div>
+        </div>
+        <div class="selects">
+            <p class="title">در چه زمینه هایی میخواهید هدف گذاری کنید</p>
+            <select name="goalsPopup" id="goalsPopup">
+                <option value="goal1">هدف 1</option>
+                <option value="goal2">هدف 2</option>
+                <option value="goal3">هدف 3</option>
+                <option value="goal4">هدف 4</option>
+                <option value="goal5">هدف 5</option>
+            </select>
+        </div>
+        <div class="inputWrapper textarea">
+			<textarea name="descPopup" id="descPopup" class="style1 labelHandler validate" required></textarea>
+			<label for="descPopup">
+				<i class="fas fa-comments"></i>
+				<p>هدف خود را وارد نمایید</p>
+			</label>
+			<span class="line"></span>
+		</div>
+        <div class="row">
+            <div class="inputWrapper checkboxes">
+                <div class="checkbox">
+                    <input type="checkbox" id="checkPopup" name="checkPopup" class="style2" value="checkbox1">
+                    <label for="checkPopup">
+                        <span class="rect">
+                            <i class="fas fa-check center-xy"></i>
+                        </span>
+                        <p class="ellipse">قوانین را قبول دارم</p>
+                    </label>
+                </div>  
+            </div>
+            <button type="submit">ثبت</button>
+        </div>
+    </form>
     <form novalidate id="category" name="category" method="GET" action="#!" enctype="text/plain">
         <div class="title">
             <div class="titleWrapper">

@@ -1,0 +1,47 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+main{
+    width: 100%;
+    height: auto;
+    margin: 0 auto $sectionsDist auto;
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    img{
+        width: 100%;
+        height: 45em;
+        object-fit: fill;
+    }
+    h4{
+        font-size: $fontL + .5em;
+        color: $textDark;
+        font-weight: 700;
+        margin-top: $dist1;
+    }
+    .text{
+        width: 90%;
+        height: auto;
+        border-radius: $dist2;
+        background-color: white;
+        box-shadow: 0 0 .5em .1em $shadowColor;
+        margin: $dist2 auto 0 auto;
+        padding: $dist2;
+        p{
+            width: 100%;
+            height: auto;
+            line-height: $dist2 + .3em;
+            font-size: $fontM;
+            color: darken($textGrey,5%);
+        }
+    }
+
+}
+@include resizeTablet('main') ;
+@include resizeMobile('main') ;
+@include mediaQ(550px){
+    main{
+        .text{
+            width: 98%;
+        }
+    }
+}

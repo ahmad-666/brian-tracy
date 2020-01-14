@@ -118,6 +118,880 @@
   margin: 0 .3em;
 }
 
+form#popup {
+  width: 65em;
+  height: auto;
+  padding: 3em;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  background-color: white;
+  -webkit-box-shadow: 0 0 1em 0.2em rgba(70, 69, 85, 0.3);
+          box-shadow: 0 0 1em 0.2em rgba(70, 69, 85, 0.3);
+}
+
+form#popup h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #1976d2;
+  margin: 0 auto;
+}
+
+form#popup .close {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  font-size: 2em;
+  cursor: pointer;
+  color: #90909b;
+}
+
+form#popup .close:hover {
+  color: #1976d2;
+}
+
+form#popup .inputWrapper.text {
+  width: 50%;
+  height: 4em;
+  position: relative;
+}
+
+form#popup .inputWrapper.text:not(:first-child) {
+  margin-right: 1.5em;
+}
+
+form#popup .inputWrapper.text input {
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding: 0 0.75em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#popup .inputWrapper.text input::-webkit-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#popup .inputWrapper.text input:-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#popup .inputWrapper.text input::-moz-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#popup .inputWrapper.text input:-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#popup .inputWrapper.text input::-ms-input-placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#popup .inputWrapper.text input::placeholder {
+  color: #90909b;
+  font-size: 1.6em;
+}
+
+form#popup .inputWrapper.text input.style1 {
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#popup .inputWrapper.text input.style1:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#popup .inputWrapper.text input.style1:focus ~ .line {
+  width: 100%;
+}
+
+form#popup .inputWrapper.text input.style2 {
+  border: 1.2px solid #d3d3d7;
+  border-radius: 3em;
+}
+
+form#popup .inputWrapper.text input.style2:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#popup .inputWrapper.text input.style2:focus ~ label {
+  color: #1976d2;
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#popup .inputWrapper.text input.style2:focus ~ .line {
+  width: 0%;
+}
+
+form#popup .inputWrapper.text input.style1.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#popup .inputWrapper.text input.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#popup .inputWrapper.text input.style1.error ~ .line {
+  background-color: #ea6161;
+}
+
+form#popup .inputWrapper.text input.style2.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#popup .inputWrapper.text input.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#popup .inputWrapper.text label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #c6c6cb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#popup .inputWrapper.text label .icon {
+  font-size: 1.6em;
+}
+
+form#popup .inputWrapper.text label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#popup .inputWrapper.text input.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#popup .inputWrapper.text input.style2 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 1.5em);
+  bottom: -moz-calc(100% + 1.5em);
+  bottom: calc(100% + 1.5em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0.75em;
+}
+
+form#popup .inputWrapper.text .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - 1px);
+  top: -moz-calc(100% - 1px);
+  top: calc(100% - 1px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#popup .inputWrapper.text .msg {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  padding: 0.75em 1.5em;
+  position: relative;
+  background-color: #ea6161;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#popup .inputWrapper.text .msg p {
+  color: #fbfbfb;
+  font-size: 1.4em;
+}
+
+form#popup .inputWrapper.text .msg i {
+  font-size: 2.4em;
+  color: #ea6161;
+  position: absolute;
+  right: 1.5em;
+  top: -webkit-calc(0% - .6em);
+  top: -moz-calc(0% - .6em);
+  top: calc(0% - .6em);
+}
+
+form#popup .inputWrapper.text .msg.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+form#popup .inputWrapper.textarea {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form#popup .inputWrapper.textarea textarea {
+  width: 100%;
+  font-size: 1.6em;
+  color: #2d2d31;
+  padding: 0.75em;
+  line-height: 1.5em;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  resize: none;
+}
+
+form#popup .inputWrapper.textarea textarea::-webkit-input-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#popup .inputWrapper.textarea textarea:-moz-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#popup .inputWrapper.textarea textarea::-moz-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#popup .inputWrapper.textarea textarea:-ms-input-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#popup .inputWrapper.textarea textarea::-ms-input-placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#popup .inputWrapper.textarea textarea::placeholder {
+  font-size: 1.6em;
+  color: #90909b;
+}
+
+form#popup .inputWrapper.textarea textarea.style1 {
+  height: 8em;
+  border: 1.2px solid #d3d3d7;
+  border-radius: 1.5em;
+}
+
+form#popup .inputWrapper.textarea textarea.style1 ~ label {
+  bottom: 100%;
+  -webkit-transform: translateY(150%);
+     -moz-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+          transform: translateY(150%);
+}
+
+form#popup .inputWrapper.textarea textarea.style1:focus {
+  border: 1.2px solid #1976d2;
+}
+
+form#popup .inputWrapper.textarea textarea.style1:focus ~ label {
+  font-size: 8px;
+  right: 0.75em;
+  color: #1976d2;
+  bottom: -webkit-calc(100% + .5em);
+  bottom: -moz-calc(100% + .5em);
+  bottom: calc(100% + .5em);
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+form#popup .inputWrapper.textarea textarea.style2 {
+  overflow: hidden;
+  border: none;
+  border-bottom: 1.2px solid #d3d3d7;
+}
+
+form#popup .inputWrapper.textarea textarea.style2 ~ label {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+form#popup .inputWrapper.textarea textarea.style2:focus {
+  border-bottom: 1.2px solid #1976d2;
+}
+
+form#popup .inputWrapper.textarea textarea.style2:focus ~ label {
+  font-size: 8px;
+  right: 0;
+  color: #1976d2;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+form#popup .inputWrapper.textarea textarea.style2:focus ~ .line {
+  width: 100%;
+}
+
+form#popup .inputWrapper.textarea textarea.style1.error {
+  border: 1.2px solid #ea6161;
+}
+
+form#popup .inputWrapper.textarea textarea.style1.error ~ label {
+  color: #ea6161;
+}
+
+form#popup .inputWrapper.textarea textarea.style2.error {
+  border-bottom: 1.2px solid #ea6161;
+}
+
+form#popup .inputWrapper.textarea textarea.style2.error ~ label {
+  color: #ea6161;
+}
+
+form#popup .inputWrapper.textarea textarea.style1 ~ label.top {
+  font-size: 8px;
+  bottom: -webkit-calc(100% + 2em);
+  bottom: -moz-calc(100% + 2em);
+  bottom: calc(100% + 2em);
+  -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+form#popup .inputWrapper.textarea textarea.style2 ~ label.top {
+  font-size: 8px;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  right: 0;
+}
+
+form#popup .inputWrapper.textarea label {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 0.75em;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  color: #c6c6cb;
+}
+
+form#popup .inputWrapper.textarea label i {
+  font-size: 1.6em;
+}
+
+form#popup .inputWrapper.textarea label p {
+  font-size: 1.5em;
+  -webkit-transform: translateX(-0.3em);
+     -moz-transform: translateX(-0.3em);
+      -ms-transform: translateX(-0.3em);
+          transform: translateX(-0.3em);
+}
+
+form#popup .inputWrapper.textarea .line {
+  width: 0%;
+  height: 1.2px;
+  background-color: #1976d2;
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(100% - .6px);
+  top: -moz-calc(100% - .6px);
+  top: calc(100% - .6px);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#popup .inputWrapper.checkboxes {
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#popup .inputWrapper.checkboxes .checkbox {
+  width: 100%;
+  height: 100%;
+  padding-right: 0.75em;
+  margin-top: 0;
+}
+
+form#popup .inputWrapper.checkboxes .checkbox input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+form#popup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect {
+  border: 1px solid transparent;
+  background-color: #1976d2;
+}
+
+form#popup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label .rect i {
+  opacity: 1;
+}
+
+form#popup .inputWrapper.checkboxes .checkbox input[type="checkbox"].style2:checked ~ label p {
+  color: #1976d2;
+}
+
+form#popup .inputWrapper.checkboxes .checkbox label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  line-height: 2.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#popup .inputWrapper.checkboxes .checkbox label .rect {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 2.3em;
+  height: 2.3em;
+  border: 1px solid #696975;
+  position: relative;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  border-radius: .45em;
+}
+
+form#popup .inputWrapper.checkboxes .checkbox label .rect i {
+  opacity: 0;
+  font-size: 1.6em;
+  color: #fbfbfb;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#popup .inputWrapper.checkboxes .checkbox label p {
+  max-width: -webkit-calc(100% - .5em - 1.2em - .5em);
+  max-width: -moz-calc(100% - .5em - 1.2em - .5em);
+  max-width: calc(100% - .5em - 1.2em - .5em);
+  font-size: 1.6em;
+  color: #696975;
+  margin-right: .3em;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#popup .inputs {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#popup .selects {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#popup .selects .title {
+  font-size: 1.4em;
+  color: #2d2d31;
+  font-weight: 700;
+}
+
+form#popup .selects select {
+  width: 15em;
+  height: 2.5em;
+  margin-top: 0.75em;
+  border-radius: 0.75em;
+}
+
+form#popup .selects select option {
+  padding: 0.75em;
+  font-size: 1.2em;
+  color: #90909b;
+}
+
+form#popup .row {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+form#popup .row button {
+  width: auto;
+  height: auto;
+  padding: 0.3em 2em;
+  font-size: 2em;
+  color: #fbfbfb;
+  background-color: #1976d2;
+  border-radius: 1.5em;
+  cursor: pointer;
+  margin-right: 1.5em;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+form#popup .row button:hover {
+  background-color: white;
+  border: 1px solid #1976d2;
+  color: #1976d2;
+}
+
+form#popup.show {
+  z-index: 10;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  form#popup {
+    font-size: 8px;
+  }
+  form#popup .inputWrapper.text input.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#popup .inputWrapper.text input.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#popup .inputWrapper.text input.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#popup .inputWrapper.text input.style2 ~ label.top {
+    font-size: 6px;
+  }
+  form#popup .inputWrapper.textarea textarea.style1:focus ~ label {
+    font-size: 6px;
+  }
+  form#popup .inputWrapper.textarea textarea.style2:focus ~ label {
+    font-size: 6px;
+  }
+  form#popup .inputWrapper.textarea textarea.style1 ~ label.top {
+    font-size: 6px;
+  }
+  form#popup .inputWrapper.textarea textarea.style2 ~ label.top {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  form#popup {
+    font-size: 6px;
+  }
+  form#popup .inputWrapper.text input.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#popup .inputWrapper.text input.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#popup .inputWrapper.text input.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#popup .inputWrapper.text input.style2 ~ label.top {
+    font-size: 4px;
+  }
+  form#popup .inputWrapper.textarea textarea.style1:focus ~ label {
+    font-size: 4px;
+  }
+  form#popup .inputWrapper.textarea textarea.style2:focus ~ label {
+    font-size: 4px;
+  }
+  form#popup .inputWrapper.textarea textarea.style1 ~ label.top {
+    font-size: 4px;
+  }
+  form#popup .inputWrapper.textarea textarea.style2 ~ label.top {
+    font-size: 4px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   #free {
     font-size: 8px;
@@ -127,6 +1001,38 @@
 @media screen and (max-width: 700px) {
   #free {
     font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  form#popup {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#popup {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  form#popup .selects select {
+    width: 15em;
+    height: 2em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form#popup .selects select {
+    width: 15em;
+    height: 1.6em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  form#popup {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=free.css.map */

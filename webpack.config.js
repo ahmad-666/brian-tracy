@@ -19,6 +19,7 @@ module.exports = {
         'product' : './src/product/product.js',     
         'about' : './src/about/about.js',     
         'contact' : './src/contact/contact.js',     
+        'speaker' : './src/speaker/speaker.js',     
     },
     output: {//for each entry point we create one .js bundle(with the same name of entry point)
         filename: '[name].js',
@@ -195,6 +196,12 @@ module.exports = {
             inject: true,
             chunks: ['contact'],
             template: './src/contact/contact.html' //should point to target html file that we want to add <script>,<link>
+        }),
+        new HtmlWebpackPlugin({ //for each .html file we need new instance of 'HtmlWebpackPlugin'
+            filename: 'speaker.html' , //name of file inside ./dist folder
+            inject: true,
+            chunks: ['speaker'],
+            template: './src/speaker/speaker.html' //should point to target html file that we want to add <script>,<link>
         }),
         new CleanWebpackPlugin()
     ]
