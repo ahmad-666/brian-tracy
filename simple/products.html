@@ -19,6 +19,9 @@
 <body>
     <nav id="blog">
         <ul class="content">
+            <a href="index.html" class="logo">
+                <img src="./assets/icons/logo.jpg" alt="logoImg">
+            </a>
             <li class="basket">
                 <a href="#!">
                     <i class="fas fa-shopping-basket"></i>
@@ -135,46 +138,10 @@
                 </ul>
             </div>
         </div>
-        <a href="index.html" class="logo">
-            <img src="./assets/icons/logo.jpg" alt="logoImg">
-        </a>
+       
     </nav>
     <main>
-        <div id="sidebar">
-            <div class="categories">
-                <p class="title">دسته بندی</p>
-                <a href="blog.html" class="article">
-                    رشد و تعالی فردی
-                </a>
-                <a href="blog.html" class="article">
-                    مدیریت زمان
-                </a>
-                <a href="blog.html" class="article">
-                    ارزیابی عملکرد
-                </a>
-                <a href="blog.html" class="article">
-                    سخنرانی در جامعه
-                </a>
-            </div>
-            <form novalidate id="searchProduct" name="searchProduct">
-                <div class="title">
-                    <div class="skew">
-                        <p>جست و جوی محصول</p>
-                    </div>
-                </div>
-                <div class="inputWrapper withSubmit">
-                    <input type="text" id="search" name="search" class="validate" placeholder="نام محصول را وارد کنید"
-                        required>
-                    <button type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <div class="msg">
-                        <i class="fas fa-caret-up"></i>
-                        <p>نام محصول را باید وارد کنید</p>
-                    </div>
-                </div>
-            </form>
-        </div>
+      
         <div id="products">
             <h4>محصولات حسین جونی</h4>
             <div class="filtersWrapper">
@@ -309,6 +276,41 @@
                 <p class="page">...</p>
                 <a href="products.html" class="page">آخر</a>
             </div>
+        </div>
+        <div id="sidebar">
+            <div class="categories">
+                <p class="title">دسته بندی</p>
+                <a href="blog.html" class="article">
+                    رشد و تعالی فردی
+                </a>
+                <a href="blog.html" class="article">
+                    مدیریت زمان
+                </a>
+                <a href="blog.html" class="article">
+                    ارزیابی عملکرد
+                </a>
+                <a href="blog.html" class="article">
+                    سخنرانی در جامعه
+                </a>
+            </div>
+            <form novalidate id="searchProduct" name="searchProduct">
+                <div class="title">
+                    <div class="skew">
+                        <p>جست و جوی محصول</p>
+                    </div>
+                </div>
+                <div class="inputWrapper withSubmit">
+                    <input type="text" id="search" name="search" class="validate" placeholder="نام محصول را وارد کنید"
+                        required>
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="msg">
+                        <i class="fas fa-caret-up"></i>
+                        <p>نام محصول را باید وارد کنید</p>
+                    </div>
+                </div>
+            </form>
         </div>
     </main>
     <footer>

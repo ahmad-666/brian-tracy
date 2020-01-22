@@ -157,7 +157,7 @@
     }
 }
 @include resizeMobile('#category') ;
-@include mediaQ(400px){
+@include mediaQ(520px){
     #category{
         .title {
             max-width: 90%;

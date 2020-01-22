@@ -423,7 +423,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 520px) {
   #category .title {
     max-width: 90%;
   }
