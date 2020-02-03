@@ -132,4 +132,28 @@ main#comments{
         }
     }
 }
+@include resizeTablet('main#comments');
+@include resizeMobile('main#comments');
+@include mediaQ(650px){
+    main#comments{
+        .wrapper{
+            @include flex(column,flex-start,center,nowrap,"") ;
+            .right{
+                width: 100%;
+            }
+            .left{
+                width: auto;
+                height: auto;
+                margin-top: $dist2;
+                margin-right: 0;
+                a{
+                    img{
+                        width: 22em;
+                        height: 16em;
+                    }
+                }
+            }
+        }
+    }
+}
 
