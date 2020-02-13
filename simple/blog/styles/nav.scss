@@ -12,12 +12,14 @@ nav#blog{
         width: auto;
         height: auto;
         margin-right: $dist2;
+        margin-left: 10vw;
         img{
             width: 12em;
             height: 5em;
         }
     }
     .content{
+        margin-right: 10vw;
         width: auto;
         height: 100%;
         display: flex;

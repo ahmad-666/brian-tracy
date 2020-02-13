@@ -37,6 +37,7 @@ nav#blog .logo {
   width: auto;
   height: auto;
   margin-right: 1.5em;
+  margin-left: 10vw;
 }
 
 nav#blog .logo img {
@@ -45,6 +46,7 @@ nav#blog .logo img {
 }
 
 nav#blog .content {
+  margin-right: 10vw;
   width: auto;
   height: 100%;
   display: -webkit-box;

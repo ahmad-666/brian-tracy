@@ -188,28 +188,28 @@ footer{
     }
 }
 @include resizeMobile('footer');
-@include mediaQ(550px){
-    footer{
-        .follow{    
-            .socials{
-                .social{
-                    width: calc(100% / 5);
-                    height: 9.5em;
-                }
-            }
-        }   
-    }
-}
+// @include mediaQ(550px){
+//     footer{
+//         .follow{    
+//             .socials{
+//                 .social{
+//                     width: calc(100% / 5);
+//                     height: 9.5em;
+//                 }
+//             }
+//         }   
+//     }
+// }
 @include mediaQ(480px){
     footer{
-        .follow{    
-            .socials{
-                .social{
-                    width: calc(100% / 4);
-                    height: 10em;
-                }
-            }
-        }
+        // .follow{    
+        //     .socials{
+        //         .social{
+        //             width: calc(100% / 4);
+        //             height: 10em;
+        //         }
+        //     }
+        // }
         .copyright{
             @include flex(column,flex-start,center,nowrap,"");
             img{
@@ -232,23 +232,27 @@ footer{
             .socials{
                 margin-right: 0;
                 margin-top: $dist2;
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+                @include flex(row,flex-start,flex-start,nowrap,"") ;
                 .social{
-                    width: calc(100% / 5);
-                    height: 10em;
+                    width: 6em;
+                    height: 6em;
                 }
             }
         } 
     }
 }
-@include mediaQ(300px){
-    footer{
-        .follow{
-            .socials{
-                .social{
-                    width: calc(100% / 4);
-                    height: 11em;
-                }
-            }
-        } 
-    }
-}
+// @include mediaQ(300px){
+//     footer{
+//         .follow{
+//             .socials{
+//                 .social{
+//                     width: calc(100% / 4);
+//                     height: 11em;
+//                 }
+//             }
+//         } 
+//     }
+// }

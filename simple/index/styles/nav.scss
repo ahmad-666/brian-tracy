@@ -9,7 +9,7 @@ header{
         right: 0;
         top: $dist4;
         display: flex;
-        @include flex(row,flex-start,center,nowrap,"") ;
+        @include flex(row,start,center,nowrap,"") ;
         color: $textWhite;
         padding-right: 10vw;
         .logo{
@@ -19,7 +19,8 @@ header{
         .navigation{
             width: auto;
             height: auto;
-            margin-right: $dist2;
+            margin-right: auto;
+            margin-left: 10vw;
             display: flex;
             @include flex(row,flex-start,center,nowrap,"") ;
             > li{

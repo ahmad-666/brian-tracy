@@ -38,7 +38,7 @@ main #sidebar {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  width: 25em;
+  width: 35em;
   height: auto;
   margin-bottom: 3em;
 }
@@ -99,8 +99,6 @@ main .articles, main #article, main #products {
 }
 
 #sidebar {
-  -webkit-box-shadow: 0 0 0.5em 0.1em rgba(70, 69, 85, 0.3);
-          box-shadow: 0 0 0.5em 0.1em rgba(70, 69, 85, 0.3);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -131,7 +129,42 @@ main .articles, main #article, main #products {
           align-content: "";
 }
 
-#sidebar .myAdd, #sidebar .mySocials, #sidebar .myProducts {
+#sidebar .partTop {
+  -webkit-box-shadow: 0 0 0.5em 0.1em rgba(70, 69, 85, 0.3);
+          box-shadow: 0 0 0.5em 0.1em rgba(70, 69, 85, 0.3);
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#sidebar .partTop .myAdd, #sidebar .partTop .mySocials, #sidebar .partTop .myProducts {
   width: 100%;
   height: auto;
   padding: 1.5em 0.75em;
@@ -165,17 +198,17 @@ main .articles, main #article, main #products {
           align-content: "";
 }
 
-#sidebar .myAdd:not(:last-child), #sidebar .mySocials:not(:last-child), #sidebar .myProducts:not(:last-child) {
+#sidebar .partTop .myAdd:not(:last-child), #sidebar .partTop .mySocials:not(:last-child), #sidebar .partTop .myProducts:not(:last-child) {
   border-bottom: 1px solid #90909b;
 }
 
-#sidebar .myAdd h6, #sidebar .mySocials h6, #sidebar .myProducts h6 {
+#sidebar .partTop .myAdd h6, #sidebar .partTop .mySocials h6, #sidebar .partTop .myProducts h6 {
   font-size: 1.6em;
   color: #1976d2;
   font-weight: 700;
 }
 
-#sidebar .myAdd .imgs, #sidebar .myAdd .socials, #sidebar .myAdd .products, #sidebar .mySocials .imgs, #sidebar .mySocials .socials, #sidebar .mySocials .products, #sidebar .myProducts .imgs, #sidebar .myProducts .socials, #sidebar .myProducts .products {
+#sidebar .partTop .myAdd .imgs, #sidebar .partTop .myAdd .socials, #sidebar .partTop .myAdd .products, #sidebar .partTop .mySocials .imgs, #sidebar .partTop .mySocials .socials, #sidebar .partTop .mySocials .products, #sidebar .partTop .myProducts .imgs, #sidebar .partTop .myProducts .socials, #sidebar .partTop .myProducts .products {
   width: 100%;
   height: auto;
   margin-top: 0.75em;
@@ -209,21 +242,21 @@ main .articles, main #article, main #products {
           align-content: "";
 }
 
-#sidebar .myAdd .imgs a, #sidebar .mySocials .imgs a, #sidebar .myProducts .imgs a {
+#sidebar .partTop .myAdd .imgs a, #sidebar .partTop .mySocials .imgs a, #sidebar .partTop .myProducts .imgs a {
   width: 90%;
   height: 17em;
 }
 
-#sidebar .myAdd .imgs a:not(:first-child), #sidebar .mySocials .imgs a:not(:first-child), #sidebar .myProducts .imgs a:not(:first-child) {
+#sidebar .partTop .myAdd .imgs a:not(:first-child), #sidebar .partTop .mySocials .imgs a:not(:first-child), #sidebar .partTop .myProducts .imgs a:not(:first-child) {
   margin-top: 0.75em;
 }
 
-#sidebar .myAdd .imgs a img, #sidebar .mySocials .imgs a img, #sidebar .myProducts .imgs a img {
+#sidebar .partTop .myAdd .imgs a img, #sidebar .partTop .mySocials .imgs a img, #sidebar .partTop .myProducts .imgs a img {
   width: 100%;
   height: 100%;
 }
 
-#sidebar .myAdd .socials, #sidebar .mySocials .socials, #sidebar .myProducts .socials {
+#sidebar .partTop .myAdd .socials, #sidebar .partTop .mySocials .socials, #sidebar .partTop .myProducts .socials {
   width: auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -252,18 +285,18 @@ main .articles, main #article, main #products {
   margin-right: auto;
 }
 
-#sidebar .myAdd .socials a, #sidebar .mySocials .socials a, #sidebar .myProducts .socials a {
+#sidebar .partTop .myAdd .socials a, #sidebar .partTop .mySocials .socials a, #sidebar .partTop .myProducts .socials a {
   width: 3.5em;
   height: 3.5em;
 }
 
-#sidebar .myAdd .socials a i, #sidebar .mySocials .socials a i, #sidebar .myProducts .socials a i {
+#sidebar .partTop .myAdd .socials a i, #sidebar .partTop .mySocials .socials a i, #sidebar .partTop .myProducts .socials a i {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-#sidebar .myAdd .socials a i::before, #sidebar .mySocials .socials a i::before, #sidebar .myProducts .socials a i::before {
+#sidebar .partTop .myAdd .socials a i::before, #sidebar .partTop .mySocials .socials a i::before, #sidebar .partTop .myProducts .socials a i::before {
   position: absolute;
   font-size: 2em;
   color: #fbfbfb;
@@ -275,40 +308,40 @@ main .articles, main #article, main #products {
           transform: translate(50%, -50%);
 }
 
-#sidebar .myAdd .socials a i.fa-telegram-plane, #sidebar .mySocials .socials a i.fa-telegram-plane, #sidebar .myProducts .socials a i.fa-telegram-plane {
+#sidebar .partTop .myAdd .socials a i.fa-telegram-plane, #sidebar .partTop .mySocials .socials a i.fa-telegram-plane, #sidebar .partTop .myProducts .socials a i.fa-telegram-plane {
   background-color: #0d91ff;
 }
 
-#sidebar .myAdd .socials a i.fa-pinterest, #sidebar .mySocials .socials a i.fa-pinterest, #sidebar .myProducts .socials a i.fa-pinterest {
+#sidebar .partTop .myAdd .socials a i.fa-pinterest, #sidebar .partTop .mySocials .socials a i.fa-pinterest, #sidebar .partTop .myProducts .socials a i.fa-pinterest {
   background-color: #e84f4f;
 }
 
-#sidebar .myAdd .socials a i.fa-instagram, #sidebar .mySocials .socials a i.fa-instagram, #sidebar .myProducts .socials a i.fa-instagram {
+#sidebar .partTop .myAdd .socials a i.fa-instagram, #sidebar .partTop .mySocials .socials a i.fa-instagram, #sidebar .partTop .myProducts .socials a i.fa-instagram {
   background-color: #4fafff;
 }
 
-#sidebar .myAdd .socials a i.fa-facebook, #sidebar .mySocials .socials a i.fa-facebook, #sidebar .myProducts .socials a i.fa-facebook {
+#sidebar .partTop .myAdd .socials a i.fa-facebook, #sidebar .partTop .mySocials .socials a i.fa-facebook, #sidebar .partTop .myProducts .socials a i.fa-facebook {
   background-color: #1c98ff;
 }
 
-#sidebar .myAdd .socials a i.fa-linkedin, #sidebar .mySocials .socials a i.fa-linkedin, #sidebar .myProducts .socials a i.fa-linkedin {
+#sidebar .partTop .myAdd .socials a i.fa-linkedin, #sidebar .partTop .mySocials .socials a i.fa-linkedin, #sidebar .partTop .myProducts .socials a i.fa-linkedin {
   background-color: #038dff;
 }
 
-#sidebar .myAdd .socials a i.fa-youtube, #sidebar .mySocials .socials a i.fa-youtube, #sidebar .myProducts .socials a i.fa-youtube {
+#sidebar .partTop .myAdd .socials a i.fa-youtube, #sidebar .partTop .mySocials .socials a i.fa-youtube, #sidebar .partTop .myProducts .socials a i.fa-youtube {
   background-color: #ea6161;
 }
 
-#sidebar .myAdd .products a, #sidebar .mySocials .products a, #sidebar .myProducts .products a {
+#sidebar .partTop .myAdd .products a, #sidebar .partTop .mySocials .products a, #sidebar .partTop .myProducts .products a {
   width: 90%;
   height: 15em;
 }
 
-#sidebar .myAdd .products a:not(:first-child), #sidebar .mySocials .products a:not(:first-child), #sidebar .myProducts .products a:not(:first-child) {
+#sidebar .partTop .myAdd .products a:not(:first-child), #sidebar .partTop .mySocials .products a:not(:first-child), #sidebar .partTop .myProducts .products a:not(:first-child) {
   margin-top: 0.75em;
 }
 
-#sidebar .myAdd .products a img, #sidebar .mySocials .products a img, #sidebar .myProducts .products a img {
+#sidebar .partTop .myAdd .products a img, #sidebar .partTop .mySocials .products a img, #sidebar .partTop .myProducts .products a img {
   width: 100%;
   height: 100%;
 }
@@ -370,6 +403,163 @@ main .articles, main #article, main #products {
   background-color: #e6e6e6;
 }
 
+#sidebar .partBottom {
+  -webkit-box-shadow: 0 0 0.5em 0.1em rgba(70, 69, 85, 0.3);
+          box-shadow: 0 0 0.5em 0.1em rgba(70, 69, 85, 0.3);
+  width: 100%;
+  height: auto;
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#sidebar .partBottom .heading {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#sidebar .partBottom .heading p {
+  width: -webkit-calc((100%) / 3);
+  width: -moz-calc((100%) / 3);
+  width: calc((100%) / 3);
+  height: 100%;
+  padding: 0.75em;
+  background-color: #f2f2f2;
+  border-top: 3px solid #90909b;
+  color: #1976d2;
+  cursor: pointer;
+  font-size: 1.4em;
+}
+
+#sidebar .partBottom .heading p:not(:last-child) {
+  border-left: 1px solid #2d2d31;
+}
+
+#sidebar .partBottom .heading p:hover {
+  border-top: 3px solid #FFBE4F;
+  color: #2d2d31;
+}
+
+#sidebar .partBottom .heading p.active {
+  border-top: 3px solid #FFBE4F;
+  color: #2d2d31;
+  background-color: white;
+}
+
+#sidebar .partBottom .tabs {
+  width: 100%;
+  height: auto;
+}
+
+#sidebar .partBottom .tabs .tab {
+  width: 100%;
+  height: auto;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#sidebar .partBottom .tabs .tab a {
+  width: 100%;
+  height: auto;
+  font-size: 1.6em;
+  color: #2d2d31;
+  padding: 0.95em;
+  background-color: #ededed;
+}
+
+#sidebar .partBottom .tabs .tab a:not(:last-child) {
+  border-bottom: 1px solid #cccccc;
+}
+
+#sidebar .partBottom .tabs .tab a:hover {
+  border-bottom: 3px solid #1976d2;
+  color: #1976d2;
+}
+
+#sidebar .partBottom .tabs .tab.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media screen and (max-width: 600px) {
   main {
     -webkit-box-orient: vertical;
@@ -396,7 +586,7 @@ main .articles, main #article, main #products {
         -ms-flex-line-pack: "";
             align-content: "";
   }
-  main #sidebar .myAdd .imgs, main #sidebar .myAdd .socials, main #sidebar .myAdd .products, main #sidebar .mySocials .imgs, main #sidebar .mySocials .socials, main #sidebar .mySocials .products, main #sidebar .myProducts .imgs, main #sidebar .myProducts .socials, main #sidebar .myProducts .products {
+  main #sidebar .partTop .myAdd .imgs, main #sidebar .partTop .myAdd .socials, main #sidebar .partTop .myAdd .products, main #sidebar .partTop .mySocials .imgs, main #sidebar .partTop .mySocials .socials, main #sidebar .partTop .mySocials .products, main #sidebar .partTop .myProducts .imgs, main #sidebar .partTop .myProducts .socials, main #sidebar .partTop .myProducts .products {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -421,43 +611,43 @@ main .articles, main #article, main #products {
         -ms-flex-line-pack: start;
             align-content: flex-start;
   }
-  main #sidebar .myAdd .imgs a, main #sidebar .mySocials .imgs a, main #sidebar .myProducts .imgs a {
+  main #sidebar .partTop .myAdd .imgs a, main #sidebar .partTop .mySocials .imgs a, main #sidebar .partTop .myProducts .imgs a {
     width: -webkit-calc((100% - (3 * 1.5em)) / 3);
     width: -moz-calc((100% - (3 * 1.5em)) / 3);
     width: calc((100% - (3 * 1.5em)) / 3);
     height: 20em;
     margin: 0.75em;
   }
-  main #sidebar .myAdd .imgs a:not(:first-child), main #sidebar .mySocials .imgs a:not(:first-child), main #sidebar .myProducts .imgs a:not(:first-child) {
+  main #sidebar .partTop .myAdd .imgs a:not(:first-child), main #sidebar .partTop .mySocials .imgs a:not(:first-child), main #sidebar .partTop .myProducts .imgs a:not(:first-child) {
     margin-top: 0;
   }
-  main #sidebar .myAdd .socials, main #sidebar .mySocials .socials, main #sidebar .myProducts .socials {
+  main #sidebar .partTop .myAdd .socials, main #sidebar .partTop .mySocials .socials, main #sidebar .partTop .myProducts .socials {
     width: 100%;
   }
-  main #sidebar .myAdd .socials a, main #sidebar .mySocials .socials a, main #sidebar .myProducts .socials a {
+  main #sidebar .partTop .myAdd .socials a, main #sidebar .partTop .mySocials .socials a, main #sidebar .partTop .myProducts .socials a {
     width: 6em;
     height: 6em;
   }
-  main #sidebar .myAdd .products a, main #sidebar .mySocials .products a, main #sidebar .myProducts .products a {
+  main #sidebar .partTop .myAdd .products a, main #sidebar .partTop .mySocials .products a, main #sidebar .partTop .myProducts .products a {
     width: -webkit-calc((100% - (3 * 1.5em)) / 3);
     width: -moz-calc((100% - (3 * 1.5em)) / 3);
     width: calc((100% - (3 * 1.5em)) / 3);
     height: 20em;
     margin: 0.75em;
   }
-  main #sidebar .myAdd .products a:not(:first-child), main #sidebar .mySocials .products a:not(:first-child), main #sidebar .myProducts .products a:not(:first-child) {
+  main #sidebar .partTop .myAdd .products a:not(:first-child), main #sidebar .partTop .mySocials .products a:not(:first-child), main #sidebar .partTop .myProducts .products a:not(:first-child) {
     margin-top: 0;
   }
 }
 
 @media screen and (max-width: 400px) {
-  main #sidebar .myAdd .imgs a, main #sidebar .mySocials .imgs a, main #sidebar .myProducts .imgs a {
+  main #sidebar .partTop .myAdd .imgs a, main #sidebar .partTop .mySocials .imgs a, main #sidebar .partTop .myProducts .imgs a {
     width: -webkit-calc((100% - (2 * 1.5em)) / 2);
     width: -moz-calc((100% - (2 * 1.5em)) / 2);
     width: calc((100% - (2 * 1.5em)) / 2);
     height: 20em;
   }
-  main #sidebar .myAdd .products a, main #sidebar .mySocials .products a, main #sidebar .myProducts .products a {
+  main #sidebar .partTop .myAdd .products a, main #sidebar .partTop .mySocials .products a, main #sidebar .partTop .myProducts .products a {
     width: -webkit-calc((100% - (2 * 1.5em)) / 2);
     width: -moz-calc((100% - (2 * 1.5em)) / 2);
     width: calc((100% - (2 * 1.5em)) / 2);
