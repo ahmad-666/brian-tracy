@@ -520,4 +520,68 @@ nav#blog .mobile {
     color: #fbfbfb;
   }
 }
+
+#topTab {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  background-color: #ebebeb;
+}
+
+#topTab a {
+  width: auto;
+  height: 4em;
+  padding: 0.75em 3em;
+  font-size: 1.6em;
+  color: #2d2d31;
+  border-top: 0.4em solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+
+#topTab a:first-child {
+  border-right: 1px solid #cccccc;
+}
+
+#topTab a:hover {
+  border-top: 0.4em solid #FFBE4F;
+}
+
+@media screen and (max-width: 1000px) {
+  #topTab {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #topTab {
+    font-size: 7px;
+  }
+}
 /*# sourceMappingURL=nav.css.map */

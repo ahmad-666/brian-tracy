@@ -220,3 +220,30 @@ nav#blog{
         }
     }
 }
+#topTab{
+    width: 100%;
+    height: auto;
+    display: flex;
+    @include flex(row,center,flex-start,wrap,flex-start) ;
+    background-color: darken(white,8%);
+    a{
+        width: auto;
+        height: 4em;
+        padding: $dist1 $dist3;
+        font-size: $fontM;
+        color: $textDark;
+        border-top: .4em solid darken(white,20%);
+        // &:not(:last-child){border-left: 1px solid darken(white,20%);}
+        border-left: 1px solid darken(white,20%);
+        &:first-child{border-right: 1px solid darken(white,20%);}
+        &:hover{
+            border-top: .4em solid $yellowColor;
+        }
+    }
+}
+@include mediaQ(1000px){
+    #topTab{font-size: 7px;}
+}
+@include mediaQ(750px){
+    #topTab{font-size: 7px;}
+}
