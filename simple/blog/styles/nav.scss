@@ -224,26 +224,74 @@ nav#blog{
     width: 100%;
     height: auto;
     display: flex;
-    @include flex(row,center,flex-start,wrap,flex-start) ;
+    @include flex(row,center,stretch,wrap,flex-start) ;
     background-color: darken(white,8%);
     a{
-        width: auto;
-        height: 4em;
+        width: calc(100% / 7);
+        height: auto;
         padding: $dist1 $dist3;
         font-size: $fontM;
         color: $textDark;
         border-top: .4em solid darken(white,20%);
         // &:not(:last-child){border-left: 1px solid darken(white,20%);}
         border-left: 1px solid darken(white,20%);
+        text-align: center;
         &:first-child{border-right: 1px solid darken(white,20%);}
         &:hover{
             border-top: .4em solid $yellowColor;
         }
     }
 }
-@include mediaQ(1000px){
+@include mediaQ(1400px){
+    #topTab{
+        a{
+            width: calc(100% / 6);
+        }
+    }
+ 
+}
+
+@include mediaQ(1100px){
     #topTab{font-size: 7px;}
 }
-@include mediaQ(750px){
-    #topTab{font-size: 7px;}
+@include mediaQ(900px){
+    #topTab{
+        a{
+            width: calc(100% / 3);
+        }
+    }
+}
+@include mediaQ(550px){
+    #topTab{
+        a{
+            width: calc(100% / 2);
+        }
+    }
+}
+#categ{
+    box-shadow: 0 0 .5em .1em $shadowColor;
+
+    width: 100%;
+    height: auto;
+    margin-top: $dist3;
+    background-color: darken(white,5%);
+    h6{
+        height: auto;
+        padding: $dist1 ;
+        font-size: $fontL;
+        color: $textDark;
+        border-bottom: 1px solid darken(white,12%);
+        border-top: 4px solid black;
+    }
+    a{
+        display: block;
+        padding: $dist1;
+        font-size: $fontM;
+        color: lighten($textDark,20%);
+        &:not(:last-child){border-bottom: 1px solid darken(white,12%);}
+        &:hover{
+            color: $primaryColor;
+            &:not(:last-child){border-bottom: 1px solid $primaryColor;}
+        }
+    }
 }
